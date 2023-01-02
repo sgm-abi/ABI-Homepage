@@ -1,0 +1,162 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    background: black;
+}
+
+.container{
+    width:800px;
+    padding-right:15px;
+    padding-left:15px;
+    margin:auto;
+}
+.landing-page{
+    position: relative;
+    background-color: black;
+}
+.landing-page .header-area{
+    display: flex;
+    padding: 25px 0 0;
+    position: relative;
+}
+.landing-page .header-area .logo{
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 19px;
+    width: 300px;
+    color: white;
+}
+.landing-page .header-area .links{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+}
+.landing-page .header-area .links li{
+    display: inline-block;
+    margin-left: 30px;
+    color: #6c63ff;
+    cursor: pointer;
+}
+.landing-page .header-area .links li:last-child{
+    border:0;
+    border-radius: 20px;
+    padding: 10px 18px;
+    color: #FFF;
+    background-color: #6c63ff;
+}
+.landing-page .info{
+    width: 35%;
+    float: left;
+    margin-top: 130px;
+}
+.landing-page .info h1{
+    font-size: 44px;
+    margin: 0 0 25px;
+    line-height: 1.4;
+    color: white;
+}
+.landing-page .info p{
+    margin: 0;
+    line-height: 1.2;
+    font-size: 15px;
+    color: white;
+}
+.landing-page .info button{
+    border:0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #6c63ff;
+}
+.landing-page .image{
+    width: 50%;
+    float: right;
+    margin-top: 35px;
+}
+.landing-page .image img {
+    max-width: 100%;
+}
+.clearfix{
+    clear:both;
+}
+.carousel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+}
+.container-carousel{
+    position:relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+}
+.carousel-item{
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+span{
+    margin: auto;
+    font-size: 2rem;
+}
+@keyframes rotate360 
+{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform:rotateY(-360deg)
+    }
+}
+.carousel-item:nth-child(1) {
+    background-image: url("https://mimo.app/i/eiffel.png");
+    transform: rotateY(0deg) translateZ(430px);
+}
+.carousel-item:nth-child(2) {
+    background-image: url("https://mimo.app/i/greece.png");
+    transform: rotateY(40deg) translateZ(430px);
+}
+.carousel-item:nth-child(3) {
+    background-image: url("https://mimo.app/i/lake.png");
+    transform: rotateY(80deg) translateZ(430px);
+}
+.carousel-item:nth-child(4) {
+    background-image: url("https://mimo.app/i/waterfall.png");
+    transform: rotateY(120deg) translateZ(430px);
+}
+.carousel-item:nth-child(5) {
+    background-image: url("https://mimo.app/i/astro-photographer.png");
+    transform: rotateY(160deg) translateZ(430px);
+}
+.carousel-item:nth-child(6) {
+    background-image: url("https://mimo.app/i/seaside.png");
+    transform: rotateY(200deg) translateZ(430px);
+}
+.carousel-item:nth-child(7) {
+    background-image: url("https://mimo.app/r/tree.png");
+    transform: rotateY(240deg) translateZ(430px);
+}
+.carousel-item:nth-child(8) {
+    background-image: url("https://mimo.app/r/trees.png");
+    transform: rotateY(280deg) translateZ(430px);
+}
+.carousel-item:nth-child(9) {
+    background-image: url("https://mimo.app/i/croatia.png");
+    transform: rotateY(320deg) translateZ(430px);
+}
