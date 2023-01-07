@@ -1,25 +1,15 @@
-img{
-    filter: brightness(80%) saturate(75%) contrast(150%);
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    border: solid 2px black;
-    border-radius: 20px;
-}
 
-body{
-    text-align: center;
-    background-color: black;
-    color: white;
-    font-family: "Courier New", Courier, monospace;
-}
 
 h1{
-    color: white;
-    padding: 75px 0 75px 0;
-    background: linear-gradient(45deg, orange, red, darkBlue);
-    border: 10px solid white;
-    border-radius: 50px;
+    font-size: 3em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    background-color: url(#);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text 7.5s linear infinite;
 }
 
 h2{
@@ -113,4 +103,8 @@ p{
 }
 .character{
     background-color: mistyrose;
+}
+@keyframes text {
+    from{ background-position: 0% 50%;}
+    to { background-position: 100% 100%;}
 }
