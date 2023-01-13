@@ -1,0 +1,77 @@
+body{
+    font-size: 120%;
+    /*Schriftarten werden nacheinander aufgerufen je nach Verfügbarkeit 
+    im Browser; sans-serif ist in allen Browsern vorhanden*/
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    /*Standard ist 1.2*/
+    line-height: 1.4;
+    color: #263238;
+    background-color: #ffffff;
+    margin: 0;
+}
+h1{
+    /*Angaben möglichst in rem oder % damit ist besser adaptiert zu den jeweiligen
+    Anzeigeformaten*/
+    font-size: 3rem;
+    /*Standard ist fett gedruckt*/
+    font-weight: normal;
+    text-align: center;
+    padding: 2rem;
+    margin: 0;
+}
+nav{
+    background-color: #263238;
+}
+/*Eigenschaften für die Linkliste in der Navigation*/
+nav ul{
+    margin: 0;
+    /*links werden nebeneinander dargestellt*/
+    display: flex;
+    /*Listenpunkte werden entfernt*/
+    list-style: none;
+}
+/*Eigenschaften von den Links selber in der Navigationsleiste*/
+nav a{
+    color: #ffffff;
+    /*typische Unterstreichung von Links wird entfernt*/
+    text-decoration: none;
+    /*Links können so breit werden, sie werden können*/
+    display: block;
+    padding: 0.8rem;
+}
+/*Eigenschaft nur vom aktuellen Link: dieser wird hier fett gedruckt dargestellt*/
+nav a.aktuell{
+    font-weight: bold;
+}
+main{
+    max-width: 62rem;
+    /*Zentrierung der Inhalte*/
+    margin: auto;
+    /*zweispaltige Darstellung*/
+    display: flex;
+}
+article{
+    width: 50%;
+    margin: 0 2rem;
+}
+footer{
+    background-color: #263238;
+    color: #ffffff;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+img{
+    max-width: 100%;
+    /*Höhe passt sich automatisch an Breite vom Bild an*/
+    height: auto;
+}
+/*wenn Bildschirmbreite <530px dann soll zu einspaltiger Darstellung 
+gewechselt werden und Artikel wird in normaler Breite dargestellt*/
+@media screen and (max-width: 530px){
+    main {
+        display: block;
+    }
+    article{
+        width: auto;
+    }
+}

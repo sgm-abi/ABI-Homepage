@@ -8,19 +8,26 @@ body{
     padding: 0;
     width: 100%;
     min-height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
     background: #eee;
-    font-family: consolas;
-    flex-wrap: wrap;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: black;
 }
 .card{
     width: 250px;
     height: 250px;
     border: 1px solid black;
-    display: flex;
+    display: table;
+    clear: both;
     justify-content: center;
     align-items: center;
     background-color: cyan;
@@ -36,7 +43,8 @@ body{
 }
 .front-face{
     z-index: 1;
-    background-color: rgb(121, 134, 136);
+    flex-direction: column;
+    background-color: rgb(112, 216, 232);
     transition: all 0.3s linear;
 }
 .card:hover .front-face{
@@ -64,4 +72,16 @@ body{
 .card:hover .face.back-face{
     transform: translateY(100px);
     box-shadow: 0px 0px 7px 0px rgb(78,74,74);
+}
+h1 {
+    color: white;
+    padding: 75px 0 75px 0;
+    border: 10px solid white;
+    border-radius: 50px;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(41, 40, 40);
+}
+body{
+    background-color: rgb(41, 40, 40);
 }

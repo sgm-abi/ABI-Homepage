@@ -4,7 +4,7 @@
 
 body{
     font-family: "Open Sans", sans-serif;
-    background: black;
+    background: rgb(40, 40,40);
 }
 
 .container{
@@ -15,7 +15,7 @@ body{
 }
 .landing-page{
     position: relative;
-    background-color: black;
+    background-color:rgb(40,40,40);
 }
 .landing-page .header-area{
     display: flex;
@@ -132,34 +132,34 @@ span{
     transform: rotateY(0deg) translateZ(430px);
 }
 .carousel-item:nth-child(2) {
-    background-image: url("https://mimo.app/i/greece.png");
+    background-image: url("images/IMG_7820.png");
     transform: rotateY(40deg) translateZ(430px);
 }
 .carousel-item:nth-child(3) {
-    background-image: url("https://mimo.app/i/lake.png");
+    background-image: url("images/IMG_8118.png");
     transform: rotateY(80deg) translateZ(430px);
 }
 .carousel-item:nth-child(4) {
-    background-image: url("https://mimo.app/i/waterfall.png");
+    background-image: url("images/IMG_7903.png");
     transform: rotateY(120deg) translateZ(430px);
 }
 .carousel-item:nth-child(5) {
-    background-image: url("https://mimo.app/i/astro-photographer.png");
+    background-image: url("images/IMG_8108.png");
     transform: rotateY(160deg) translateZ(430px);
 }
 .carousel-item:nth-child(6) {
-    background-image: url("https://mimo.app/i/seaside.png");
+    background-image: url("images/IMG_7882.png");
     transform: rotateY(200deg) translateZ(430px);
 }
 .carousel-item:nth-child(7) {
-    background-image: url("https://mimo.app/r/tree.png");
+    background-image: url("images/IMG_7937.png");
     transform: rotateY(240deg) translateZ(430px);
 }
 .carousel-item:nth-child(8) {
-    background-image: url("https://mimo.app/r/trees.png");
+    background-image: url("images/IMG_8108.png");
     transform: rotateY(280deg) translateZ(430px);
 }
 .carousel-item:nth-child(9) {
-    background-image: url("https://mimo.app/i/croatia.png");
+    background-image: url("images/IMG_7939.png");
     transform: rotateY(320deg) translateZ(430px);
 }
