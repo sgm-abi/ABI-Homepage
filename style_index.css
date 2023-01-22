@@ -4,7 +4,7 @@
 
 body {
     font-family: "Open Sans", sans-serif;
-    background: black;
+    background: rgb(40, 40, 40);
 }
 
 .container {
@@ -16,7 +16,7 @@ body {
 
 .landing-page {
     position: relative;
-    background-color: black;
+    background-color: rgb(40,40,40);
 }
 
 .landing-page .header-area {
@@ -61,7 +61,7 @@ a{
 }
 
 .landing-page .info {
-    width: 35%;
+    width: 70%;
     float: left;
     margin-top: 130px;
 }
