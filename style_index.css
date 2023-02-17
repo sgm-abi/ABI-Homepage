@@ -121,14 +121,14 @@ span {
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: white;
+    background-color: steelblue;
     font-family: Arial;
 }
 /* Links inside the navbar */
 .navbar a {
     float: left;
     font-size: 16px;
-    color:black;
+    color:whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -145,7 +145,7 @@ span {
     font-size: 16px;
     border: none;
     outline: none;
-    color: black;
+    color: whitesmoke;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -187,4 +187,8 @@ span {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.navbar a.aktuell {
+    font-weight: bold;
 }
