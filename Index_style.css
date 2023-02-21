@@ -3,8 +3,12 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
-    background: rgb(40, 40, 41);
+    font-size: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.4;
+    color: whitesmoke;
+    background: rgb(40,40,40);
+    margin:0;
 }
 
 .container {
