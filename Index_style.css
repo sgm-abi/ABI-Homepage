@@ -11,117 +11,33 @@ body {
     margin:0;
 }
 
-.container {
-    width: 800px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin: auto;
-}
 
-.landing-page {
-    position: relative;
-    background-color: rgb(40,40,40);
-}
-
-.landing-page .header-area {
-    display: flex;
-    padding: 25px 0 0;
-    position: relative;
-}
-
-.landing-page .header-area .logo {
-    text-transform: uppercase;
-    font-style: italic;
-    margin-top: 10px;
-    font-size: 19px;
-    width: 300px;
-    color: white;
-}
-
-.landing-page .header-area .links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 40%;
-    text-align: right;
-}
-a{
-    color: white;
-    text-decoration: none;
-}
-.landing-page .header-area .links li {
-    display: inline-block;
-    margin-left: 30px;
-    color: wheat;
-    cursor: pointer;
-}
-
-.landing-page .header-area .links li:last-child {
-    border: 0;
-    border-radius: 20px;
-    padding: 10px 18px;
-    color: #FFF;
-    background-color: white;
-}
-
-.landing-page .info {
-    width: 50%;
-    float: left;
-    margin-top: 130px;
-    padding: 30px;
-
-}
-
-.landing-page .info{
-    margin: 0 0 25px;
-    line-height: 1.4;
-    color: white;
+main{
+    margin: 20px;
 }
 
 h1{
-    margin: 50px 0 0;
+    margin: 10px 10px 0;
     line-height: 1.4;
-    color: red;
+    color:whitesmoke;
     font-size:30px;
 }
 h2{
     color: white;
 }
 
-.landing-page .info p {
-    margin: 0;
-    line-height: 1.2;
-    font-size: 15px;
-    color: white;
+h3{
+    color: red;
 }
 
-.landing-page .info button {
-    border: 0;
-    border-radius: 20px;
-    padding: 12px 30px;
-    margin-top: 30px;
-    cursor: pointer;
-    color: #FFF;
-    background-color: darkblue;
-}
-
-.landing-page .image {
+.image img{
     width: 100%;
-    float:left;
-    margin-top: 35px;
-}
-
-.landing-page .image img {
+    float: left;
+    margin: 20px 0px 20px 0px;
     max-width: 100%;
 }
 
-span {
-    margin: auto;
-    font-size: 2rem;
-    color: white;
-    align-content: center;
-    text-align: center;
-}
+
 /* Navbar container */
 .navbar {
     overflow: hidden;
@@ -195,4 +111,7 @@ span {
 
 .navbar a.aktuell {
     font-weight: bold;
+}
+a{
+    color:steelblue;
 }
