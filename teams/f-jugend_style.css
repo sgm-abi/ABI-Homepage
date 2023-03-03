@@ -11,44 +11,18 @@ body {
     margin:0;
 }
 
-
-main{
-    margin: 20px;
-}
-
-h1{
-    margin: 10px 10px 0;
-    line-height: 1.4;
-    color:whitesmoke;
-    font-size:30px;
-}
-h2{
-    color: white;
-}
-
-h3{
-    color: red;
-}
-
-.image img{
-    width: 100%;
-    float: left;
-    margin: 20px 0px 20px 0px;
-    max-width: 100%;
-}
-
-
 /* Navbar container */
 .navbar {
     overflow: hidden;
     background-color: steelblue;
     font-family: Arial;
 }
+
 /* Links inside the navbar */
 .navbar a {
     float: left;
     font-size: 16px;
-    color:whitesmoke;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -65,7 +39,7 @@ h3{
     font-size: 16px;
     border: none;
     outline: none;
-    color: whitesmoke;
+    color: white;
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -99,6 +73,7 @@ h3{
     display: block;
     text-align: left;
 }
+
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
@@ -112,66 +87,48 @@ h3{
 .navbar a.aktuell {
     font-weight: bold;
 }
-a{
-    color:steelblue;
-}
 
-.footer{
-    /*mehrspaltige Ansicht*/
-    display: flex;
-    color:#fffefe;
-    padding: 2rem 0;
+img{
+    width: 100%;
+    margin: 10px 0;
+}
+.qrcode{
+    width: 30%;
     height: auto;
-    /* Abstände zwischen den Spalten */
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.box{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
     margin: 20px;
 }
-
-.footer h2{
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    font-weight:bold;
+h1{
+    margin: 20px;
+}
+h2{
+    margin: 0;
+}
+p{
+    margin: 20px 0px;
 }
 
-.links li{
-    list-style: none;
-    line-height: 30px;
+.column{
+    float:left;
+    width:50%;
+    min-height:35rem;
+    padding: 20px;
 }
 
-links li a{
-    text-decoration: none;
-    color: #fff;
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+   clear: both;
 }
 
-.address{
-    text-align:center;
-    margin-bottom:10px;
-}
-
-.social{
-    display:flex;
-    list-style: none;
-}
-.social li{
-    margin: 0 8px;
-    cursor: pointer;
-    font-size: 18px;
-}
-.fa:hover{
-    opacity: 0.7;
-}
-.fa-facebook{
-    background: #3B5998;
-    color: white;
-}
-.fa-instagram{
-    background: magenta;
-    color: white;
+@media screen and (max-width: 530px){
+    main{
+        display: block;
+    }
+    article{
+        width:auto;
+    }
+    .column {
+    width: 100%;
+  }
 }
