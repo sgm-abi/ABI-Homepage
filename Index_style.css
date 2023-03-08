@@ -22,6 +22,10 @@ h1{
     color:whitesmoke;
     font-size:30px;
 }
+h1::first-letter{
+    font-size:4rem;
+    color:steelblue;
+}
 h2{
     color: white;
 }
