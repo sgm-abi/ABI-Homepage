@@ -1,0 +1,30 @@
+# ===================================
+# Generator: http://pixelfolk.net/tools/robots
+# Erstellt am: 10.03.2023, 08:33
+# Webseite: https://sgm-abi.de/index.html
+# ===================================
+
+Crawl-delay: 5
+Sitemap: https://sgm-abi.de/sitemap.xml
+
+# ===================================
+# Folgende Seiten sollen nicht indexiert werden:
+# ===================================
+
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /temp/
+
+# ===================================
+# Schließe folgende Spider komplett aus:
+# ===================================
+
+User-agent: WebReaper
+User-agent: WebCopier
+User-agent: Offline Explorer
+User-agent: HTTrack
+User-agent: Microsoft.URL.Control
+User-agent: EmailCollector
+User-agent: penthesilea
+Disallow: /
