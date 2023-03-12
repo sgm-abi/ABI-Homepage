@@ -27,7 +27,7 @@ h1::first-letter{
     color:steelblue;
 }
 h2{
-    color: white;
+    color: whitesmoke;
 }
 
 h3{
@@ -178,4 +178,10 @@ links li a{
 .fa-instagram{
     background: magenta;
     color: white;
+}
+table, th, td{
+    border: thin solid gainsboro;
+}
+tr:nth-cild(even){
+    background-color: #D6EEEE;
 }
