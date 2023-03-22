@@ -180,8 +180,11 @@ links li a{
     color: white;
 }
 table, th, td{
-    border: thin solid gainsboro;
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 5px 10px;
 }
-tr:nth-cild(even){
-    background-color: #D6EEEE;
+tr:nth-child(even){
+    background-color: whitesmoke;
+    color: black;
 }

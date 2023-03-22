@@ -132,6 +132,12 @@ span {
     width:100%;
     padding: 20px;
 }
+section{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px;
+    Gap: 50px;
+}
 
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
@@ -148,6 +154,9 @@ span {
     }
     .box{
         display:block;
+    }
+    section{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
