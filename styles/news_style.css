@@ -31,11 +31,11 @@ h3{
     color: red;
 }
 
-.image img{
-    width: 100%;
+img{
+    width: 400px;
     float: left;
     margin: 20px 0px 20px 0px;
-    max-width: 100%;
+    max-width: 500px;
 }
 
 
@@ -126,6 +126,7 @@ a{
     /* Abstände zwischen den Spalten */
     justify-content: space-around;
     flex-wrap: wrap;
+    clear:both;
 }
 
 .box{
@@ -187,11 +188,13 @@ tr:nth-child(even){
 
 .bildrechts{
     float:left;
-    margin: 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .bildlinks{
     float:right;
-    margin: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 .grid-container{
     display: grid;
@@ -210,3 +213,11 @@ tr:nth-child(even){
 .item-6{
     grid-row: span 2;
 }
+
+/* responsive design der Bilder */
+@media screen and (max-width: 400px) {
+    img{
+        max-width: 100%;
+        height:auto;
+    }
+  }
