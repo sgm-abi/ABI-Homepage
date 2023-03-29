@@ -188,3 +188,10 @@ tr:nth-child(even){
     background-color: whitesmoke;
     color: black;
 }
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+    table, th, td{
+        font-size: 10px;
+    }
+  }
