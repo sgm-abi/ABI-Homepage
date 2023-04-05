@@ -24,7 +24,7 @@ h1{
 }
 
 h2{
-    color: whitesmoke;
+    color: steelblue;
     font-size: 20px;
     clear:both;
 }
@@ -132,8 +132,8 @@ a{
 }
 
 .box{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    display:flex;
+    flex-direction: column;
     align-items: center;
     margin: 20px;
 }
@@ -215,6 +215,30 @@ tr:nth-child(even){
 }
 .item-6{
     grid-row: span 2;
+}
+
+.section{
+    padding: 10px;
+}
+
+.menu{
+    border: 10px solid steelblue;
+    flex:0 0 200px;
+}
+.content{
+    background-color: rgb(40,40,40);
+    flex: 1 1 350px;
+}
+
+.container{
+    display: flex;
+}
+a{
+    display: inline-block;
+    padding:5px;
+}
+h2{
+    text-align: center;
 }
 
 /* responsive design der Bilder */
