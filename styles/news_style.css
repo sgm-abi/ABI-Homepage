@@ -7,33 +7,33 @@ body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     line-height: 1.4;
     color: whitesmoke;
-    background: rgb(40,40,40);
-    margin:0;
+    background: rgb(40, 40, 40);
+    margin: 0;
 }
 
 
-main{
+main {
     margin: 20px;
 }
 
-h1{
+h1 {
     line-height: 1.4;
-    color:whitesmoke;
-    font-size:30px;
+    color: whitesmoke;
+    font-size: 30px;
     clear: both;
 }
 
-h2{
+h2 {
     color: steelblue;
     font-size: 20px;
-    clear:both;
+    clear: both;
 }
 
-h3{
+h3 {
     color: red;
 }
 
-img{
+img {
     width: 400px;
     float: left;
     margin: 20px 0px 20px 0px;
@@ -47,11 +47,12 @@ img{
     background-color: steelblue;
     font-family: Arial;
 }
+
 /* Links inside the navbar */
 .navbar a {
     float: left;
     font-size: 16px;
-    color:whitesmoke;
+    color: whitesmoke;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -102,6 +103,7 @@ img{
     display: block;
     text-align: left;
 }
+
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
@@ -115,136 +117,156 @@ img{
 .navbar a.aktuell {
     font-weight: bold;
 }
-a{
-    color:steelblue;
+
+a {
+    color: steelblue;
 }
 
-.footer{
+.footer {
     /*mehrspaltige Ansicht*/
     display: flex;
-    color:#fffefe;
+    color: #fffefe;
     padding: 2rem 0;
     height: auto;
     /* Abstände zwischen den Spalten */
     justify-content: space-around;
     flex-wrap: wrap;
-    clear:both;
+    clear: both;
 }
 
-.box{
-    display:flex;
+.box {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px;
 }
 
-.footer h2{
+.footer h2 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    font-weight:bold;
-    clear:both;
+    font-weight: bold;
+    clear: both;
 }
 
-.links li{
+.links li {
     list-style: none;
     line-height: 30px;
 }
 
-links li a{
+links li a {
     text-decoration: none;
     color: #fff;
 }
 
-.address{
-    text-align:center;
-    margin-bottom:10px;
+.address {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.social{
-    display:flex;
+.social {
+    display: flex;
     list-style: none;
 }
-.social li{
+
+.social li {
     margin: 0 8px;
     cursor: pointer;
     font-size: 18px;
 }
-.fa:hover{
+
+.fa:hover {
     opacity: 0.7;
 }
-.fa-facebook{
+
+.fa-facebook {
     background: #3B5998;
     color: white;
 }
-.fa-instagram{
+
+.fa-instagram {
     background: magenta;
     color: white;
 }
-table, th, td{
+
+table,
+th,
+td {
     border: 1px solid white;
     border-collapse: collapse;
     padding: 5px 10px;
 }
-tr:nth-child(even){
+
+tr:nth-child(even) {
     background-color: steelblue;
 }
 
-.bildrechts{
-    float:left;
+.bildrechts {
+    float: left;
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.bildlinks{
-    float:right;
+
+.bildlinks {
+    float: right;
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
 }
-.grid-container{
+
+.grid-container {
     display: grid;
     gap: 2px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.grid-item{
+.grid-item {
     padding-left: 20px;
     width: 100%;
 }
-.item-1{
+
+.item-1 {
     grid-column: span 2;
     grid-row: span 2;
 }
-.item-6{
+
+.item-6 {
     grid-row: span 2;
 }
 
-.section{
+.section {
     padding: 10px;
 }
 
-.menu{
+.menu {
     border: 10px solid steelblue;
-    flex:0 0 200px;
+    flex: 0 0 200px;
 }
-.content{
-    background-color: rgb(40,40,40);
+
+.content {
+    background-color: rgb(40, 40, 40);
     flex: 1 1 350px;
 }
 
-.container{
+.container {
     display: flex;
 }
-a{
+
+a {
     display: inline-block;
-    padding:5px;
+    padding: 5px;
 }
-h2{
+
+h2 {
     text-align: center;
 }
 
 /* responsive design der Bilder */
 @media screen and (max-width: 400px) {
-    img{
+    img {
         max-width: 100%;
-        height:auto;
+        height: auto;
     }
-  }
+
+    .container {
+        display: block;
+    }
+}
