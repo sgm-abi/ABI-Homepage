@@ -24,20 +24,15 @@ h1 {
 }
 
 h2 {
-    color: steelblue;
+    color: whitesmoke;
     font-size: 20px;
     clear: both;
 }
 
-h3 {
-    color: red;
-}
-
 img {
-    width: 400px;
+    width: 100%;
     float: left;
-    margin: 20px 0px 20px 0px;
-    max-width: 500px;
+    margin: 20px 0px 0px 0px;
 }
 
 
@@ -202,19 +197,29 @@ tr:nth-child(even) {
 
 .bildrechts {
     float: left;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
 }
 
 .bildlinks {
     float: right;
-    margin-left: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+}
+
+
+.videolinks {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 30%;
 }
 
 .grid-container {
+    clear: both;
     display: grid;
-    gap: 2px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -223,13 +228,17 @@ tr:nth-child(even) {
     width: 100%;
 }
 
-.item-1 {
+.col2_row2 {
     grid-column: span 2;
     grid-row: span 2;
 }
 
-.item-6 {
+.col1_row2 {
     grid-row: span 2;
+}
+
+.col2_row1 {
+    grid-column: span 2;
 }
 
 .section {
@@ -255,18 +264,20 @@ a {
     padding: 5px;
 }
 
-h2 {
-    text-align: center;
-}
-
 /* responsive design der Bilder */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     img {
         max-width: 100%;
         height: auto;
     }
 
-    .container {
-        display: block;
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }

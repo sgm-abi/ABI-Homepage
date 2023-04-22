@@ -25,15 +25,11 @@ h1 {
 
 h1::first-letter {
     font-size: 4rem;
-    color: steelblue;
+    color: #5689C0;
 }
 
 h2 {
     color: whitesmoke;
-}
-
-h3 {
-    color: red;
 }
 
 .image img {
@@ -47,7 +43,7 @@ h3 {
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: steelblue;
+    background-color: #5689C0;
     font-family: Arial;
 }
 
@@ -84,7 +80,7 @@ h3 {
 /* Add a red background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(40, 40, 40);
 }
 
 /* Dropdown content (hidden by default) */
@@ -121,8 +117,9 @@ h3 {
     font-weight: bold;
 }
 
+/* #A1E1FA gehört eigentlich zum Farbschema, aber die Links kommen dann nicht so richtig rüber alternativ weiß #EAEBED*/
 a {
-    color: steelblue;
+    color: #A1E1Fa;
 }
 
 .footer {
@@ -192,14 +189,14 @@ links li a {
 table,
 th,
 td {
-    border: 1px solid white;
+    border: 1px solid #A1E1Fa;
     border-collapse: collapse;
     padding: 5px 10px;
 }
 
 tr:nth-child(even) {
-    background-color: whitesmoke;
-    color: black;
+    background-color: #5689C0;
+    color: #EAEBED;
 }
 
 figure {
