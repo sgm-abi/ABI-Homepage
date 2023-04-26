@@ -51,28 +51,38 @@
     <a href="./news.html">News</a>
     <a href="./gallery.html">Fotos</a>
   </div>
-  <main>
-    <h1>Willkommen bei ABI - Kinder- und Jugendfußball e.V.</h1>
+  <h1>Willkommen bei ABI - Kinder- und Jugendfußball e.V.</h1>
 
-    <div class="image">
-      <img src="images/ABI-Gesamtbild-2022.jpg" alt="Bild von Saisoneröffnung 2022" title="ABI Saisoneröffnung 2022">
-    </div>
-
-
-    <p>
-      Hier erfahrt ihr alles über unsere Kinder- und Jugendmannschaften, über den Trainings- und Spielbetrieb, unseren
-      Förderverein und alle Veranstaltungen.</p>
+  <div class="image">
+    <img src="images/ABI-Gesamtbild-2022.jpg" alt="Bild von Saisoneröffnung 2022" title="ABI Saisoneröffnung 2022">
+  </div>
 
 
-    <p>
-      <iframe style="width: 100%; border: none; height: 215px; background-color: transparent;"
-        src="https://www.wetter.de/widget/3tage/u0vjhf0g/false/"></iframe><br /><a href="https://www.wetter.de"
-        rel="nofollow" target="_blank">Das Wetter in Beilstein</a>
-    </p>
+  <p>
+    Hier erfahrt ihr alles über unsere Kinder- und Jugendmannschaften, über den Trainings- und Spielbetrieb, unseren
+    Förderverein und alle Veranstaltungen.</p>
 
 
-    <h2>KW 16</h2>
+  <p>
+    <iframe style="width: 100%; border: none; height: 215px; background-color: transparent;"
+      src="https://www.wetter.de/widget/3tage/u0vjhf0g/false/"></iframe><br /><a href="https://www.wetter.de"
+      rel="nofollow" target="_blank">Das Wetter in Beilstein</a>
+  </p>
+
+  <h2>Termine & Spiele</h2>
+
+  <!--Links zu den Tabs mit den jeweiligen Tabellen-->
+  <div class="tab">
+    <button class="tablinks" onclick="openTable(event,'Aktuell')" id="defaultOpen">Aktuelle Woche</button>
+    <button class="tablinks" onclick="openTable(event,'Vorschau')">Vorschau</button>
+    <button class="tablinks" onclick="openTable(event,'Rückblick')">Rückblick</button>
+  </div>
+
+  <!-- Tabellen, die in den oben definierten Links angezeigt werden-->
+  <div id="Aktuell" class="tabcontent">
+    <!--Aktuelle Tabelle-->
     <table id="Spiele">
+      <caption>Spiele der 17. KW</caption>
       <tr>
         <th>Datum</th>
         <th>Team</th>
@@ -81,175 +91,456 @@
         <th>Ergebnis</th>
       </tr>
       <tr>
+        <td>24.04.23, 18:15</td>
+        <td>D2</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-nordhausen-unteres-zabergaeu-ii-tsv-nordhausen-wuerttemberg/-/saison/2223/team-id/01UCAQJRQK000000VS548985VSEFG5AS"
+            target="_blank">SGM Nordhausen..</a></td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIBO1P0000000VTVG0001VTR8C1K7"
+            target="_blank">SGM ABI II</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-nordhausen-unteres-zabergaeu-ii-sgm-ilsfeld-abstatt-beilstein-abi-ii/-/spiel/02KCT2KS28000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>28.04.23, 18:30</td>
+        <td>B-J-innen</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sv-suelzbach-i-sv-suelzbach-wuerttemberg/-/saison/2223/team-id/01SNVKVU90000000VS548984VVFI3UG1"
+            target="_blank">SV Sülzbach</a></td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-beilstein-abstatt-abi-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/02F0RK819O000000VS5489B2VUBVHUE0"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sv-suelzbach-i-sgm-sc-ilsfeld-beilstein-abstatt-abi/-/spiel/02KC37U14C000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr id="Heimspiel">
+        <td>29.04.23, 10:30</td>
+        <td>C-J-innen</td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIAPVRC000000VTVG0001VTR8C1K7"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-sv-onolzheim-honhardt-gruendelhardt-sv-onolzheim-wuerttemberg/-/saison/2223/team-id/02IMQ5H01C000000VS5489B2VVQ9C6A6"
+            target="_blank">SGM SV Onolzheim/..</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-sc-ilsfeld-abstatt-beilstein-abi-sgm-sv-onolzheim-honhardt-gruendelhardt/-/spiel/02KKO3NQ58000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>29.04.23, 11:10</td>
+        <td>C2</td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNO5CCG000000VS548984VS7EIAOE"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-fv-wuestenrot-neuhuetten-neulautern-fv-wuestenrot-wuerttemberg/-/saison/2223/team-id/02F5B45OOK000000VS5489B1VVS28625"
+            target="_blank">SGM FV Wüstenrot/..</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-sc-ilsfeld-abstatt-beilstein-abi-ii-sgm-fv-wuestenrot-neuhuetten-neulautern/-/spiel/02KCSA7ODC000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>29.04.23, 11:10</td>
+        <td>D2</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-cleebronn-botenheim-eibensbach-stockheim-tsv-cleebronn-wuerttemberg/-/saison/2223/team-id/011MIFDKCG000000VTVG0001VTR8C1K7"
+            target="_blank">SGM Cleebronn/..</a></td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIBO1P0000000VTVG0001VTR8C1K7"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-cleebronn-botenheim-eibensbach-stockheim-sgm-ilsfeld-abstatt-beilstein-abi-ii/-/spiel/02KCT2KS84000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>29.04.23, 12:50</td>
+        <td>D1</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/tsg-heilbronn-i-tsg-heilbronn-wuerttemberg/-/saison/2223/team-id/011MIBO1GC000000VTVG0001VTR8C1K7"
+            target="_blank">TSG Heilbronn I</a></td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MICMDO8000000VTVG0001VTR8C1K7"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/tsg-heilbronn-i-sgm-ilsfeld-abstatt-beilstein-abi-i/-/spiel/02KCT0F9T8000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>29.04.23, 13:00</td>
+        <td>C1</td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNNEK1G000000VS548984VS7EIAOE"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sport-union-neckarsulm-ii-neckarsulmer-sport-union-wuerttemberg/-/saison/2223/team-id/012IOJ08P0000000VV0AG80NVVJ79KI7"
+            target="_blank">Sport-Union Neckarsulm II</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-sc-ilsfeld-abstatt-beilstein-abi-i-sport-union-neckarsulm-ii/-/spiel/02IQVQNN6O000000VS5489B3VUDHAAN1"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>29.04.23, 16:15</td>
+        <td>A</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-tsv-brettach-kobra-tsv-brettach-wuerttemberg/-/saison/2223/team-id/02ES02HOKG000000VS5489B2VVP292BR"
+            target="_blank">SGM TSV Brettach KoBra</a></td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-sc-abstatt-beilstein-ilsfeld-abi-sc-abstatt-wuerttemberg/-/saison/2223/team-id/011MIB1QNG000000VTVG0001VTR8C1K7"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-tsv-brettach-kobra-sgm-sc-abstatt-beilstein-ilsfeld-abi/-/spiel/02KCN5VF8G000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>30.04.23, 10:30</td>
+        <td>B1</td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/01OQR89UAC000000VV0AG80NVU94JLT0"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/vfr-heilbronn-96-18-ii-vfr-heilbronn-96-18-wuerttemberg/-/saison/2223/team-id/02IGCLELL8000000VS5489B1VUG7QVAU"
+            target="_blank">VfR Heilbronn 96/18 II</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i-vfr-heilbronn-96-18-ii/-/spiel/02KD6OM44O000000VS5489B3VSG7Q4FB"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>30.04.23, 10:30</td>
+        <td>B2</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sc-oberes-zabergaeu-sc-oberes-zabergaeu-wuerttemberg/-/saison/2223/team-id/02IOI6N650000000VS5489B1VSO9MMK0"
+            target="_blank">SC Oberes Zabergäu</a></td>
+        <td><a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/02B9N1UOUG000000VS5489B1VU20GQ5T"
+            target="_blank">SGM ABI</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sc-oberes-zabergaeu-sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii/-/spiel/02KD6ORU5O000000VS5489B3VSG7Q4FB"
+            target="_blank">link</a></td>
+      </tr>
+    </table>
+
+  </div>
+  <!--Tabelle mit den Spielen in der nächsten Woche-->
+  <div id="Vorschau" class="tabcontent">
+    <table id="Spiele">
+      <caption>Spiele der 18. KW</caption>
+      <tr>
+        <th>Datum</th>
+        <th>Team</th>
+        <th>Heim</th>
+        <th>Gast</th>
+        <th>Ergebnis</th>
+      </tr>
+      <tr>
+        <td>05.05.23, 18:30</td>
+        <td>B-J-innen</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-beilstein-abstatt-abi-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/02F0RK819O000000VS5489B2VUBVHUE0"
+            target="_blank" class="ABI">SGM ABI B-J-innen</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-tsv-talheim-heilbronn-tsv-talheim-wuerttemberg/-/saison/2223/team-id/01SMLHVRF4000000VS548985VU8O1RK1"
+            target="_blank">SGM TSV Talheim/Heilbronn</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-sc-ilsfeld-beilstein-abstatt-abi-sgm-tsv-talheim-heilbronn/-/spiel/02KC37U174000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>06.05.23, 09:30</td>
+        <td>D2</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIBO1P0000000VTVG0001VTR8C1K7"
+            target="_blank" class="ABI">SGM ABI D2</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-dahenfeld-oedheim-ii-sc-dahenfeld-wuerttemberg/-/saison/2223/team-id/02IMQPAR70000000VS5489B1VSO9MMK0"
+            target="_blank">SGM Dahenfeld/Oedheim II</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-beilstein-abi-ii-sgm-dahenfeld-oedheim-ii/-/spiel/02KCT2KSAG000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>06.05.23, 11:10</td>
+        <td>D1</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MICMDO8000000VTVG0001VTR8C1K7"
+            target="_blank" class="ABI">SGM ABI D1</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/tuerkspor-neckarsulm-i-tuerkspor-neckarsulm-wuerttemberg/-/saison/2223/team-id/01HA15SI80000000VV0AG811VU6HO2AK"
+            target="_blank">Türkspor Neckarsulm I</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-beilstein-abi-i-tuerkspor-neckarsulm-i/-/spiel/02KCT0F9V8000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>06.05.23, 13:00</td>
+        <td>C2</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/vfl-obereisesheim-vfl-obereisesheim-wuerttemberg/-/saison/2223/team-id/027AESMMCO000000VS5489B1VU8ROJMK"
+            target="_blank">VfL Obereisesheim</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNO5CCG000000VS548984VS7EIAOE"
+            target="_blank" class="ABI">SGM ABI C2</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/vfl-obereisesheim-sgm-sc-ilsfeld-abstatt-beilstein-abi-ii/-/spiel/02KCSA7OG8000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>06.05.23, 14:00</td>
+        <td>C-J-innen</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/spvgg-oedheim-ii-spvgg-oedheim-wuerttemberg/-/saison/2223/team-id/02F6I7JC4S000000VS5489B1VU7L28SU"
+            target="_blank">Spvgg Oedheim II</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIAPVRC000000VTVG0001VTR8C1K7"
+            target="_blank" class="ABI">SGM ABI C-J-innen</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/spvgg-oedheim-ii-sgm-sc-ilsfeld-abstatt-beilstein-abi/-/spiel/02KKO3NQ90000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>06.05.23, 15:15</td>
+        <td>C1</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/tsv-ilshofen-i-tsv-ilshofen-wuerttemberg/-/saison/2223/team-id/011MIC49CK000000VTVG0001VTR8C1K7"
+            target="_blank">TSV Ilshofen I</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNNEK1G000000VS548984VS7EIAOE"
+            target="_blank" class="ABI">SGM ABI C1</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/tsv-ilshofen-i-sgm-sc-ilsfeld-abstatt-beilstein-abi-i/-/spiel/02IQVQNNES000000VS5489B3VUDHAAN1"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>06.05.23, 16:15</td>
+        <td>A</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-sc-abstatt-beilstein-ilsfeld-abi-sc-abstatt-wuerttemberg/-/saison/2223/team-id/011MIB1QNG000000VTVG0001VTR8C1K7"
+            target="_blank" class="ABI">SGM ABI A</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-neuenstadt-kochertal-i-tsv-neuenstadt-wuerttemberg/-/saison/2223/team-id/0206V3MFMG000000VS548985VSL7HPD7"
+            target="_blank">SGM Neuenstadt Kochertal</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-sc-abstatt-beilstein-ilsfeld-abi-sgm-neuenstadt-kochertal-i/-/spiel/02KCN5VFC0000000VS5489B4VU1O1RVG"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>07.05.23, 10:30</td>
+        <td>B1</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-duerrenzimmern-unteres-zabergaeu-tgv-duerrenzimmern-wuerttemberg/-/saison/2223/team-id/02BDA2BPSK000000VS5489B1VTPVH7C1"
+            target="_blank">SGM Dürrenzimmern...</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/01OQR89UAC000000VV0AG80NVU94JLT0"
+            target="_blank" class="ABI">SGM ABI B1</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-duerrenzimmern-unteres-zabergaeu-sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i/-/spiel/02KD6OM474000000VS5489B3VSG7Q4FB"
+            target="_blank">link</a></td>
+      </tr>
+      <tr>
+        <td>07.05.23, 10:30</td>
+        <td>B2</td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/02B9N1UOUG000000VS5489B1VU20GQ5T"
+            target="_blank" class="ABI">SGM ABI B2</a></td>
+        <td><a
+            href="https://www.fussball.de/mannschaft/sgm-kirchhausen-biberach-fc-kirchhausen-wuerttemberg/-/saison/2223/team-id/02IO4RNT28000000VS5489B1VSO9MMK0"
+            target="_blank">SGM Kirchhausen/Biberach</a></td>
+        <td><a
+            href="https://www.fussball.de/spiel/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-sgm-kirchhausen-biberach/-/spiel/02KD6ORU80000000VS5489B3VSG7Q4FB"
+            target="_blank">link</a></td>
+      </tr>
+    </table>
+  </div>
+  <!--Tabelle mit dem Rückblick (=Woche vor der aktuellen mit den Links zu den Spielberichten)-->
+  <div id="Rückblick" class="tabcontent">
+
+    <table id="Spiele">
+      <caption>Spiele der 16. KW</caption>
+      <!--Tabellenüberschrift (Kopf)-->
+      <tr>
+        <th>Datum</th>
+        <th>Team</th>
+        <th>Ergebnis</th>
+        <th>Heim</th>
+        <th>Gast</th>
+        <th>Links</th>
+      </tr>
+      <tr>
         <td>19.04.23, 19:00</td>
         <td>B2</td>
+        <td>2:1</td>
         <td>
-          <a href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/02B9N1UOUG000000VS5489B1VU20GQ5T"
-            target="_blank">SGM ABI II</a></td>
+          <a class="ABI"
+            href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/02B9N1UOUG000000VS5489B1VU20GQ5T"
+            target="_blank">SGM ABI</a></td>
         <td><a
             href="https://www.fussball.de/mannschaft/tv-flein-tv-flein-wuerttemberg/-/saison/2223/team-id/011MIAEMSK000000VTVG0001VTR8C1K7"
             target="_blank">TV Flein</a></td>
-        <td><a href="news/KW16/230419_B2-Junioren_Halbfinale.html">Fotos</a><br><a
+        <td><a href="news/KW16/230419_B2-Junioren_Halbfinale.html">Spielbericht</a><br><a
             href="https://www.fussball.de/spiel/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tv-flein/-/spiel/02LA9217TK000000VS5489B3VSIJ73NB"
             target="_blank">fussball.de</a></td>
       </tr>
       <tr>
         <td>22.04.23, 09:30</td>
         <td>D2</td>
-        <td><a
+        <td class="Heimspiel">0:3</td>
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIBO1P0000000VTVG0001VTR8C1K7"
-            target="_blank">SGM ABI II</a></td>
+            target="_blank">SGM ABI</a></td>
         <td><a
             href="https://www.fussball.de/mannschaft/tsg-heilbronn-ii-tsg-heilbronn-wuerttemberg/-/saison/2223/team-id/02B57483C4000000VS5489B1VULH2T74"
             target="_blank">TSG Heilbronn II</a></td>
         <td><a
             href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-beilstein-abi-ii-tsg-heilbronn-ii/-/spiel/02KCT2KS58000000VS5489B4VU1O1RVG"
-            target="_blank">link</a></td>
+            target="_blank">fussball.de</a></td>
       </tr>
       <tr>
         <td>22.04.23, 10:30</td>
         <td>C-J-innen</td>
+        <td>2:2</td>
         <td><a
             href="https://www.fussball.de/mannschaft/tura-untermuenkheim-tura-untermuenkheim-wuerttemberg/-/saison/2223/team-id/02INRAIC9C000000VS5489B2VVQ9C6A6"
             target="_blank">TURA Untermünkheim</a></td>
-        <td><a
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIAPVRC000000VTVG0001VTR8C1K7"
             target="_blank">SGM ABI</a></td>
         <td><a
             href="https://www.fussball.de/spiel/tura-untermuenkheim-sgm-sc-ilsfeld-abstatt-beilstein-abi/-/spiel/02KKO3NQ2G000000VS5489B4VU1O1RVG"
-            target="_blank">link</a></td>
+            target="_blank">fussball.de</a></td>
       </tr>
       <tr>
         <td>22.04.23, 11:10</td>
         <td>C2</td>
+        <td>0:10</td>
         <td><a
             href="https://www.fussball.de/mannschaft/sgm-nordhausen-unteres-zabergaeu-ii-tsv-nordhausen-wuerttemberg/-/saison/2223/team-id/02KAEIQJ84000000VS5489B1VTE34DTP"
             target="_blank">SGM Nordhausen Unteres Zabergäu II</a></td>
-        <td><a
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNO5CCG000000VS548984VS7EIAOE"
-            target="_blank">SGM ABI II</a></td>
-        <td><a
-            href="https://www.fussball.de/spiel/sgm-nordhausen-unteres-zabergaeu-ii-sgm-sc-ilsfeld-abstatt-beilstein-abi-ii/-/spiel/02KCSA7O9S000000VS5489B4VU1O1RVG"
-            target="_blank">link</a></td>
+            target="_blank">SGM ABI</a></td>
+        <td>
+          <a href="/news/KW16/230422_C-Junioren_Spielbericht.html">Spielbericht</a><br>
+          <a href="https://www.fussball.de/spiel/sgm-nordhausen-unteres-zabergaeu-ii-sgm-sc-ilsfeld-abstatt-beilstein-abi-ii/-/spiel/02KCSA7O9S000000VS5489B4VU1O1RVG"
+            target="_blank">fussball.de</a></td>
       </tr>
       <tr>
-        <td>22.04.23, 11:10</td>
+        <td class="Heimspiel">22.04.23, 11:10</td>
         <td>D1</td>
-        <td><a
+        <td>3:1</td>
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MICMDO8000000VTVG0001VTR8C1K7"
-            target="_blank">SGM ABI I</a></td>
+            target="_blank">SGM ABI</a></td>
         <td><a
             href="https://www.fussball.de/mannschaft/sgm-obergriesheim-krumme-ebene-am-neckar-msg-eintracht-obergriesheim-wuerttemberg/-/saison/2223/team-id/02F0NQC2I8000000VS5489B1VT1H0S9M"
             target="_blank">SGM Obergriesheim Krumme Ebene</a></td>
         <td><a
             href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-beilstein-abi-i-sgm-obergriesheim-krumme-ebene-am-neckar/-/spiel/02KCT0F9QS000000VS5489B4VU1O1RVG"
-            target="_blank">link</a></td>
+            target="_blank">fussball.de</a></td>
       </tr>
       <tr>
         <td>22.04.23, 11:50</td>
         <td>C1</td>
+        <td>3:1</td>
         <td><a
             href="https://www.fussball.de/mannschaft/vfr-heilbronn-96-18-ii-vfr-heilbronn-96-18-wuerttemberg/-/saison/2223/team-id/02EKPGCJ60000000VS5489B2VU47K6LH"
             target="_blank">VfR Heilbronn 96/18 II</a></td>
-        <td><a
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNNEK1G000000VS548984VS7EIAOE"
-            target="_blank">SGM ABI I</a></td>
-        <td><a
-            href="https://www.fussball.de/spiel/vfr-heilbronn-96-18-ii-sgm-sc-ilsfeld-abstatt-beilstein-abi-i/-/spiel/02IQVQNN1C000000VS5489B3VUDHAAN1"
-            target="_blank">link</a></td>
+            target="_blank">SGM ABI</a></td>
+        <td>
+          <a href="/news/KW16/230422_C-Junioren_Spielbericht.html">Spielbericht</a><br>
+          <a href="https://www.fussball.de/spiel/vfr-heilbronn-96-18-ii-sgm-sc-ilsfeld-abstatt-beilstein-abi-i/-/spiel/02IQVQNN1C000000VS5489B3VUDHAAN1"
+            target="_blank">fussball.de</a></td>
       </tr>
       <tr>
         <td>23.04.23, 10:30</td>
         <td>B1</td>
+        <td>2:2</td>
         <td><a
             href="https://www.fussball.de/mannschaft/sport-union-neckarsulm-ii-neckarsulmer-sport-union-wuerttemberg/-/saison/2223/team-id/01KT70V4FC000000VV0AG80NVVRC6LS5"
             target="_blank">Sport-Union Neckarsulm II</a></td>
-        <td><a
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/01OQR89UAC000000VV0AG80NVU94JLT0"
-            target="_blank">SGM ABI I</a></td>
+            target="_blank">SGM ABI</a></td>
         <td><a
             href="https://www.fussball.de/spiel/sport-union-neckarsulm-ii-sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i/-/spiel/02KD6OM43O000000VS5489B3VSG7Q4FB"
-            target="_blank">link</a></td>
+            target="_blank">fussball.de</a></td>
       </tr>
       <tr>
         <td>23.04.23, 10:30</td>
         <td>B2</td>
-        <td><a
+        <td>1:2</td>
+        <td><a class="ABI"
             href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/02B9N1UOUG000000VS5489B1VU20GQ5T"
-            target="_blank">SGM ABI II</a></td>
+            target="_blank">SGM ABI</a></td>
         <td><a
             href="https://www.fussball.de/mannschaft/sc-amorbach-sc-neckarsulm-amorbach-wuerttemberg/-/saison/2223/team-id/011MI9TS10000000VTVG0001VTR8C1K7"
             target="_blank">SC Amorbach</a></td>
         <td><a
             href="https://www.fussball.de/spiel/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-sc-amorbach/-/spiel/02KD6ORU2C000000VS5489B3VSG7Q4FB"
-            target="_blank">link</a></td>
+            target="_blank">fussball.de</a></td>
       </tr>
     </table>
 
-    <h2>KW 16</h2>
-    <ul>
-      <li>
-        <a href="news/KW16/230419_B2-Junioren_Halbfinale.html">[19.04.23] B2-Junioren Halbfinale Bezirkspokal </a>
-      </li>
-    </ul>
+  </div>
 
-    <h2>KW 15 (Osterferien)</h2>
-    <ul>
-      <li>
-        <a href="news/KW15/230412_Fussballcamp_Ostern.html">Fußballcamp vom 11.04. bis 14.04.2023</a>
-      </li>
-    </ul>
-    <h2>KW 13</h2>
-    <ul>
-      <li>
-        <a href="/news/230327_B-Junioren_Spielbericht.html">[27.03.23] B-Junioren Spiele gegen TV Flein und VFL
-          Obereisesheim</a>
-      </li>
-      <li>
-        <a href="/news/KW13/230401_C-Junioren_Spielbericht.html">[01.04.23] C-Junioren gegen Türksport II und SGM
-          Gaisbach-Kupferzell</a>
-      </li>
-      <li>
-        <a href="/news/KW13/230402_B-Junioren_Spielbericht.html">[02.04.23] B-Junioren Spiele gegen SSV Klingenberg und
-          SGM TV Hardthausen/KOBRA</a>
-      </li>
-      <li>
-        <a href="news/KW13/230402_C-Junioren_Bundesliga.html">[02.04.23] C-Junioren beim Bundesligaspiel der
-          B-Junioren</a>
-      </li>
-    </ul>
-    <h2>KW 12</h2>
-    <ul>
-      <li>
-        <a href="/news/230322_B2-Junioren_Spielbericht.html">[22.03.23] B2-Junioren Viertelfinale Bezirkspokal</a>
-      </li>
-      <li>
-        <a href="/news/230326_A-Junioren_Spielbericht.html">[25.03.23] A-Junioren 1. Heimspiel gegen Türkspor
-          Neckarsulm</a>
-      </li>
-      <li>
-        <a href="/news/230326_C-Junioren_Spielbericht.html">[26.03.23] C-Junioren Rückrundenauftakt mit 2
-          Unentschieden</a>
-      </li>
-    </ul>
-    <a href="news.html">Weitere Berichte</a>
+  <!--Javascript um gewünschte Tabelle anzuzeigen-->
+  <script>
+    function openTable(evt, tableName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tableName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
 
-    <h2>Unsere Ziele</h2>
-    <p>
-      Mit dem Zusammenschluss der einzelnen Mannschaften aus Abstatt, Beilstein, Ilsfeld und Heinriet können wir
-      durchgängig für alle Altersklassen von 9-19 Jahren ein Fußballtraining vor Ort ermöglichen. Mit qualifiziertem
-      Trainerpersonal arbeiten wir stets an einer guten fussballerischen Ausbildung. Im Vodergrund steht jedoch immer
-      der Spaß
-      am Sport. Du bist interressiert an einem Probetraining? Dann komme einfach vorbei zu einem Training deiner
-      Altersgruppe oder kontaktiere uns unter <a href="mailto:abi-fussball@online.de">abi-fussball@online.de</a>.
-    </p>
+    //Aktuelle Spieltabelle per default anzeigen
+    document.getElementById("defaultOpen").click();
+  </script>
 
-    <h2>Das aktuelle Dribbling Nr. 23 (April 2023)</h2>
 
-    <iframe style="width: 100%; border: none; height: 600px; background-color:transparent;"
-      src="https://www.yumpu.com/de/embed/view/JM3ElkxTZ0Nfwrjg" title="Dribbling 23"></iframe><br><a
-      href="https://www.yumpu.com/de/document/view/67767667/01-dribbling-23" title="01 Dribbling 23" target="_blank">01
-      Dribbling 23</a>
+  <h2>KW 16</h2>
+  <ul>
+    <li>
+      <a href="news/KW16/230419_B2-Junioren_Halbfinale.html">[19.04.23] B2-Junioren Halbfinale Bezirkspokal </a>
+    </li>
+    <li><a href="/news/KW16/230422_C-Junioren_Spielbericht.html">[22.04.23] C-Junioren Spielbericht der 16. KW</a></li>
+  </ul>
+
+  <h2>KW 15 (Osterferien)</h2>
+  <ul>
+    <li>
+      <a href="news/KW15/230412_Fussballcamp_Ostern.html">Fußballcamp vom 11.04. bis 14.04.2023</a>
+    </li>
+  </ul>
+  <p>
+    Weitere Berichte unter <a href="news.html">News</a>
+  </p>
+
+  <h2>Unsere Ziele</h2>
+  <p>
+    Mit dem Zusammenschluss der einzelnen Mannschaften aus Abstatt, Beilstein, Ilsfeld und Heinriet können wir
+    durchgängig für alle Altersklassen von 9-19 Jahren ein Fußballtraining vor Ort ermöglichen. Mit qualifiziertem
+    Trainerpersonal arbeiten wir stets an einer guten fussballerischen Ausbildung. Im Vodergrund steht jedoch immer
+    der Spaß
+    am Sport. Du bist interressiert an einem Probetraining? Dann komme einfach vorbei zu einem Training deiner
+    Altersgruppe oder kontaktiere uns unter <a href="mailto:abi-fussball@online.de">abi-fussball@online.de</a>.
+  </p>
+
+  <h2>Das aktuelle Dribbling Nr. 23 (April 2023)</h2>
+
+  <iframe style="width: 100%; border: none; height: 600px; background-color:transparent;"
+    src="https://www.yumpu.com/de/embed/view/JM3ElkxTZ0Nfwrjg" title="Dribbling 23"></iframe><br><a
+    href="https://www.yumpu.com/de/document/view/67767667/01-dribbling-23" title="01 Dribbling 23" target="_blank">01
+    Dribbling 23</a>
 
   </main>
 

@@ -8,12 +8,12 @@ body {
     line-height: 1.4;
     color: whitesmoke;
     background: rgb(40, 40, 40);
-    margin: 0;
+    margin: 0px;
 }
 
 
 main {
-    margin: 20px;
+    margin: 0px;
 }
 
 h1 {
@@ -23,6 +23,10 @@ h1 {
     font-size: 30px;
 }
 
+p {
+    margin: 0px 20px;
+}
+
 h1::first-letter {
     font-size: 4rem;
     color: #5689C0;
@@ -30,6 +34,11 @@ h1::first-letter {
 
 h2 {
     color: whitesmoke;
+    margin: 20px;
+}
+
+h3 {
+    margin: 0px 0px 20px 0px;
 }
 
 .image img {
@@ -77,7 +86,7 @@ h2 {
     /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a black background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
     background-color: rgb(40, 40, 40);
@@ -119,7 +128,7 @@ h2 {
 
 /* #A1E1FA gehört eigentlich zum Farbschema, aber die Links kommen dann nicht so richtig rüber alternativ weiß #EAEBED*/
 a {
-    color: #A1E1Fa;
+    color: #a1e1fa;
 }
 
 .footer {
@@ -199,8 +208,57 @@ tr:nth-child(even) {
     color: #EAEBED;
 }
 
+tr:nth-child(odd) {
+    background-color: rgb(40, 40, 40)
+}
+
+a.ABI {
+    color: gold;
+}
+
+/*Design der Tabs*/
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/*Design der Buttons, die für den Tab-Inhalt genutzt werden*/
+.tab button {
+    background-color: inherit;
+    font-size: 18px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color wenn über der Button mit der Maus gestreift wird */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* create an active/current tablink class */
+.tab button.active {
+    background-color: steelblue;
+    color: white;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px 20px;
+    border-top: none;
+    background-image: url("../images/Gras.jpg");
+}
+
 figure {
     margin: 20px 0 20px 0;
+}
+
+caption {
+    font-size: 24px;
 }
 
 /* Display the columns below each other instead of side by side on small screens */

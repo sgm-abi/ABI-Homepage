@@ -1,0 +1,449 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 100%;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.4;
+    color: whitesmoke;
+    background: rgb(40, 40, 40);
+    margin: 0px;
+}
+
+
+main {
+    margin: 0px;
+}
+
+h1 {
+    margin: 10px 10px 0;
+    line-height: 1.4;
+    color: whitesmoke;
+    font-size: 30px;
+}
+
+p {
+    margin: 0px 20px;
+}
+
+h1::first-letter {
+    font-size: 4rem;
+    color: #5689C0;
+}
+
+h2 {
+    color: rgb(40, 40, 40);
+    margin: 20px;
+}
+
+h3 {
+    margin: 20px;
+    text-align: center;
+    color: greenyellow;
+}
+
+
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: #5689C0;
+    font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: whitesmoke;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: whitesmoke;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Add a black background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(40, 40, 40);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar a.aktuell {
+    font-weight: bold;
+}
+
+/* #A1E1FA gehört eigentlich zum Farbschema, aber die Links kommen dann nicht so richtig rüber alternativ weiß #EAEBED*/
+a {
+    color: black;
+    font-size: 20px;
+}
+
+.footer {
+    /*mehrspaltige Ansicht*/
+    display: flex;
+    color: #fffefe;
+    padding: 2rem 0;
+    height: auto;
+    /* Abstände zwischen den Spalten */
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.footer h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.links li {
+    list-style: none;
+    line-height: 30px;
+}
+
+links li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.address {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+}
+
+.social li {
+    margin: 0 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: magenta;
+    color: white;
+}
+
+
+figure {
+    margin: 20px 0 20px 0;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    padding: 20px;
+    border: 1px solid white;
+    justify-content: space-between;
+}
+
+
+.textbox {
+    padding: 10px;
+    height: 150px;
+}
+
+/* Define slide show */
+.slides {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.slides::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, .1);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.slides:hover::after {
+    opacity: 1;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: cycle 2s linear infinite 0s forwards;
+    animation-play-state: paused;
+}
+
+.slides:hover .image {
+    animation-play-state: running;
+}
+
+.image-1 {
+    z-index: 10;
+}
+
+.image-2 {
+    z-index: 9;
+    animation-delay: 0.2s;
+}
+
+.image-3 {
+    z-index: 8;
+    animation-delay: 0.4s;
+}
+
+.image-4 {
+    z-index: 7;
+    animation-delay: 0.6s;
+}
+
+.image-5 {
+    z-index: 6;
+    animation-delay: 0.8s;
+}
+
+.image-6 {
+    z-index: 5;
+    animation-delay: 1.0s;
+}
+
+.image-7 {
+    z-index: 4;
+    animation-delay: 1.2s;
+}
+
+.image-8 {
+    z-index: 3;
+    animation-delay: 1.4s;
+}
+
+.image-9 {
+    z-index: 2;
+    animation-delay: 1.6s;
+}
+
+.image-10 {
+    z-index: 1;
+    animation-delay: 1.8s;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* the actual timeline (vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/*Container around the content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* the circle on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: rgb(40, 40, 40);
+    border: 4px solid whitesmoke;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* place the container to the left */
+.left {
+    left: 0;
+}
+
+/* place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* add arrow to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white
+}
+
+/* add arrow to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0px;
+    border-color: transparent white transparent transparent;
+}
+
+/* fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+@keyframes cycle {
+    from {
+        visibility: visible;
+        z-index: 11;
+    }
+
+    to {
+        visibility: hidden;
+        z-index: 0;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        border: 1px solid white;
+        justify-content: space-between;
+    }
+
+    .slides {
+        position: relative;
+        width: 350px;
+        height: 350px;
+    }
+
+    /* place the timeline to the left */
+    .timeline {
+        left: 31px;
+    }
+
+
+
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}

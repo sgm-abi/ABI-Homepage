@@ -24,7 +24,7 @@ h1 {
 }
 
 h2 {
-    color: whitesmoke;
+    color: greenyellow;
     font-size: 20px;
     clear: both;
 }
@@ -39,7 +39,7 @@ img {
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: steelblue;
+    background-color: #5689C0;
     font-family: Arial;
 }
 
@@ -73,10 +73,10 @@ img {
     /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a black background color to navbar links on hover */
 .navbar a:hover,
 .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: rgb(40, 40, 40);
 }
 
 /* Dropdown content (hidden by default) */
@@ -262,6 +262,41 @@ tr:nth-child(even) {
 a {
     display: inline-block;
     padding: 5px;
+}
+
+.row {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+strong {
+    color: greenyellow;
+}
+
+a {
+    color: #a1e1fa;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
 /* responsive design der Bilder */
