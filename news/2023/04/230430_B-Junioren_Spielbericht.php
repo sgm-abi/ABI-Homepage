@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABI Kinder- und Jugendfußball
+  Homepage des Fördervereins für die Fußballjugend des SC Abstatt,
+  TGV Eintracht Beilstein, SC Ilsfeld und des SPVGG Heinriet" />
+    <link rel="icon" href="https://sgm-abi.de/images/ABI Logo-3-2.1.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://sgm-abi.de/images/ABI Logo-3-2.1.png" type="image/png" size="180x180">
+    <title>ABI Kinder- und Jugendfußball e.V. Startseite</title>
+    <link rel="stylesheet" href="https://sgm-abi.de/styles/news_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <?php include '../../../includes/navigation.inc.php';?>
+
+    <main>
+        <h1>SGM-ABI B-Junioren</h1>
+        <h2>B1 gegen VFR Heilbronn mit 3:4</h2>
+        <p>
+            Nachdem uns aufgrund von Verletzungen und Familienfeiern bereits 6 Stammspieler nicht zur Verfügung und kurzfristig noch zwei krankheitsausfälle am morgen dazukamen, dann zeigt sich wie ABI Tickt. Innerhalb von 30 Min hatten wir noch drei Spieler aktiviert, die für uns spielberechtigt sind, so konnte das Spiel auch stattfinden.  
+        </p>
+        <p>
+            Somit waren auch die Ersten 15 Minuten etwas aufgeregt in unseren Reihen was auch zu dem 0:1 für den VFR führt, ab diesem Zeitpunkt übernahm aber unser Team das Kommando in der 21 Min durch Jaris das verdiente 1:1 und in der 35 Min. das ebenfalls zu diesem Zeitpunkt verdiente 2:1 durch Fabi. 
+        </p>
+        <p>
+            Die Ersten 15 Min der zweiten Halbzeit waren dann von uns wieder etwas verschlafen worden, so dass innerhalb von 4 Min (47, 51Min) der VFR erneut in Führung gehen konnte. Danach hatten wir durch Philipp noch 2 100% die aber der Torhüter des VFR absolut glänzend parierte. Danach konnte Paul noch eine VFR-Chance vereiteln aber in der 70 Min erzielte der VFR das 2:4 aus einer eigentlich harmlosen Freistoß Situation. IN der /4 Min Andrew mit dem 3:4 
+        </p>
+        <p>
+            Fazit am Ende waren es die jeweils ersten 15 Min der Halbzeit, wo man noch nicht komplett präsent war, danach  in HZ 1 dominierend zu Ende gespielt in Halbzeit zwei war spielerisch der VFR etwas überlegen, aber insgesamt hätte das Spiel ein Unentschieden verdient. 
+        </p>
+            Im Spiel: Paul, Peter, Florin, Omar, Julius, Fabian, Andrew, Batuhan, Talik, Jaris, Robin, Philipp, Efe
+            Auf der Bank Georg und Kaan.  
+
+        </p>
+       
+
+    </main>
+
+    <footer class="footer">
+        <div class="box">
+            <h2>Links</h2>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/Verein/Foerderverein.html">Über uns</a></li>
+                <li><a href="../Impressum.html">Impressum</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Service</h2>
+            <ul class="links">
+                <li><a href="Verein/Vorstand.html">Ansprechpartner</a></li>
+                <li><a href="Verein/Foerderverein.html">Mitglied werden</a></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Kontakt</h2>
+            <p class="address">ABI - Kinder- und Jugendfußball e.V.<br>
+                1. Vorsitzender: Dr. Martin Kimmig<br>
+                Auensteiner Straße 15<br>
+                71720 Oberstenfeld
+            </p>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/Sgmabifussball" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/sgm_abi/?igshid=YmMyMTA2M2Y%3D" class="fa fa-instagram"></a></li>
+            </ul>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>

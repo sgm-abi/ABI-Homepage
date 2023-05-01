@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABI Kinder- und Jugendfußball
+  Homepage des Fördervereins für die Fußballjugend des SC Abstatt,
+  TGV Eintracht Beilstein, SC Ilsfeld und des SPVGG Heinriet" />
+    <link rel="icon" href="https://sgm-abi.de/images/ABI Logo-3-2.1.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://sgm-abi.de/images/ABI Logo-3-2.1.png" type="image/png" size="180x180">
+    <title>ABI Kinder- und Jugendfußball e.V. Startseite</title>
+    <link rel="stylesheet" href="https://sgm-abi.de/styles/news_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <?php include '../../../includes/navigation.inc.php';?>
+
+    <main>
+        <h1>SGM-ABI A-Junioren</h1>
+        <h2>SGM TSV Brettach KoBra gegen SGM ABI A mit 2:4</h2>
+        <p>
+            Am 29.04. waren wir zu Gast bei der SGM TSV Brettach KoBra. Gespielt wurde in Hardthausen. Das Spiel galt unter dem Motto endlich. Endlich war es wieder soweit, nach der Osterpause und dem verlegten Talheim-Spiel, durften wir endlich wieder ein Pflichtspiel bestreiten. Dementsprechend schnell starteten wir die Partie und gingen Recht schnell in Führung. Mit dem Führungstreffer schalteten wir aber auf Sparflamme und ließen uns die Lust, endlich wieder spielen zu dürfen, nicht anmerken. Trotzdem gelang es uns die 1. Halbzeit mit einer 3:0 Führung zu beenden. In der Pause ermahnt, mit Beginn der zweiten Hälfte eingetroffen. Zwei vom Schiedsrichter gegebene Handelfmeter verhalfen unserem Gegner den Rückstand auf 2:3 zu verkürzen und sorgten für neuen Aufwind bei unserem Gegner. So waren wir gefordert und schafften es wieder mit wenig Aufwand ein Tor zu erzielen. Das 2:4 war auch der spätere Endstand und wir buchen die nächsten 3 Punkte auf unserem Konto, dennoch gilt es zu sagen, unsere Gegner waren an diesem Tag, die Mannschaft die mehr investierte und weniger aus ihren Chancen machte. 
+        </p>
+       
+
+    </main>
+
+    <footer class="footer">
+        <div class="box">
+            <h2>Links</h2>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="/Verein/Foerderverein.html">Über uns</a></li>
+                <li><a href="../Impressum.html">Impressum</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Service</h2>
+            <ul class="links">
+                <li><a href="Verein/Vorstand.html">Ansprechpartner</a></li>
+                <li><a href="Verein/Foerderverein.html">Mitglied werden</a></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2>Kontakt</h2>
+            <p class="address">ABI - Kinder- und Jugendfußball e.V.<br>
+                1. Vorsitzender: Dr. Martin Kimmig<br>
+                Auensteiner Straße 15<br>
+                71720 Oberstenfeld
+            </p>
+            <ul class="social">
+                <li><a href="https://www.facebook.com/Sgmabifussball" class="fa fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/sgm_abi/?igshid=YmMyMTA2M2Y%3D" class="fa fa-instagram"></a></li>
+            </ul>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
