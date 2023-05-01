@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ABI Kinder- und Jugendfußball
+  Homepage des Fördervereins für die Fußballjugend des SC Abstatt,
+  TGV Eintracht Beilstein, SC Ilsfeld und des SPVGG Heinriet" />
+  <link rel="icon" href="https://sgm-abi.de/images/ABI Logo-3-2.1.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://sgm-abi.de/images/ABI Logo-3-2.1.png" type="image/png" size="180x180">
+  <title>ABI Kinder- und Jugendfußball e.V. Startseite</title>
+  <link rel="stylesheet" href="../../styles/news_style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <?php include("../../includes/navigation.inc.php");?>
+
+  <main>
+    <h1>B-Junioren: Spiele der 16. KW</h1>
+    <h2>Neckarsulmer Sportunion B2  - SGM-ABI B1 2:2 (2:1)</h2>
+    <p>
+      Nach zwei Wochen Spielpause, außer Testspielen gegen die C1 sowie die A Jugend und Trainingseinheiten, war über Ostern Spielpause. 
+So richtig wusste man nicht wie stark Neckarsulm ist, und aufgrund der unnötigen Niederlage vor den Osterferien, war auch etwas Druck da.
+Und bevor man richtig wach war, ging Neckarsulm in der 13 Min bereits in Führung. Die Robin in der 23 Minute ausgleichen konnte. In der 35 Min musste Jonas verletzt vom Platz, und in der 39 Min folgte das 2:1 für Neckarsulm. Am Ende muss man sagen es war nicht so der richtige Zug in unserem Spiel in Halbzeit 1.  Dies änderte sich vollkommen in Halbzeit 2 in der 50 Min durch Jaris der verdiente Ausgleich und danach wurde nur noch auf das Tor von Neckarsulm gespielt, aber irgendwie trotz vieler Chancen wollte der Ball nicht nochmals über die Linie.   
+
+    </p>
+
+    <p>
+      Fazit an der Leistung in Halbzeit 2 lässt sich aufbauen. Nächster Gegner am Sonntag 30.4 10.30 in Beilstein der VFR Heilbronn II.  
+
+    </p>
+    <p>
+      Von dieser Stelle an Jonas Gute Besserung komm bald wieder zurück. 
+    </p>
+
+    <p>Es spielten:  Paul, Fabian, Icy, Florin, Peter, Kay, Julius, Benjamin Jaris Felix, Robin, Jonas, Florian, Andrew
+An der Linie Georg und Kaan.
+</p>
+
+<h2>SGM-ABI B2  - SC Amorbach   1:2 (1:1)</h2>
+    <p>
+      Sonntagmorgen 9.30 echt früh für den einen oder anderen B Jugendlichen. Und so startete auch das Spiel 6 Min das 0:1. Und es rollten noch etliche Bälle durch unser Mittelfeld hindurch, was vor allem zum Vorteil der schnellen Angriffsspieler des SC war. Kleiner Lernprozess was nützt die beste Dreierkette wenn wir im Mittelfeld schlampig unterwegs sind. Daher nach 15 Minuten Umstellung auf Viererkette somit nicht mehr selbst so offensiv ausgerichtet, aber Hauptsache mehr Stabilität.   
+    </p>
+    <p>
+     In der 35 Min dann nun auch das verdiente 1:1 durch Philipp Freistoßtor. IN Halbzeit zwei wollten wir da weitermachen, wo wir aufgehört hatten, und es gelang auch, bis auf die 51 Min wo wir ein Foul im Strafraumeck verursachen. Aber what a Men im Tor, Alpay hält den platzierten Schuss.  
+In der 60 Minute dann trotzdem das 1:2 Verkettung unglücklicher Umstände nimm Ihn du ich habe Ihn sicher, und irgendwie kullerte er ins Tor. Danach hatten wir einige Chancen zum Ausgleich waren aber im Strafraum des Gegners einfach zu inkonsequent im Verwerten. 
+    </p>
+    <p>
+        Der Gegner war weitestgehend ab der 70Min in Sachen Fitness nicht mehr ganz auf der Höhe aber anstatt dies auszunutzen verfielen wir unnötig in hektische Aktionen. Der Gegner drosch oft einfach nur noch die Bälle weit ins Sportgelände um sich über die Zeit zu retten, was am Ende auch gelang.  
+</p>
+
+
+    <p>
+        Fazit die Einstellung von einigen in den Ersten 15 Minuten lies zu wünschen übrig, Dreierkette nur noch, wenn alle auch bereit sind zu laufen von Minute 1 an, aber das sollte selbstverständlich sein. 
+Aber der Kampfeswillen in Halbzeit zwei war sehr gut, und die Hektik stellen wir auch noch ab. Für manches ist es einfach wichtig das jedem klar ist regelmäßig im Training zu sein. Den ohne Training kein Erfolg. 
+    
+    </p>
+    <p>
+        Im Einsatz waren: Timo, Philipp, Samuel, Mehmet Ali Sandokan, Joris, Albi, Marvin, Noah, Phil, Christian, Tugra, Alpay. 
+Trainer Wolfgang
+</p>
+
+  </main>
+
+  <footer class="footer">
+    <div class="box">
+      <h2>Links</h2>
+      <ul class="links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="/Verein/Foerderverein.html">Über uns</a></li>
+        <li><a href="../Impressum.html">Impressum</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Service</h2>
+      <ul class="links">
+        <li><a href="Verein/Vorstand.html">Ansprechpartner</a></li>
+        <li><a href="Verein/Foerderverein.html">Mitglied werden</a></li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h2>Kontakt</h2>
+      <p class="address">ABI - Kinder- und Jugendfußball e.V.<br>
+        1. Vorsitzender: Dr. Martin Kimmig<br>
+        Auensteiner Straße 15<br>
+        71720 Oberstenfeld
+      </p>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/Sgmabifussball" class="fa fa-facebook"></a></li>
+        <li><a href="https://www.instagram.com/sgm_abi/?igshid=YmMyMTA2M2Y%3D" class="fa fa-instagram"></a></li>
+      </ul>
+
+    </div>
+
+  </footer>
+</body>
+
+</html>

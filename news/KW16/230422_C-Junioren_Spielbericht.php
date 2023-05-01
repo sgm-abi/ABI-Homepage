@@ -16,41 +16,7 @@
 </head>
 
 <body>
-  <div class="navbar">
-    <a href="https://sgm-abi.de/">Home</a>
-    <div class="dropdown">
-      <button class="dropbtn">Verein
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="https://sgm-abi.de/Verein/Foerderverein.html">Förderverein</a>
-        <a href="https://sgm-abi.de/Verein/Vorstand.html">Vorstand</a>
-        <a href="https://sgm-abi.de/Verein/Rat.html">Rat</a>
-        <a href="https://sgm-abi.de/Verein/FSJ.html">FSJ</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">Mannschaften
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="https://sgm-abi.de/teams/Trainingsinformationen.html">Allgemeine Infos</a>
-        <a href="https://sgm-abi.de/teams/A-Junioren.html">A-Junioren</a>
-        <a href="https://sgm-abi.de/teams/B-Junioren.html">B-Junioren</a>
-        <a href="https://sgm-abi.de/teams/B-Juniorinnen.html">B-Juniorinnen</a>
-        <a href="https://sgm-abi.de/teams/C-Junioren.html">C-Junioren</a>
-        <a href="https://sgm-abi.de/teams/C-Juniorinnen.html">C-Juniorinnen</a>
-        <a href="https://sgm-abi.de/teams/D-Junioren.html">D-Junioren</a>
-        <a href="https://sgm-abi.de/teams/D-Juniorinnen.html">D-Juniorinnen</a>
-        <a href="https://sgm-abi.de/teams/E-Junioren.html">E-Junioren</a>
-        <a href="https://sgm-abi.de/teams/E-Juniorinnen.html">E-Juniorinnen</a>
-        <a href="https://sgm-abi.de/teams/F-Junioren.html">F-Junioren</a>
-        <a href="https://sgm-abi.de/teams/G-Junioren.html" class="aktuell">G-Junioren (Bambini)</a>
-      </div>
-    </div>
-    <a href="https://sgm-abi.de/news.html">News</a>
-    <a href="/gallery.html">Events</a>
-  </div>
+    <?php include("../../includes/navigation.inc.php");?>
 
   <main>
     <h1>SGM ABI C-Junioren</h1>
