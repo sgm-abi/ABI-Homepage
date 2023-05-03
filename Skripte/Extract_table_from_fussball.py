@@ -127,7 +127,7 @@ for idx in range(0,len(team_urls)):
 
     # In[66]:
 
-
+    
     #merge columns to table
     if (idx==0):
         df.to_csv('out.csv', index=False)
