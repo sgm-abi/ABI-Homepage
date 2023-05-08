@@ -17,7 +17,7 @@ df.head()
 weeks=sorted(df.KW.unique())
 
 for kw in weeks:
-
+    print("generate table " + str(kw))
     filename = "Spiele_KW_" + str(kw) + ".html"
     #extract data from current calendar week
     kw_data = df.loc[df['KW']==kw]
@@ -33,7 +33,7 @@ for kw in weeks:
     table_head += "\t\t<th>Gast</th>\n"
     table_head += "\t\t<th>Ergebnis</th>\n"
     table_head += "\t</tr>"
-    print(table_head)
+    #print(table_head)
     f = open(filename, "w")
     f.write(table_head)
     f.close()
