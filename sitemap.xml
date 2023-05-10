@@ -8,90 +8,218 @@
 
 
 <url>
-  <loc>https://sgm-abi.de/</loc>
-  <lastmod>2023-03-08T11:13:55+00:00</lastmod>
-  <priority>1.00</priority>
+	<loc>https://sgm-abi.de/</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/index.html</loc>
-  <lastmod>2023-03-08T11:13:55+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/index.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>1.0</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/Verein/Foerderverein.html</loc>
-  <lastmod>2023-03-05T21:05:13+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/Verein/Foerderverein.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/Verein/Vorstand.html</loc>
-  <lastmod>2023-02-22T20:32:22+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/Verein/Vorstand.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/Verein/Rat.html</loc>
-  <lastmod>2023-02-22T20:32:22+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/Verein/Rat.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/Verein/FSJ.html</loc>
-  <lastmod>2023-03-05T21:05:12+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/Verein/FSJ.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/A-Junioren.html</loc>
-  <lastmod>2023-03-08T11:14:36+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/Trainingsinformationen.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/B-Junioren.html</loc>
-  <lastmod>2023-03-08T11:14:35+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/A-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/B-Juniorinnen.html</loc>
-  <lastmod>2023-03-08T11:14:35+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/B-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/C-Junioren.html</loc>
-  <lastmod>2023-03-08T11:14:34+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/B-Juniorinnen.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/C-Juniorinnen.html</loc>
-  <lastmod>2023-03-08T11:14:33+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/C-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/D-Junioren.html</loc>
-  <lastmod>2023-03-08T11:14:33+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/C-Juniorinnen.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/D-Juniorinnen.html</loc>
-  <lastmod>2023-03-08T11:14:32+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/D-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/E-Juniorinnen.html</loc>
-  <lastmod>2023-03-08T11:14:31+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/D-Juniorinnen.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/F-Junioren.html</loc>
-  <lastmod>2023-03-08T11:14:30+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/E-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/teams/G-Junioren.html</loc>
-  <lastmod>2023-03-08T11:14:36+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/E-Juniorinnen.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
 <url>
-  <loc>https://sgm-abi.de/Impressum.html</loc>
-  <lastmod>2023-02-22T20:31:33+00:00</lastmod>
-  <priority>0.80</priority>
+	<loc>https://sgm-abi.de/teams/F-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
 </url>
-
-
+<url>
+	<loc>https://sgm-abi.de/teams/G-Junioren.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/gallery.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/2023/05/230506_A-Junioren_Neuenstadt.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/2023/05/230505_B-Junioren_Spiele.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/2023/04/230429_A-JunIoren_Spielbericht.php</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/2023/04/230429_C-Junioren_Spielbericht.php</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/2023/04/230430_B-Junioren_Spielbericht.php</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.4</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW16/230419_B2-Junioren_Halbfinale.php</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW16/230422_C-Junioren_Spielbericht.php</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW16/230423_B-Junioren_Spielbericht.php</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/Impressum.html</loc>
+	<lastmod>2023-05-09T06:32:55+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW15/230412_Fussballcamp_Ostern.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230327_B-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW13/230401_C-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW13/230402_B-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/KW13/230402_C-Junioren_Bundesliga.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230322_B2-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230326_A-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230326_C-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230318_A-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230319_B-Junioren_Spielbericht.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230319_C2-Junioren_Spezialtraining.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230312_A-Junioren_Zusammenfassung.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230311_B-Junioren_Saisonvorbereitung.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://sgm-abi.de/news/230312_C1-Junioren_Trainingswochenende.html</loc>
+	<lastmod>2023-05-09T06:33:01+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
 </urlset>
