@@ -126,13 +126,15 @@ for idx in range(0,len(team_urls)):
 
 
     # In[66]:
-
-    
+    current_date = datetime.date.today()
+    date_string = current_date.strftime('%Y-%m-%d')
+    outfile = f'out_{date_string}.csv' 
+    print(outfile)
     #merge columns to table
     if (idx==0):
-        df.to_csv('out.csv', index=False)
+        df.to_csv(outfile, index=False)
     else:
-        df.to_csv('out.csv', mode='a', index=False, header=False)
+        df.to_csv(outfile, mode='a', index=False, header=False)
 
 
 
