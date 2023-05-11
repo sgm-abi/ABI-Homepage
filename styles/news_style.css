@@ -291,6 +291,21 @@ a {
     color: #a1e1fa;
 }
 
+.fancy-button {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    border: solid;
+    border-radius: 5px;
+    background-color: greenyellow;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.fancy-button:hover {
+    background-color: #3e8e41;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
     .column {

@@ -1,72 +1,118 @@
-    <table>
-          <tr>
-              <th>Datum</th>
-              <th>Team</th>
-              <th>Heimspiel</th>
-              <th>Auswärts</th>
-              <th>Ergebnis</th>
-          </tr>
-          <tr>
-              <td>31.03, 18:30</td>
-              <td>B-J'innen</td>
-              <td>TGV Dürrenzimmern</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-beilstein-abstatt-abi-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/02F0RK819O000000VS5489B2VUBVHUE0#!/" target="_blank">
-                  link</a>
-              </td>
-          </tr>
-          <tr>
-              <td>01.04, 11:10</td>
-              <td>C2</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td>Türkspor Neckarsulm </td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNO5CCG000000VS548984VS7EIAOE#!/" target="_blank">link</a></td>
-              
-          </tr>
-          <tr>
-              <td>01.04, 12:10</td>
-              <td>D1</td>
-              <td>TSV Biberach</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MICMDO8000000VTVG0001VTR8C1K7#!/" target="_blank">link</a></td>
-          </tr>
-          <tr>
-              <td>01.04, 13:00</td>
-              <td>C1</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td>SGM SSV Gaisbach/... </td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/020CNNEK1G000000VS548984VS7EIAOE#!/" target="_blank">link</a></td>
-          </tr>
-          <tr>
-              <td>01.04, 15:00</td>
-              <td>D2</td>
-              <td>SGM Nordhausen Unteres Zabergäu</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-ilsfeld-abstatt-beilstein-abi-ii-sc-ilsfeld-wuerttemberg/-/saison/2223/team-id/011MIBO1P0000000VTVG0001VTR8C1K7#!/" target="_blank">link</a></td>
-          </tr>
-          <tr>
-              <td>01.04, 16:15</td>
-              <td>A</td>
-              <td>Aramäer Heilbronn</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-sc-abstatt-beilstein-ilsfeld-abi-sc-abstatt-wuerttemberg/-/saison/2223/team-id/011MIB1QNG000000VTVG0001VTR8C1K7#!/" target="_blank">
-                  link</a>
-              </td>
-          </tr>
-          <tr>
-              <td>02.04, 10:30</td>
-              <td>B1</td>
-              <td>SGM TSV Hardthausen</td>
-              <td><strong style="color:orange">SGM ABI</strong></td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-i-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/01OQR89UAC000000VV0AG80NVU94JLT0#!/" target="_blank">link</a></td>
-          </tr>
-          <tr>
-            <td>02.04, 10:30</td>
-              <td>B2</td>
-              <td><strong style="color:orange">SGM ABI</strong> </td>
-              <td>SSV Klingenberg</td>
-              <td><a href="https://www.fussball.de/mannschaft/sgm-tgv-eintracht-beilstein-abstatt-ilsfeld-abi-ii-tgv-eintracht-beilstein-wuerttemberg/-/saison/2223/team-id/02B9N1UOUG000000VS5489B1VU20GQ5T#!/" target="_blank">
-                   link</a></td>
-          </tr>
-          
-      </table>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Timeline</title>
+    <style>
+        /* Timeline styling */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .timeline:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background-color: #ccc;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        .timeline li {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            margin-bottom: 50px;
+            text-align: right;
+        }
+
+        .timeline li:nth-child(odd) {
+            text-align: left;
+            padding: 20px 40px 20px 60px;
+        }
+
+        .timeline li:before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            right: -6px;
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline li:nth-child(odd):before {
+            right: auto;
+            left: -6px;
+        }
+
+        .timeline li h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .timeline li p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .timeline li .dot {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 50%;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Timeline</h1>
+    <ul class="timeline">
+        <li>
+            <div class="content">
+                <h3>Year 1</h3>
+                <p>Event 1</p>
+            </div>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <div class="content">
+                <h3>Year 2</h3>
+                <p>Event 2</p>
+            </div>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <div class="content">
+                <h3>Year 3</h3>
+                <p>Event 3</p>
+            </div>
+            <div class="dot"></div>
+        </li>
+        <li>
+            <div class="content">
+                <h3>Year 4</h3>
+                <p>Event 4</p>
+            </div>
+            <div class="dot"></div>
+        </li>
+    </ul>
+</body>
+
+</html>
