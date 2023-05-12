@@ -12,7 +12,7 @@ import codecs
 # In[22]:
 
 
-df = pd.read_csv('out.csv', sep=",")
+df = pd.read_csv('out_new.csv', sep=",")
 df.head()
 weeks=sorted(df.KW.unique())
 
