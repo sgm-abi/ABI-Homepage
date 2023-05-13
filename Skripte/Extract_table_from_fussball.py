@@ -3,7 +3,7 @@
 
 # In[8]:
 
-
+import os
 import requests
 import csv
 import re
@@ -16,6 +16,8 @@ from datetime import date
 # In[58]:
 
 team_urls = pd.read_csv('Spiele_Links.csv')
+outfile = "out_new.csv";
+os.rename(outfile, "out_old.csv")
 
 for idx in range(0,len(team_urls)):
 
@@ -128,8 +130,6 @@ for idx in range(0,len(team_urls)):
     # In[66]:
     current_date = datetime.date.today()
     date_string = current_date.strftime('%Y-%m-%d')
-    outfile = f'out_{date_string}.csv' 
-    print(outfile)
     #merge columns to table
     if (idx==0):
         df.to_csv(outfile, index=False)
