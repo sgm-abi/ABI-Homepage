@@ -200,6 +200,7 @@ tr:nth-child(even) {
     margin-right: 1rem;
     margin-bottom: 1rem;
     width: 50%;
+    max-width: 350px;
 }
 
 .bildlinks {
@@ -207,6 +208,7 @@ tr:nth-child(even) {
     margin-left: 1rem;
     margin-bottom: 1rem;
     width: 50%;
+    max-width: 350px;
 }
 
 
