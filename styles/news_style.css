@@ -117,6 +117,12 @@ a {
     color: steelblue;
 }
 
+/* bullet points bei Linklisten ausschalten und Zeilenabstand definiert */
+.links li {
+    list-style: none;
+    line-height: 30px;
+}
+
 .footer {
     /*mehrspaltige Ansicht*/
     display: flex;
@@ -141,16 +147,6 @@ a {
     margin-bottom: 1rem;
     font-weight: bold;
     clear: both;
-}
-
-.links li {
-    list-style: none;
-    line-height: 30px;
-}
-
-links li a {
-    text-decoration: none;
-    color: #fff;
 }
 
 .address {

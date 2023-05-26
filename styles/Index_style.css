@@ -4,7 +4,7 @@
 
 body {
     font-size: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.4;
     color: whitesmoke;
     background: rgb(40, 40, 40);
@@ -271,7 +271,7 @@ caption {
     background-color: steelblue;
     padding: 10px;
     position: fixed;
-    top: 0;
+    top: 0px;
     right: 0;
     height: 100%;
 }
@@ -282,13 +282,17 @@ caption {
 }
 
 .event h3 {
-    margin-top: 10;
+    margin-top: 30px;
     color: gold;
 }
 
 
 .event p {
     margin-bottom: 5px;
+}
+
+.sidebar h2 {
+    margin: 40px 0 0 0;
 }
 
 /* Stil für den restlichen Inhalt */
@@ -304,6 +308,10 @@ caption {
         position: static;
         width: 100%;
         height: auto;
+    }
+
+    .sidebar h2 {
+        margin-top: 10px;
     }
 
     .content {

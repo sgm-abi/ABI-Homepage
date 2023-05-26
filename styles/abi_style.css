@@ -26,7 +26,8 @@ Author URI: http://pmf-design.de/
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
   font-family: levenim_mtregular;
@@ -254,7 +255,7 @@ span.kader-text {
 .trainer {
   float: left;
   height: 300px;
-  border: none!important;
+  border: none !important;
 }
 
 .textblock {
@@ -425,9 +426,11 @@ a.mail-link {
   0% {
     left: -160px;
   }
+
   60% {
     left: -160px;
   }
+
   100% {
     left: 50px;
   }
@@ -437,9 +440,11 @@ a.mail-link {
   0% {
     left: -160px;
   }
+
   60% {
     left: -160px;
   }
+
   100% {
     left: 50px;
   }
@@ -449,9 +454,11 @@ a.mail-link {
   0% {
     left: -160px;
   }
+
   60% {
     left: -160px;
   }
+
   100% {
     left: 50px;
   }
@@ -461,9 +468,11 @@ a.mail-link {
   0% {
     left: -160px;
   }
+
   60% {
     left: -160px;
   }
+
   100% {
     left: 50px;
   }
@@ -509,6 +518,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -122px;
   }
@@ -518,6 +528,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -122px;
   }
@@ -527,6 +538,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -122px;
   }
@@ -536,6 +548,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -122px;
   }
@@ -578,6 +591,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -113px;
   }
@@ -587,6 +601,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -113px;
   }
@@ -596,6 +611,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -113px;
   }
@@ -605,6 +621,7 @@ a.mail-link {
   0% {
     right: -428px;
   }
+
   100% {
     right: -113px;
   }
@@ -714,10 +731,12 @@ a.mail-link {
     right: -160px;
     opacity: 1;
   }
+
   60% {
     right: -160px;
     opacity: 1;
   }
+
   100% {
     right: 50px;
     opacity: 1;
@@ -729,10 +748,12 @@ a.mail-link {
     right: -160px;
     opacity: 1;
   }
+
   60% {
     right: -160px;
     opacity: 1;
   }
+
   100% {
     right: 50px;
     opacity: 1;
@@ -744,10 +765,12 @@ a.mail-link {
     right: -160px;
     opacity: 1;
   }
+
   60% {
     right: -160px;
     opacity: 1;
   }
+
   100% {
     right: 50px;
     opacity: 1;
@@ -759,10 +782,12 @@ a.mail-link {
     left: -160px;
     opacity: 1;
   }
+
   60% {
     left: -160px;
     opacity: 1;
   }
+
   100% {
     left: 50px;
     opacity: 1;
@@ -1010,7 +1035,7 @@ h2 {
   margin: 0;
 }
 
-{
+h3 {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 20px;
@@ -1268,7 +1293,7 @@ textarea {
 }
 
 .mannschaft-news .display-posts-listing {
-  background: none!important;
+  background: none !important;
 }
 
 .mannschaft-news .listing-item {
@@ -1433,14 +1458,17 @@ textarea {
   0% {
     left: 20%;
   }
+
   3% {
     left: -moz-calc(20% - 75px);
     left: calc(20% - 75px);
   }
+
   97% {
     left: -moz-calc(20% - 75px);
     left: calc(20% - 75px);
   }
+
   100% {
     left: 20%;
   }
@@ -1450,14 +1478,17 @@ textarea {
   0% {
     left: 20%;
   }
+
   3% {
     left: -webkit-calc(20% - 75px);
     left: calc(20% - 75px);
   }
+
   97% {
     left: -webkit-calc(20% - 75px);
     left: calc(20% - 75px);
   }
+
   100% {
     left: 20%;
   }
@@ -1467,12 +1498,15 @@ textarea {
   0% {
     left: 20%;
   }
+
   3% {
     left: calc(20% - 75px);
   }
+
   97% {
     left: calc(20% - 75px);
   }
+
   100% {
     left: 20%;
   }
@@ -1482,19 +1516,22 @@ textarea {
   0% {
     left: 20%;
   }
+
   3% {
     left: calc(20% - 75px);
   }
+
   97% {
     left: calc(20% - 75px);
   }
+
   100% {
     left: 20%;
   }
 }
 
 .easingslider-265 {
-  z-index: -1!important;
+  z-index: -1 !important;
   float: left;
   position: fixed !important;
   left: 20%;
@@ -1621,7 +1658,7 @@ footer ul li a:hover {
   float: right;
   margin-top: -6px;
   margin-left: 10px;
-  display none;
+  display: none;
 }
 
 .intagram-logo-footer:hover {
@@ -1681,14 +1718,17 @@ footer ul li a:hover {
     left: -moz-calc((100% - 1050px) / 2);
     left: calc((100% - 1050px) / 2);
   }
+
   3% {
     left: -moz-calc(((100% - 1050px) / 2) - 75px);
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   97% {
     left: -moz-calc(((100% - 1050px) / 2) - 75px);
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   100% {
     left: -moz-calc((100% - 1050px) / 2);
     left: calc((100% - 1050px) / 2);
@@ -1700,14 +1740,17 @@ footer ul li a:hover {
     left: -webkit-calc((100% - 1050px) / 2);
     left: calc((100% - 1050px) / 2);
   }
+
   3% {
     left: -webkit-calc(((100% - 1050px) / 2) - 75px);
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   97% {
     left: -webkit-calc(((100% - 1050px) / 2) - 75px);
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   100% {
     left: -webkit-calc((100% - 1050px) / 2);
     left: calc((100% - 1050px) / 2);
@@ -1718,12 +1761,15 @@ footer ul li a:hover {
   0% {
     left: calc((100% - 1050px) / 2);
   }
+
   3% {
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   97% {
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   100% {
     left: calc((100% - 1050px) / 2);
   }
@@ -1733,12 +1779,15 @@ footer ul li a:hover {
   0% {
     left: calc((100% - 1050px) / 2);
   }
+
   3% {
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   97% {
     left: calc(((100% - 1050px) / 2) - 75px);
   }
+
   100% {
     left: calc((100% - 1050px) / 2);
   }
@@ -1850,7 +1899,7 @@ nav .big {
 
 @media only screen and (max-width: 1770px) {
   .easingslider-265 {
-    z-index: -1!important;
+    z-index: -1 !important;
     float: left;
     position: fixed !important;
     left: calc((100% - 1050px) / 2);
@@ -1908,21 +1957,25 @@ nav .big {
   .ein-team {
     display: none;
   }
+
   .ein-ziel {
     display: none;
   }
+
   .tgv-eintracht-schrift {
     position: static;
     float: right;
     margin-top: -117px;
     margin-right: 20%;
   }
+
   .adresse-kontakt {
     float: left;
     display: block;
     width: 100%;
     margin-bottom: 20px;
   }
+
   .galerie-links-inline {
     display: inline;
     float: left;
@@ -1930,9 +1983,11 @@ nav .big {
     font-family: capture_smallzregular;
     text-align: left;
   }
+
   .galerie-links {
     display: none;
   }
+
   #gallery-1 {
     width: 100% !important;
   }
@@ -1960,9 +2015,11 @@ nav .big {
     transform: translate(-50%, -50%);
     z-index: 99;
   }
+
   .galerie-links-inline {
     display: none;
   }
+
   .galerie-links {
     display: inline-block;
   }
@@ -1976,9 +2033,11 @@ nav .big {
     font-family: capture_smallzregular;
     text-align: left;
   }
+
   .galerie-links {
     display: none;
   }
+
   #gallery-1 {
     width: 100% !important;
   }
@@ -1991,24 +2050,31 @@ nav .big {
     margin-top: -117px;
     margin-right: 10%;
   }
+
   .home-nachricht {
     width: 100% !important;
   }
+
   .werbung-mittel {
     width: 100%;
   }
+
   .welcome {
     width: 100%;
   }
+
   .home-news {
     width: 100%;
   }
+
   .einzeiler {
     display: none;
   }
+
   .mehrzeiler {
     display: inline;
   }
+
   #widget1 {
     margin-bottom: 0px;
     margin-top: 20px;
@@ -2019,6 +2085,7 @@ nav .big {
   .tabelle iframe {
     width: 400px !important;
   }
+
   .tabelle {
     width: 400px !important;
     float: right !important;
@@ -2036,32 +2103,39 @@ nav .big {
   .big ul {
     display: none;
   }
+
   .cbp-spmenu li {
     display: block;
     padding-left: 0px;
     padding-right: 0px;
   }
+
   nav.big {
     position: fixed;
     z-index: 999;
     top: 0px;
   }
+
   nav a:hover {
     border-bottom: 1px solid rgba(102, 102, 102, 1);
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
   }
+
   #currentPage a {
     border-bottom: 1px solid rgba(204, 204, 204, 1);
     color: rgba(255, 255, 255, 1) !important;
     text-decoration: none !important;
   }
+
   #header-links {
     display: none;
   }
+
   #header {
     display: none;
   }
+
   #showLeft {
     position: relative;
     width: 40px;
@@ -2073,9 +2147,11 @@ nav .big {
     float: left;
     display: block !important;
   }
+
   footer {
     height: 120px;
   }
+
   footer ul {
     list-style: none;
     padding: 0;
@@ -2084,6 +2160,7 @@ nav .big {
     margin-right: 0;
     margin-left: 30px;
   }
+
   footer ul li {
     display: block;
     line-height: 0px;
@@ -2091,6 +2168,7 @@ nav .big {
     padding-left: 0px;
     padding-right: 0px;
   }
+
   footer span {
     display: block;
     float: right;
@@ -2098,6 +2176,7 @@ nav .big {
     margin-right: 30px;
     color: rgba(255, 255, 255, 1);
   }
+
   #content {
     margin-top: 50px;
   }
@@ -2107,6 +2186,7 @@ nav .big {
   footer {
     height: 160px;
   }
+
   #ueberschrift-container h1 {
     font-size: 20px;
   }
@@ -2116,17 +2196,21 @@ nav .big {
   #header {
     display: none;
   }
+
   #header-links {
     display: none;
   }
+
   nav.big {
     position: fixed;
     z-index: 999;
     top: 0px;
   }
+
   #content {
     margin-top: 50px;
   }
+
   input {
     width: -moz-calc(100% - 14px);
     width: -webkit-calc(100% - 14px);
@@ -2141,6 +2225,7 @@ nav .big {
     border: rgba(0, 0, 0, 1) 2px solid;
     min-width: 0 !important;
   }
+
   textarea {
     width: -moz-calc(100% - 15px);
     width: -webkit-calc(100% - 15px);
@@ -2151,6 +2236,7 @@ nav .big {
     border: rgba(0, 0, 0, 1) 2px solid;
     min-width: 0 !important;
   }
+
   .wpcf7-submit {
     width: 100%;
   }
@@ -2192,15 +2278,19 @@ nav .big {
     height: auto;
     overflow: hidden;
   }
+
   .display-posts-listing .wp-post-image {
     margin-right: 10px !important;
   }
+
   .display-posts-listing {
     background-image: none !important;
   }
+
   #img_cont a {
     width: 27%;
   }
+
   .footer-social {
     float: left;
   }
@@ -2212,6 +2302,7 @@ nav .big {
     margin-left: 30px;
     margin-top: 0px;
   }
+
   footer {
     height: 220px;
   }
@@ -2233,9 +2324,11 @@ nav .big {
   .mannschaft-gross {
     display: none;
   }
+
   .mannschaft-klein {
     display: block !important;
   }
+
   #img_cont a {
     display: table-cell;
     text-align: center;
@@ -2247,6 +2340,7 @@ nav .big {
   .mannschaft-gross {
     display: block;
   }
+
   .mannschaft-klein {
     display: none;
   }
@@ -2376,7 +2470,8 @@ nav .big {
 
 /* Transitions */
 
-.cbp-spmenu, .cbp-spmenu-push {
+.cbp-spmenu,
+.cbp-spmenu-push {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -2395,14 +2490,17 @@ nav .big {
     height: auto;
     border: none !important;
   }
+
   .excerpt {
     width: 100% !important;
     text-align: justify !important;
     ;
   }
+
   #img_cont {
     width: 100%;
   }
+
   #img_cont a {
     width: 46%;
   }
@@ -2416,9 +2514,11 @@ nav .big {
     font-size: 75%;
     height: 110px;
   }
+
   .cbp-spmenu-top {
     top: -110px;
   }
+
   .cbp-spmenu-bottom {
     bottom: -110px;
   }
@@ -2429,12 +2529,16 @@ nav .big {
     font-size: 90%;
     width: 190px;
   }
-  .cbp-spmenu-left, .cbp-spmenu-push-toleft {
+
+  .cbp-spmenu-left,
+  .cbp-spmenu-push-toleft {
     left: -190px;
   }
+
   .cbp-spmenu-right {
     right: -190px;
   }
+
   .cbp-spmenu-push-toright {
     left: 190px;
   }
