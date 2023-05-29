@@ -56,74 +56,76 @@ for idx in range(0, len(team_urls)):
             # add team id
             teams.append(team)
 
-    # Listen mit Datum, Uhrzeit und Team-ID werden in einer Tabelle gespeichert
-    df = pd.DataFrame(list(zip(dates, times, teams)), columns=["Datum", "Zeit", "Team"])
-    df.insert(len(df.columns), "KW", kw)
+        # Listen mit Datum, Uhrzeit und Team-ID werden in einer Tabelle gespeichert
+        df = pd.DataFrame(
+            list(zip(dates, times, teams)), columns=["Datum", "Zeit", "Team"]
+        )
+        df.insert(len(df.columns), "KW", kw)
 
-    # Gegner (Fußballvereine) auslesen (befindet sich in jeder 3. Zeile ab 3. Zeile)
-    for data in table.find_all("tbody"):
-        rows = data.find_all("tr")
-        # 1. Mannschaft (Heim)
-        club1 = list()
-        # 2. Mannschaft (auswärts)
-        club2 = list()
-        for i in range(2, len(rows), 3):
-            # entfernt Sonderzeichen wie Zeilenumbruch (n) und Tab (t)
-            # print(rows[i].text)
-            removedSpace = re.sub(r"\n", "", rows[i].text)
-            removedSpace = re.sub(r"\t", "", removedSpace)
-            removedSpace = re.sub(r":", ";", removedSpace)
-            splitted = removedSpace.split(";")
-            club1.append(splitted[0])
-            club2.append(splitted[1][0:-1])
+        if df.shape[0] > 0:
+            # Gegner (Fußballvereine) auslesen (befindet sich in jeder 3. Zeile ab 3. Zeile)
+            for data in table.find_all("tbody"):
+                rows = data.find_all("tr")
+                # 1. Mannschaft (Heim)
+                club1 = list()
+                # 2. Mannschaft (auswärts)
+                club2 = list()
+                for i in range(2, len(rows), 3):
+                    # entfernt Sonderzeichen wie Zeilenumbruch (n) und Tab (t)
+                    # print(rows[i].text)
+                    removedSpace = re.sub(r"\n", "", rows[i].text)
+                    removedSpace = re.sub(r"\t", "", removedSpace)
+                    removedSpace = re.sub(r":", ";", removedSpace)
+                    splitted = removedSpace.split(";")
+                    club1.append(splitted[0])
+                    club2.append(splitted[1][0:-1])
 
-    # Abspeichern der Heim und Gast-Mannschaft in der Tabelle mit den Spieldaten
-    df.insert(len(df.columns), "Heim", club1)
-    df.insert(len(df.columns), "Gast", club2)
+            # Abspeichern der Heim und Gast-Mannschaft in der Tabelle mit den Spieldaten
+            df.insert(len(df.columns), "Heim", club1)
+            df.insert(len(df.columns), "Gast", club2)
 
-    # Logo von den Mannschaften auslesen (befindet sich in jeder 3. Zeile ab 2. Zeile)
-    for data in table.find_all("tbody"):
-        rows = data.find_all("tr")
-        logos_home = list()
-        logos_guest = list()
-        for i in range(2, len(rows), 3):
-            # entfernt Sonderzeichen wie Zeilenumbruch (n) und Tab (t)
-            logo = rows[i].find_all("div", class_="club-logo")  # rows[i].text
+            # Logo von den Mannschaften auslesen (befindet sich in jeder 3. Zeile ab 2. Zeile)
+            for data in table.find_all("tbody"):
+                rows = data.find_all("tr")
+                logos_home = list()
+                logos_guest = list()
+                for i in range(2, len(rows), 3):
+                    # entfernt Sonderzeichen wie Zeilenumbruch (n) und Tab (t)
+                    logo = rows[i].find_all("div", class_="club-logo")  # rows[i].text
 
-            logo_link = re.findall(r"//(\S+)\">", str(logo))
-            logos_home.append(logo_link[0])
-            logos_guest.append(logo_link[1])
+                    logo_link = re.findall(r"//(\S+)\">", str(logo))
+                    logos_home.append(logo_link[0])
+                    logos_guest.append(logo_link[1])
 
-    # Logo-URLs in der Tabelle abspeichern
-    df.insert(len(df.columns), "Logo Heim", logos_home)
-    df.insert(len(df.columns), "Logo Gast", logos_guest)
+            # Logo-URLs in der Tabelle abspeichern
+            df.insert(len(df.columns), "Logo Heim", logos_home)
+            df.insert(len(df.columns), "Logo Gast", logos_guest)
 
-    # Alle Links zum Spiel und zu den Mannschaften auf fussball.de auslesen
-    links = table.find_all("a")
-    homeLinks = list()
-    guestLinks = list()
-    spielLinks = list()
-    for i in range(2, len(links), 6):
-        homeLinks.append(links[i].get("href"))
-        guestLinks.append(links[i + 1].get("href"))
-        spielLinks.append(links[i + 2].get("href"))
+            # Alle Links zum Spiel und zu den Mannschaften auf fussball.de auslesen
+            links = table.find_all("a")
+            homeLinks = list()
+            guestLinks = list()
+            spielLinks = list()
+            for i in range(2, len(links), 6):
+                homeLinks.append(links[i].get("href"))
+                guestLinks.append(links[i + 1].get("href"))
+                spielLinks.append(links[i + 2].get("href"))
 
-    # Links zur Gesamttabelle hinzufügen
-    if len(df.columns) == len(homeLinks):
-        df.insert(len(df.columns), "home_link", homeLinks)
-        df.insert(len(df.columns), "guest_link", guestLinks)
-        df.insert(len(df.columns), "Spiel", spielLinks)
+            # Links zur Gesamttabelle hinzufügen
+            df.insert(len(df.columns), "home_link", homeLinks)
+            df.insert(len(df.columns), "guest_link", guestLinks)
+            df.insert(len(df.columns), "Spiel", spielLinks)
 
-    numOfGames += df.shape[0]
+        numOfGames += df.shape[0]
 
-    # Gesamttabelle als csv abspeichern
-    # wenn 1. Link, dann wird alte csv-Datei überschrieben
-    # ansonsten werden die Tabellen einfach hinten dran gehängt, so dass sich am Ende alle Spiele
-    # von allen Mannschaften in einer Datei befinden
-    if idx == 0:
-        df.to_csv(outfile, index=False)
-    else:
-        df.to_csv(outfile, mode="a", index=False, header=False)
+        # Gesamttabelle als csv abspeichern
+        # wenn 1. Link, dann wird alte csv-Datei überschrieben
+        # ansonsten werden die Tabellen einfach hinten dran gehängt, so dass sich am Ende alle Spiele
+        # von allen Mannschaften in einer Datei befinden
+        if idx == 0:
+            df.to_csv(outfile, index=False)
+        else:
+            df.to_csv(outfile, mode="a", index=False, header=False)
 
 print("number of games: " + str(numOfGames))
 

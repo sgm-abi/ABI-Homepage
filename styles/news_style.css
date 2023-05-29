@@ -123,6 +123,10 @@ a {
     line-height: 30px;
 }
 
+/*  ---------------------------------------------------
+    DEFINITION DER FUSSLEISTE
+    ---------------------------------------------------
+*/
 .footer {
     /*mehrspaltige Ansicht*/
     display: flex;
