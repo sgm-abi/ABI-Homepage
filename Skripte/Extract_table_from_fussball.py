@@ -185,14 +185,24 @@ for kw in weeks:
                 + kw_data["Heim"][ind].replace("\u200b", "")
                 + "</a></td>\n"
             )
-        html_line += (
-            "\t\t<td>"
-            + '<a href="'
-            + kw_data["guest_link"][ind]
-            + '" target="_blank" >'
-            + kw_data["Gast"][ind].replace("\u200b", "")
-            + "</a></td>\n"
-        )
+        if kw_data["Gast"][ind] == "SGM ABI":
+            html_line += (
+                "\t\t<td>"
+                + '<a href="'
+                + kw_data["guest_link"][ind]
+                + '" target="_blank" class="ABI">'
+                + kw_data["Gast"][ind].replace("\u200b", "")
+                + "</a></td>\n"
+            )
+        else:
+            html_line += (
+                "\t\t<td>"
+                + '<a href="'
+                + kw_data["guest_link"][ind]
+                + '" target="_blank" >'
+                + kw_data["Gast"][ind].replace("\u200b", "")
+                + "</a></td>\n"
+            )
         html_line += (
             "\t\t<td>"
             + '<a href="'
