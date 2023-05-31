@@ -1,118 +1,37 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>My Timeline</title>
-    <style>
-        /* Timeline styling */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 0;
-            list-style: none;
-        }
-
-        .timeline:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            width: 2px;
-            background-color: #ccc;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-
-        .timeline li {
-            position: relative;
-            width: 50%;
-            padding: 20px 40px;
-            margin-bottom: 50px;
-            text-align: right;
-        }
-
-        .timeline li:nth-child(odd) {
-            text-align: left;
-            padding: 20px 40px 20px 60px;
-        }
-
-        .timeline li:before {
-            content: "";
-            position: absolute;
-            top: 20px;
-            right: -6px;
-            width: 12px;
-            height: 12px;
-            background-color: #ccc;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .timeline li:nth-child(odd):before {
-            right: auto;
-            left: -6px;
-        }
-
-        .timeline li h3 {
-            margin-top: 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .timeline li p {
-            margin-bottom: 0;
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        .timeline li .dot {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background-color: #ccc;
-            border-radius: 50%;
-            z-index: 1;
-        }
-    </style>
+  <title>Ideensammlung</title>
 </head>
-
 <body>
-    <h1>My Timeline</h1>
-    <ul class="timeline">
-        <li>
-            <div class="content">
-                <h3>Year 1</h3>
-                <p>Event 1</p>
-            </div>
-            <div class="dot"></div>
-        </li>
-        <li>
-            <div class="content">
-                <h3>Year 2</h3>
-                <p>Event 2</p>
-            </div>
-            <div class="dot"></div>
-        </li>
-        <li>
-            <div class="content">
-                <h3>Year 3</h3>
-                <p>Event 3</p>
-            </div>
-            <div class="dot"></div>
-        </li>
-        <li>
-            <div class="content">
-                <h3>Year 4</h3>
-                <p>Event 4</p>
-            </div>
-            <div class="dot"></div>
-        </li>
-    </ul>
-</body>
+  <h1>Ideensammlung</h1>
+  
+  <h2>Bestehende Ideen:</h2>
+  <ul id="ideen-liste">
+    <li>Idee 1</li>
+    <li>Idee 2</li>
+    <li>Idee 3</li>
+  </ul>
 
+  <h2>Neue Idee hinzufügen:</h2>
+  <form id="ideen-form">
+    <input type="text" id="idee-input" placeholder="Gib eine Idee ein">
+    <button type="submit">Hinzufügen</button>
+  </form>
+
+  <script>
+    // JavaScript-Code zum Hinzufügen der neuen Idee
+    document.getElementById("ideen-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Verhindert das Neuladen der Seite nach dem Absenden des Formulars
+
+      var ideeInput = document.getElementById("idee-input");
+      var ideenListe = document.getElementById("ideen-liste");
+      var neueIdee = document.createElement("li");
+      neueIdee.textContent = ideeInput.value;
+      ideenListe.appendChild(neueIdee);
+
+      ideeInput.value = ""; // Setzt das Eingabefeld zurück
+    });
+  </script>
+</body>
 </html>
