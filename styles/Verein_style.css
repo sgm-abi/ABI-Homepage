@@ -17,7 +17,7 @@ a {
     text-decoration: none;
 }
 
-p{
+p {
     margin: 20px;
 }
 
@@ -26,16 +26,19 @@ h1 {
     line-height: 1.4;
     color: whitesmoke;
 }
-h2{
+
+h2 {
     margin: 20px;
 }
-h3{
+
+h3 {
     margin: 0px;
 }
 
-.text_ohne_margin{
+.text_ohne_margin {
     margin: 20px 0px;
 }
+
 span {
     margin: auto;
     font-size: 2rem;
@@ -127,48 +130,126 @@ span {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 1200px;
 }
-.column{
-    float:left;
-    width:100%;
+
+.column {
+    float: left;
+    width: 100%;
     padding: 20px;
 }
-section{
+
+section {
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 10px;
     Gap: 50px;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    padding: 20px;
+    margin: 10px;
+    max-width: 350px;
+}
+
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
+    .column {
+        width: 100%;
+        display: block;
+    }
 
-    .row{
-        display:block;
+    .row {
+        display: block;
     }
-    .footer{
-        display:block;
+
+    .footer {
+        display: block;
     }
-    .box{
-        display:block;
+
+    .box {
+        display: block;
     }
-    section{
+
+    section {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
 
 .title {
-  color: whitesmoke;
+    color: whitesmoke;
 }
-.subcolumn{
-    float:left;
+
+.subcolumn {
+    float: left;
     margin: 10px;
 }
-.subrow{
+
+.subrow {
     display: grid;
     grid-template-columns: 1fr 3fr;
+}
+
+/*  ---------------------------------------------------
+    DEFINITION DER FUSSLEISTE
+    ---------------------------------------------------
+*/
+.footer {
+    /*mehrspaltige Ansicht*/
+    display: flex;
+    color: #fffefe;
+    padding: 2rem 0;
+    height: auto;
+    /* Abstände zwischen den Spalten */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    clear: both;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.footer h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    clear: both;
+}
+
+.address {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social {
+    display: flex;
+    list-style: none;
+}
+
+.social li {
+    margin: 0 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: magenta;
+    color: white;
 }
