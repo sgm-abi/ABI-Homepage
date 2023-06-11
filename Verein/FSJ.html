@@ -57,29 +57,56 @@
     </p>
 
     <p>Kontakt: fsj-abi@online.de</p>
+    <!--Bildschirm um vergrößerten Bericht darzustellen-->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img id="modal-img" class="modal-content" alt="Bericht in groß">
+    </div>
+
     <h2>2021/2022: Nico Helleis</h2>
+
     <div class="container">
-        <div class="item">
-            <img class="report" src="../images/FSJ/Bericht_Nico_Helleis.png">
+        <div class="gallery">
+            <img src="../images/FSJ/Bericht_Nico_Helleis.png" alt="Bericht von Nico Helleis" onclick="showModal(this)">
         </div>
     </div>
     <h2>2020/2021: Luca Schneider</h2>
     <div class="container">
-        <div class="item">
-            <img class="report" src="../images/FSJ/Ciao_Luca_Willkommen_Nico.png">
+        <div class="gallery">
+            <img src="../images/FSJ/Ciao_Luca_Willkommen_Nico.png" alt="Bericht von Luca Schneider"
+                onclick="showModal(this)">
         </div>
-        <div class="item">
-            <img class="report" src="../images/FSJ/Bericht_Luca_Schneider.png">
+        <div class="gallery">
+            <img src="../images/FSJ/Bericht_Luca_Schneider.png" alt="Bericht von Luca Schneider"
+                onclick="showModal(this)">
         </div>
     </div>
-    <h2>2019/2020: Jana Gerlach</h2>
+    <h2 id="Jana">2019/2020: Jana Gerlach</h2>
     <div class="container">
-        <div class="item">
-            <img class="report" src="../images/FSJ/Ciao_Jana_Willkommen_Luca.png">
+        <div class="gallery">
+            <img src="../images/FSJ/Ciao_Jana_Willkommen_Luca.png" alt="Abschied von Jana, willkommen Luca"
+                onclick="showModal(this)">
         </div>
-        <div class="item">
-            <img class="report" src="../images/FSJ/Bericht_Jana_Gerlach.png">
+        <div class="gallery">
+            <img src="../images/FSJ/Bericht_Jana_Gerlach.png" alt="Bericht von Jana" onclick="showModal(this)">
         </div>
     </div>
+
+    <!--JavaScript-->
+    <script>
+        function showModal(img) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-img");
+
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        //Funktion zum Schließen des vergrößerten Bildes
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
 
 </html>

@@ -162,6 +162,45 @@ section {
     max-width: 320px;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 10px;
+    max-width: 350px;
+}
+
+.gallery img {
+    width: 350px;
+    height: auto;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    display: block;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.modal img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
 /* Display the columns below each other instead of side by side on small screens */
 @media screen and (max-width: 650px) {
     .column {
