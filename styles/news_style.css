@@ -4,7 +4,10 @@
 
 body {
     font-size: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Avenir",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
     line-height: 1.4;
     color: whitesmoke;
     background: rgb(40, 40, 40);
@@ -30,8 +33,7 @@ h2 {
 }
 
 img {
-    width: 100%;
-    float: left;
+    width: 80%;
     margin: 20px 0px 0px 0px;
 }
 
@@ -123,6 +125,10 @@ a {
     line-height: 30px;
 }
 
+/*  ---------------------------------------------------
+    DEFINITION DER FUSSLEISTE
+    ---------------------------------------------------
+*/
 .footer {
     /*mehrspaltige Ansicht*/
     display: flex;
