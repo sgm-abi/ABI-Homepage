@@ -121,7 +121,7 @@ a {
 
 /* bullet points bei Linklisten ausschalten und Zeilenabstand definiert */
 .links li {
-    list-style: none;
+    /*list-style: none;*/
     line-height: 30px;
 }
 
@@ -217,6 +217,10 @@ tr:nth-child(even) {
     margin-left: 1rem;
     margin-bottom: 1rem;
     width: 30%;
+}
+
+.ABI {
+    color: gold;
 }
 
 .grid-container {
