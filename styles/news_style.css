@@ -318,6 +318,11 @@ a {
         flex: 50%;
         max-width: 50%;
     }
+
+    .bildlinks {
+        height: auto;
+        max-width: 100%;
+    }
 }
 
 /* responsive design der Bilder */
@@ -335,5 +340,10 @@ a {
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .bildlinks .bildrechts {
+        height: auto;
+        max-width: 100%;
     }
 }
