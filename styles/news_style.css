@@ -247,6 +247,10 @@ tr:nth-child(even) {
     grid-column: span 2;
 }
 
+.col3_row1 {
+    grid-column: span 3;
+}
+
 .section {
     padding: 10px;
 }
