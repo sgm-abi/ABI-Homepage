@@ -43,7 +43,7 @@ img {
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: #5689C0;
+    background-color: #004aad;
     font-family: Arial;
 }
 
@@ -198,7 +198,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: steelblue;
+    background-color: #004aad;
 }
 
 .bildrechts {
@@ -261,7 +261,7 @@ tr:nth-child(even) {
 }
 
 .menu {
-    border: 10px solid steelblue;
+    border: 10px solid #004aad;
     flex: 0 0 200px;
 }
 
@@ -306,6 +306,20 @@ strong {
 
 .fancy-button:hover {
     background-color: #3e8e41;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.grid-table>div {
+    background-color: #004aad;
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* responsive design der Bilder */
