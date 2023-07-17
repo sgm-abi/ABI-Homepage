@@ -15,7 +15,7 @@ outfile = "All_games_from_fussball_de.csv"
 numOfGames = 0
 
 # rufe alle links aus Spiele_links.csv auf um für jede Mannschaft die noch stattfindenden Spiele zu extrahieren
-for idx in range(0, len(team_urls)):
+for idx in range(0, 1):  # len(team_urls)):
     # load url
     url = team_urls["url"][idx]
     response = requests.get(url)
