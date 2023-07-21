@@ -14,7 +14,7 @@ body {
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: steelblue;
+    background-color: #004aad;
     font-family: Arial;
 }
 
@@ -149,7 +149,7 @@ p {
 }
 
 a {
-    color: steelblue;
+    color: #004aad;
     font-size: 0.9rem
 }
 

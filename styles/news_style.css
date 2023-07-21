@@ -28,8 +28,9 @@ h1 {
 
 h2 {
     color: gold;
-    font-size: 20px;
+    font-size: 25px;
     clear: both;
+    padding-top: 30px;
 }
 
 img {
@@ -322,6 +323,18 @@ strong {
     padding: 20px 0;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
 /* responsive design der Bilder */
 @media screen and (max-width: 600px) {
 
@@ -334,4 +347,11 @@ strong {
         height: auto;
         max-width: 100%;
     }
+
+    /*
+    .grid-container {
+        clear: both;
+        display: grid;
+        grid-template-columns: 1fr;
+    }*/
 }

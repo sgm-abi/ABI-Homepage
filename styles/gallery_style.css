@@ -29,7 +29,7 @@ p {
 
 h1::first-letter {
     font-size: 4rem;
-    color: #5689C0;
+    color: #004aad;
 }
 
 h2 {
@@ -48,7 +48,7 @@ h3 {
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: #5689C0;
+    background-color: #004aad;
     font-family: Arial;
 }
 
