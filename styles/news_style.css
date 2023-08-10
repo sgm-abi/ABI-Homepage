@@ -27,21 +27,24 @@ h1 {
 }
 
 h2 {
-    color: greenyellow;
-    font-size: 20px;
+    color: gold;
+    font-size: 25px;
     clear: both;
+    padding-top: 30px;
 }
 
 img {
-    width: 80%;
-    margin: 20px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px 10px 10px;
+    object-fit: cover;
 }
 
 
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: #5689C0;
+    background-color: #004aad;
     font-family: Arial;
 }
 
@@ -116,7 +119,9 @@ img {
 }
 
 a {
-    color: steelblue;
+    color: #a1e1fa;
+    display: inline-block;
+    padding: 5px;
 }
 
 /* bullet points bei Linklisten ausschalten und Zeilenabstand definiert */
@@ -194,7 +199,7 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: steelblue;
+    background-color: #004aad;
 }
 
 .bildrechts {
@@ -230,7 +235,8 @@ tr:nth-child(even) {
 }
 
 .grid-item {
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
     width: 100%;
 }
 
@@ -247,27 +253,22 @@ tr:nth-child(even) {
     grid-column: span 2;
 }
 
+.col3_row1 {
+    grid-column: span 3;
+}
+
 .section {
     padding: 10px;
 }
 
 .menu {
-    border: 10px solid steelblue;
+    border: 10px solid #004aad;
     flex: 0 0 200px;
 }
 
 .content {
     background-color: rgb(40, 40, 40);
     flex: 1 1 350px;
-}
-
-.container {
-    display: flex;
-}
-
-a {
-    display: inline-block;
-    padding: 5px;
 }
 
 .row {
@@ -290,11 +291,7 @@ a {
 }
 
 strong {
-    color: greenyellow;
-}
-
-a {
-    color: #a1e1fa;
+    color: gold;
 }
 
 .fancy-button {
@@ -302,7 +299,7 @@ a {
     padding: 10px 20px 10px 20px;
     border: solid;
     border-radius: 5px;
-    background-color: greenyellow;
+    background-color: gold;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -312,28 +309,49 @@ a {
     background-color: #3e8e41;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
+.grid-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.grid-table>div {
+    background-color: #004aad;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
 }
 
 /* responsive design der Bilder */
 @media screen and (max-width: 600px) {
-    img {
-        max-width: 100%;
-        height: auto;
-    }
 
     video {
         max-width: 100%;
         height: auto;
     }
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .bildlinks .bildrechts {
+        height: auto;
+        max-width: 100%;
     }
+
+    /*
+    .grid-container {
+        clear: both;
+        display: grid;
+        grid-template-columns: 1fr;
+    }*/
 }

@@ -4,17 +4,17 @@
 
 body {
     font-size: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Avenir", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.4;
     color: whitesmoke;
-    background: rgb(40,40,40);
-    margin:0;
+    background: rgb(40, 40, 40);
+    margin: 0;
 }
 
 /* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: steelblue;
+    background-color: #004aad;
     font-family: Arial;
 }
 
@@ -88,35 +88,45 @@ body {
     font-weight: bold;
 }
 
-img{
+img {
     width: 100%;
     margin: 10px 0;
 }
-.qrcode{
+
+.qrcode {
     width: 30%;
     height: auto;
     margin: 20px;
 }
-h1{
+
+h1 {
     margin: 20px;
 }
-h2{
-    margin: 0;
-}
-p{
-    margin: 20px 0px;
+
+h2 {
+    margin: 20px;
 }
 
-.column{
-    float:left;
-    width:100%;
+h3 {
+    color: gold;
+}
+
+p {
+    margin: 20px;
+}
+
+.column {
+    float: left;
+    width: 100%;
     padding: 20px;
 }
-.subcolumn{
-    float:left;
-    
+
+.subcolumn {
+    float: left;
+
 }
-.subrow{
+
+.subrow {
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
@@ -126,81 +136,91 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.footer{
+
+.footer {
     /*mehrspaltige Ansicht*/
     display: flex;
-    color:#fffefe;
+    color: #fffefe;
     padding: 2rem 0;
     height: auto;
     /* Abstände zwischen den Spalten */
     justify-content: space-around;
     flex-wrap: wrap;
 }
-a{
-    color:steelblue;
+
+a {
+    color: #004aad;
     font-size: 0.9rem
 }
-.box{
-    display:flex;
+
+.box {
+    display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0px;
 }
 
-.footer h2{
+.footer h2 {
     font-size: 1.3rem;
-    font-weight:bold;
+    font-weight: bold;
 }
 
-.links li{
+.links li {
     list-style: none;
     line-height: 20px;
 }
 
-links li a{
+links li a {
     text-decoration: none;
     color: #fff;
     font-size: 10px;
 }
 
-.address{
-    text-align:center;
-    margin-bottom:10px;
+.address {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.social{
-    display:flex;
+.social {
+    display: flex;
     list-style: none;
 }
-.social li{
+
+.social li {
     margin: 0 8px;
     cursor: pointer;
     font-size: 16px;
 }
-.fa:hover{
+
+.fa:hover {
     opacity: 0.7;
 }
-.fa-facebook{
+
+.fa-facebook {
     background: #3B5998;
     color: white;
 }
-.fa-instagram{
+
+.fa-instagram {
     background: magenta;
     color: white;
 }
-.description{
+
+.description {
     margin: 20px;
 }
 
-@media screen and (max-width: 530px){
+@media screen and (max-width: 530px) {
 
-    .row{
-        display:block;
+    .row {
+        display: block;
     }
-    .footer{
-        display:block;
+
+    .footer {
+        display: block;
     }
-    .box{
-        display:block;
+
+    .box {
+        display: block;
     }
 }
