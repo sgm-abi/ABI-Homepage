@@ -6,3 +6,6 @@ Inhalt:
 
 * index.html: Das ist die Startseite von ABI, die angezeigt wird, wenn https://sgm-abi.de aufgerufen wird.
 * news.html: Enthält alle Spielberichte nach Jahr und Monat sortiert. Außerdem kann man 
+
+> [!NOTE]
+> Jeder kann dieses Verzeichnis sehen und runterladen aber keine kann Änderungen vornehmen.
