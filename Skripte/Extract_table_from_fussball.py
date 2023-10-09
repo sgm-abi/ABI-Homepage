@@ -189,7 +189,7 @@ for kw in weeks:
             )
         else:
             player = kw_data["Heim"][ind]
-            player = player if len(player)<16 else f"{player[0:15]}..."
+            player = player if len(player)<15 else f"{player[0:14]}..."
             html_line += (
                 "\t\t<td>"
                 + '<a href="'
@@ -209,7 +209,7 @@ for kw in weeks:
             )
         else:
             player = kw_data["Gast"][ind]
-            player = player if len(player)<16 else f"{player[0:15]}..."
+            player = player if len(player)<15 else f"{player[0:14]}..."
             html_line += (
                 "\t\t<td>"
                 + '<a href="'
