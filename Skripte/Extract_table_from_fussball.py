@@ -171,6 +171,7 @@ for kw in weeks:
 
     f = open(filename, "a")
     for ind in kw_data.index:
+
         html_line = "\t<tr>\n"
         html_line += (
             "\t\t<td>" + kw_data["Datum"][ind] + ", " + kw_data["Zeit"][ind] + "</td>\n"
@@ -187,12 +188,14 @@ for kw in weeks:
                 + "</a></td>\n"
             )
         else:
+            player = kw_data["Heim"][ind]
+            player = player if len(player)<16 else f"{player[0:15]}..."
             html_line += (
                 "\t\t<td>"
                 + '<a href="'
                 + kw_data["home_link"][ind]
                 + '" target="_blank">'
-                + kw_data["Heim"][ind].replace("\u200b", "")
+                + player.replace("\u200b", "")
                 + "</a></td>\n"
             )
         if kw_data["Gast"][ind] == "SGM ABI":
@@ -205,12 +208,14 @@ for kw in weeks:
                 + "</a></td>\n"
             )
         else:
+            player = kw_data["Gast"][ind]
+            player = player if len(player)<16 else f"{player[0:15]}..."
             html_line += (
                 "\t\t<td>"
                 + '<a href="'
                 + kw_data["guest_link"][ind]
                 + '" target="_blank" >'
-                + kw_data["Gast"][ind].replace("\u200b", "")
+                + player.replace("\u200b", "")
                 + "</a></td>\n"
             )
         html_line += (
