@@ -335,6 +335,22 @@ strong {
     height: auto;
 }
 
+.auto-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-gap: 10px;
+}
+
+.auto-grid-item {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 70px;
+}
+
 /* responsive design der Bilder */
 @media screen and (max-width: 600px) {
 
