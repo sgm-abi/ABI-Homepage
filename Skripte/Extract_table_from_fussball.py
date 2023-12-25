@@ -14,9 +14,9 @@ team_urls = pd.read_csv("Spiele_Links.csv")
 outfile = "All_games_from_fussball_de.csv"
 numOfGames = 0
 print(len(team_urls))
-
+# erzeuge definition
 # rufe alle links aus Spiele_links.csv auf um für jede Mannschaft die noch stattfindenden Spiele zu extrahieren
-for idx in range(0,len(team_urls)):
+for idx in range(0, len(team_urls)):
     # load url
     url = team_urls["url"][idx]
     response = requests.get(url)
@@ -33,7 +33,6 @@ for idx in range(0,len(team_urls)):
     print(team)
 
     try:
-
         # Datum und Liga auslesen (befindet sich in jeder 3. Zeile ab 2. Zeile)
         for data in table.find_all("tbody"):
             rows = data.find_all("tr")
@@ -98,7 +97,9 @@ for idx in range(0,len(team_urls)):
                     logos_guest = list()
                     for i in range(2, len(rows), 3):
                         # entfernt Sonderzeichen wie Zeilenumbruch (n) und Tab (t)
-                        logo = rows[i].find_all("div", class_="club-logo")  # rows[i].text
+                        logo = rows[i].find_all(
+                            "div", class_="club-logo"
+                        )  # rows[i].text
 
                         logo_link = re.findall(r"//(\S+)\">", str(logo))
                         logos_home.append(logo_link[0])
@@ -134,9 +135,8 @@ for idx in range(0,len(team_urls)):
             else:
                 df.to_csv(outfile, mode="a", index=False, header=False)
 
-
     except:
-        print('no data')
+        print("no data")
 print("number of games: " + str(numOfGames))
 
 df = pd.read_csv(outfile, sep=",")
@@ -171,7 +171,6 @@ for kw in weeks:
 
     f = open(filename, "a")
     for ind in kw_data.index:
-
         html_line = "\t<tr>\n"
         html_line += (
             "\t\t<td>" + kw_data["Datum"][ind] + ", " + kw_data["Zeit"][ind] + "</td>\n"
@@ -189,7 +188,7 @@ for kw in weeks:
             )
         else:
             player = kw_data["Heim"][ind]
-            player = player if len(player)<15 else f"{player[0:14]}..."
+            player = player if len(player) < 15 else f"{player[0:14]}..."
             html_line += (
                 "\t\t<td>"
                 + '<a href="'
@@ -209,7 +208,7 @@ for kw in weeks:
             )
         else:
             player = kw_data["Gast"][ind]
-            player = player if len(player)<15 else f"{player[0:14]}..."
+            player = player if len(player) < 15 else f"{player[0:14]}..."
             html_line += (
                 "\t\t<td>"
                 + '<a href="'
