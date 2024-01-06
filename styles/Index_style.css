@@ -170,6 +170,7 @@ a {
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  background-color: rgb(40,40,40);
 }
 
 .footer h2 {
