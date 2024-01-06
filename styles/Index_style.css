@@ -249,7 +249,7 @@ tr:nth-child(odd) {
 /*Design der Buttons, die für den Tab-Inhalt genutzt werden*/
 .tab button {
   background-color: inherit;
-  font-size: 18px;
+  font-size: 16px;
   float: left;
   border: none;
   outline: none;
