@@ -54,8 +54,9 @@ h2 {
 }
 
 caption {
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 h3 {
@@ -182,7 +183,7 @@ a {
   line-height: 30px;
 }
 
-links li a {
+.links li a {
   text-decoration: none;
   color: #fff;
 }
@@ -264,7 +265,7 @@ tr:nth-child(odd) {
 
 /* create an active/current tablink class */
 .tab button.active {
-  background-color: #004aad;
+  background-color:red;
   color: white;
 }
 
@@ -272,16 +273,14 @@ tr:nth-child(odd) {
   display: none;
   padding: 20px 20px;
   border-top: none;
-  background-image: url("../images/Verein/Gras.jpg");
+  background-color: #004aad;
+  /*background-image: url("../images/Verein/Gras.jpg");*/
 }
 
 figure {
   margin: 20px 0 20px 0;
 }
 
-caption {
-  font-size: 24px;
-}
 
 /* Stil für die Seitenleiste */
 .sidebar {
