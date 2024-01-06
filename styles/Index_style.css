@@ -17,10 +17,7 @@ body {
   grid-gap: 10px;
 }
 
-.box {
-  background-color: #ccc;
-  padding: 20px;
-}
+
 
 main {
   margin: 0px;
@@ -173,6 +170,7 @@ a {
   background-color: rgb(40,40,40);
 }
 
+
 .footer h2 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
@@ -245,6 +243,7 @@ tr:nth-child(odd) {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  border-radius: 10px;
 }
 
 /*Design der Buttons, die für den Tab-Inhalt genutzt werden*/
@@ -275,6 +274,7 @@ tr:nth-child(odd) {
   padding: 20px 20px;
   border-top: none;
   background-color: #004aad;
+  border-radius: 10px;
   /*background-image: url("../images/Verein/Gras.jpg");*/
 }
 
