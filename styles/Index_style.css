@@ -254,7 +254,7 @@ tr:nth-child(odd) {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 10px 10px;
   transition: 0.3s;
 }
 
