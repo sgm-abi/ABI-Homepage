@@ -214,8 +214,8 @@ section {
 /* Define slide show */
 .slides {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 1fr;
+    height:300px;
 }
 
 .slides::after {
@@ -296,23 +296,7 @@ section {
     animation-delay: 1.8s;
 }
 
-.timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-/* the actual timeline (vertical ruler) */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: white;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-}
 
 /*Container around the content */
 .container {
@@ -322,62 +306,6 @@ section {
     width: 50%;
 }
 
-/* the circle on the timeline */
-.container::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    right: -17px;
-    background-color: rgb(40, 40, 40);
-    border: 4px solid whitesmoke;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-/* place the container to the left */
-.left {
-    left: 0;
-}
-
-/* place the container to the right */
-.right {
-    left: 50%;
-}
-
-/* add arrow to the left container (pointing right) */
-.left::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white
-}
-
-/* add arrow to the right container (pointing left) */
-.right::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0px;
-    border-color: transparent white transparent transparent;
-}
-
-/* fix the circle for containers on the right side */
-.right::after {
-    left: -16px;
-}
 
 .content {
     padding: 20px 30px;
