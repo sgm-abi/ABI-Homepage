@@ -24,6 +24,7 @@ h1 {
     color: whitesmoke;
     font-size: 30px;
     clear: both;
+    max-width: 900px;
 }
 
 h2 {
@@ -39,7 +40,9 @@ img {
     margin: 10px 10px 10px 10px;
     object-fit: cover;
 }
-
+p{
+    max-width: 900px;
+}
 
 /* Navbar container */
 .navbar {
