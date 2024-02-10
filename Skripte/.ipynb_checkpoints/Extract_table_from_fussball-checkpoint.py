@@ -14,7 +14,6 @@ team_urls = pd.read_csv("Spiele_Links.csv")
 outfile = "All_games_from_fussball_de.csv"
 numOfGames = 0
 print(len(team_urls))
-df = pd.DataFrame()
 # erzeuge definition
 # rufe alle links aus Spiele_links.csv auf um für jede Mannschaft die noch stattfindenden Spiele zu extrahieren
 for idx in range(0, len(team_urls)):
@@ -48,29 +47,19 @@ for idx in range(0, len(team_urls)):
                 cleanString = re.sub(r" ", "", cleanString)
                 splitted = cleanString.split(",")
 
-                if len(splitted) == 3:
+                # Datum wird extrahiert um die KW auszurechnen und Datum und Uhrzeit separat abzuspeichern
+                try:
                     date_split = splitted[1].split(".")
-                    datum = datetime.date(
-                        int(date_split[2]) + 2000,
-                        int(date_split[1]),
-                        int(date_split[0]),
-                    )
-                    kw.append(datum.isocalendar()[1])
-                    dates.append(splitted[1])
-                    times.append(splitted[2].encode("utf-8").decode("utf-8"))
-                else:
-                    date_split = prev_date[1].split(".")
-                    datum = datetime.date(
-                        int(date_split[2]) + 2000,
-                        int(date_split[1]),
-                        int(date_split[0]),
-                    )
-                    kw.append(datum.isocalendar()[1])
-                    dates.append(prev_date[1])
-                    times.append(splitted[0].encode("utf-8").decode("utf-8"))
-                teams.append(team)
-                prev_date = splitted
+                except:
+                    continue
 
+                datum = datetime.date(
+                    int(date_split[2]) + 2000, int(date_split[1]), int(date_split[0])
+                )
+                kw.append(datum.isocalendar()[1])
+                dates.append(splitted[1])
+                times.append(splitted[2])
+                # add team id
                 teams.append(team)
 
             # Listen mit Datum, Uhrzeit und Team-ID werden in einer Tabelle gespeichert
