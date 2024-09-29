@@ -35,7 +35,7 @@ img {
 .auto-grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 3px;
 }
 
 .auto-grid-item {
