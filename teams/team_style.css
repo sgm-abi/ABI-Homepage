@@ -17,6 +17,9 @@ body {
     background-color: #004aad;
     font-family: Arial;
 }
+a {
+  color: #a1e1fa;
+}
 
 /* Links inside the navbar */
 .navbar a {
