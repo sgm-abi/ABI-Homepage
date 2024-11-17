@@ -1,99 +1,113 @@
 <!DOCTYPE html>
 <html lang="de">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SGM ABI Homepage" />
-    <link rel="icon" href="images/ABI Logo-3-2.1.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/ABI Logo-3-2.1.png" type="image/png" size="180x180">
-    <title>SGM ABI Start</title>
-    <link rel="stylesheet" href="../styles/Verein_style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="SGM ABI Homepage" />
+        <link rel="icon" href="images/ABI Logo-3-2.1.png" type="image/png">
+        <link rel="apple-touch-icon" href="images/ABI Logo-3-2.1.png"
+            type="image/png" size="180x180">
+        <title>SGM ABI Start</title>
+        <link rel="stylesheet" href="../styles/Verein_style.css">
+    </head>
 
-<body>
-    <div class="navbar">
-        <a href="../index.html" class="aktuell">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn">Verein
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="../Verein/Foerderverein.html">Förderverein ABI</a>
-                <a href="../Verein/Vorstand.html">ABI Vorstand</a>
-                <a href="../Verein/Rat.html">ABI Rat</a>
-                <a href="../Verein/FSJ.html">FSJ bei ABI</a>
-                <a href="../Verein/Dribbling.html">Dribbling - Das Magazin <sup><span
-                            style="color:red;font-size: smaller">NEU</span></sup></a>
+    <body>
+        <div class="navbar">
+            <a href="../index.html" class="aktuell">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Verein
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../Verein/Foerderverein.html">Förderverein ABI</a>
+                    <a href="../Verein/Vorstand.html">ABI Vorstand</a>
+                    <a href="../Verein/Rat.html">ABI Rat</a>
+                    <a href="../Verein/FSJ.html">FSJ bei ABI</a>
+                    <a href="../Verein/Dribbling.html">Dribbling - Das Magazin
+                        <sup><span
+                                style="color:red;font-size: smaller">NEU</span></sup></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Training & Teams
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../teams/Trainingsinformationen.html">Allgemeine
+                        Infos</a>
+                    <a href="https://sgm-abi.de/blog/a-junioren/">A-Junioren</a>
+                    <a href="https://sgm-abi.de/blog/b-junioren/">B-Junioren</a>
+                    <a
+                        href="https://sgm-abi.de/blog/b-juniorinnen/">B-Juniorinnen</a>
+                    <a href="https://sgm-abi.de/blog/c-junioren/">C-Junioren</a>
+                    <a
+                        href="https://sgm-abi.de/blog/c-juniorinnen/">C-Juniorinnen</a>
+                    <a href="../teams/D-Junioren.html">D-Junioren</a>
+                    <a
+                        href="https://sgm-abi.de/blog/d-juniorinnen/">D-Juniorinnen</a>
+                    <a href="../teams/E-Junioren.html">E-Junioren</a>
+                    <a
+                        href="https://sgm-abi.de/blog/e-juniorinnen/">E-Juniorinnen</a>
+                    <a href="../teams/F-Junioren.html">F-Junioren</a>
+                    <a href="../teams/G-Junioren.html">G-Junioren (Bambini)</a>
+                </div>
+            </div>
+            <a href="../news.html">News</a>
+            <a href="../gallery.html">Events</a>
+        </div>
+        <h1>ABI-Kinder- und Jugendfußball e.V.</h1>
+        <h2>FSJ bei ABI</h2>
+        <p>Diese Stelle hat die Aufgabe, den ABI-Rat hauptamtlich zu
+            unterstützen. Dazu gehören neben organisatorischen
+            Aufgaben auch das Betreuen von ABI-Teams und das Leiten von
+            Sport-AGs in den Schulen der beteiligten Gemeiden.
+        </p>
+
+        <p>Kontakt: fsj-abi@online.de</p>
+        <!--Bildschirm um vergrößerten Bericht darzustellen-->
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img id="modal-img" class="modal-content" alt="Bericht in groß">
+        </div>
+
+        <h2>2021/2022: Nico Helleis</h2>
+
+        <div class="container">
+            <div class="gallery">
+                <img src="../images/FSJ/Bericht_Nico_Helleis.png"
+                    alt="Bericht von Nico Helleis" onclick="showModal(this)">
             </div>
         </div>
-        <div class="dropdown">
-            <button class="dropbtn">Training & Teams
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="../teams/Trainingsinformationen.html">Allgemeine Infos</a>
-                <a href="../teams/A-Junioren.html">A-Junioren</a>
-                <a href="../teams/B-Junioren.html">B-Junioren</a>
-                <a href="../teams/B-Juniorinnen.html">B-Juniorinnen</a>
-                <a href="../teams/C-Junioren.html">C-Junioren</a>
-                <a href="../teams/C-Juniorinnen.html">C-Juniorinnen</a>
-                <a href="../teams/D-Junioren.html">D-Junioren</a>
-                <a href="../teams/D-Juniorinnen.html">D-Juniorinnen</a>
-                <a href="../teams/E-Junioren.html">E-Junioren</a>
-                <a href="../teams/E-Juniorinnen.html">E-Juniorinnen</a>
-                <a href="../teams/F-Junioren.html">F-Junioren</a>
-                <a href="../teams/G-Junioren.html">G-Junioren (Bambini)</a>
+        <h2>2020/2021: Luca Schneider</h2>
+        <div class="container">
+            <div class="gallery">
+                <img src="../images/FSJ/Ciao_Luca_Willkommen_Nico.png"
+                    alt="Bericht von Luca Schneider"
+                    onclick="showModal(this)">
+            </div>
+            <div class="gallery">
+                <img src="../images/FSJ/Bericht_Luca_Schneider.png"
+                    alt="Bericht von Luca Schneider"
+                    onclick="showModal(this)">
             </div>
         </div>
-        <a href="../news.html">News</a>
-        <a href="../gallery.html">Events</a>
-    </div>
-    <h1>ABI-Kinder- und Jugendfußball e.V.</h1>
-    <h2>FSJ bei ABI</h2>
-    <p>Diese Stelle hat die Aufgabe, den ABI-Rat hauptamtlich zu unterstützen. Dazu gehören neben organisatorischen
-        Aufgaben auch das Betreuen von ABI-Teams und das Leiten von Sport-AGs in den Schulen der beteiligten Gemeiden.
-    </p>
+        <h2 id="Jana">2019/2020: Jana Gerlach</h2>
+        <div class="container">
+            <div class="gallery">
+                <img src="../images/FSJ/Ciao_Jana_Willkommen_Luca.png"
+                    alt="Abschied von Jana, willkommen Luca"
+                    onclick="showModal(this)">
+            </div>
+            <div class="gallery">
+                <img src="../images/FSJ/Bericht_Jana_Gerlach.png"
+                    alt="Bericht von Jana" onclick="showModal(this)">
+            </div>
+        </div>
 
-    <p>Kontakt: fsj-abi@online.de</p>
-    <!--Bildschirm um vergrößerten Bericht darzustellen-->
-    <div id="modal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img id="modal-img" class="modal-content" alt="Bericht in groß">
-    </div>
-
-    <h2>2021/2022: Nico Helleis</h2>
-
-    <div class="container">
-        <div class="gallery">
-            <img src="../images/FSJ/Bericht_Nico_Helleis.png" alt="Bericht von Nico Helleis" onclick="showModal(this)">
-        </div>
-    </div>
-    <h2>2020/2021: Luca Schneider</h2>
-    <div class="container">
-        <div class="gallery">
-            <img src="../images/FSJ/Ciao_Luca_Willkommen_Nico.png" alt="Bericht von Luca Schneider"
-                onclick="showModal(this)">
-        </div>
-        <div class="gallery">
-            <img src="../images/FSJ/Bericht_Luca_Schneider.png" alt="Bericht von Luca Schneider"
-                onclick="showModal(this)">
-        </div>
-    </div>
-    <h2 id="Jana">2019/2020: Jana Gerlach</h2>
-    <div class="container">
-        <div class="gallery">
-            <img src="../images/FSJ/Ciao_Jana_Willkommen_Luca.png" alt="Abschied von Jana, willkommen Luca"
-                onclick="showModal(this)">
-        </div>
-        <div class="gallery">
-            <img src="../images/FSJ/Bericht_Jana_Gerlach.png" alt="Bericht von Jana" onclick="showModal(this)">
-        </div>
-    </div>
-
-    <!--JavaScript-->
-    <script>
+        <!--JavaScript-->
+        <script>
         function showModal(img) {
             var modal = document.getElementById("modal");
             var modalImg = document.getElementById("modal-img");
@@ -109,4 +123,4 @@
         }
     </script>
 
-</html>
+    </html>
