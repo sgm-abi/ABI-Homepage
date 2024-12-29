@@ -339,10 +339,6 @@ figure {
     margin-right: 10px;
   }
 
-            /* Für kleine Bildschirme */
-    .form {
-        width: 100%; /* Abschnitte werden einspaltig */
-      }
 
   /* Display the columns below each other instead of side by side on small screens */
   table,
