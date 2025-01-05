@@ -169,10 +169,8 @@ for kw in weeks:
     table_head += "\t<caption>Spiele der " + str(kw) + ". KW</caption>\n"
     table_head += "\t<tr>\n"
     table_head += "\t\t<th>Datum</th>\n"
-    table_head += "\t\t<th>ABI Team</th>\n"
-    table_head += "\t\t<th>Heim</th>\n"
-    table_head += "\t\t<th>Gast</th>\n"
-    table_head += "\t\t<th>Ergebnis</th>\n"
+    table_head += "\t\t<th>Team</th>\n"
+    table_head += "\t\t<th>Ereignis</th>\n"
     table_head += "\t</tr>"
     # print(table_head)
     f = open(filename, "w")
@@ -186,55 +184,39 @@ for kw in weeks:
         html_line += (
             "\t\t<td>" + kw_data["Datum"][ind] + ", " + kw_data["Zeit"][ind] + "</td>\n"
         )
-        html_line += "\t\t<td>" + kw_data["Team"][ind] + "</td>\n"
+        html_line += (
+            "\t\t<td>"
+            + kw_data["Team"][ind]
+            + "</td>\n"
+            + "\t\t<td>"
+            + '<a href="'
+            + kw_data["Spiel"][ind]
+            + '" target="_blank">'
+        )
         if kw_data["Heim"][ind] == "SGM ABI":
-            print("Heimspiel")
             html_line += (
-                "\t\t<td>"
-                + '<a href="'
-                + kw_data["home_link"][ind]
-                + '" target="_blank" class="ABI">'
-                + kw_data["Heim"][ind].replace("\u200b", "")
-                + "</a></td>\n"
+                kw_data["Heim"][ind].replace("\u200b", "")
+                + " "
+                + kw_data["Team"][ind]
+                + " vs. "
             )
         else:
             player = kw_data["Heim"][ind]
-            player = player if len(player) < 15 else f"{player[0:14]}..."
-            html_line += (
-                "\t\t<td>"
-                + '<a href="'
-                + kw_data["home_link"][ind]
-                + '" target="_blank">'
-                + player.replace("\u200b", "")
-                + "</a></td>\n"
-            )
+            player = player if len(player) < 44 else f"{player[0:45]}..."
+            html_line += player.replace("\u200b", "") + " vs. "
         if kw_data["Gast"][ind] == "SGM ABI":
             html_line += (
-                "\t\t<td>"
-                + '<a href="'
-                + kw_data["guest_link"][ind]
-                + '" target="_blank" class="ABI">'
+                " "
                 + kw_data["Gast"][ind].replace("\u200b", "")
-                + "</a></td>\n"
+                + " "
+                + kw_data["Team"][ind]
+                + " "
             )
         else:
             player = kw_data["Gast"][ind]
-            player = player if len(player) < 15 else f"{player[0:14]}..."
-            html_line += (
-                "\t\t<td>"
-                + '<a href="'
-                + kw_data["guest_link"][ind]
-                + '" target="_blank" >'
-                + player.replace("\u200b", "")
-                + "</a></td>\n"
-            )
-        html_line += (
-            "\t\t<td>"
-            + '<a href="'
-            + kw_data["Spiel"][ind]
-            + '" target="_blank">link</a>'
-            + "</td>\n"
-        )
+            player = player if len(player) < 44 else f"{player[0:45]}..."
+            html_line += " " + player.replace("\u200b", "") + " "
+        html_line += "</a>" + "</td>\n"
         html_line += "\t</tr>\n"
 
         f.write(html_line)
