@@ -1,0 +1,33 @@
+name: ABI Fussball Widgets aktualisieren
+
+on:
+  schedule:
+    # Täglich 18:00 Uhr (UTC+1 = 17:00 UTC im Winter, 16:00 UTC im Sommer)
+    # Wir nehmen 16:00 UTC → passt für MESZ (Sommer, UTC+2)
+    - cron: "0 16 * * *"
+  workflow_dispatch:  # Manueller Start per Knopf in GitHub möglich
+
+jobs:
+  update-widgets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten installieren
+        run: pip install requests beautifulsoup4 paramiko
+
+      - name: Widgets generieren und hochladen
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASS }}
+          SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
+        run: python Skripte/fussball_widget_scraper.py
