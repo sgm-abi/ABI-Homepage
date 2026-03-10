@@ -482,7 +482,7 @@ for ind in kw_data.index:
 
 stand = heute.strftime("%d.%m.%Y")
 aktuelle_spiele_html = f"""<!-- ABI Aktuelle Spiele -->
-<div style="margin:1em 0;overflow-x:auto;text-align:left">
+<div class="aktuelle" style="margin:1em 0;overflow-x:auto;text-align:left">
   <div {S_TITEL}>⚽ Aktuelle Spiele ({heute.strftime('%d.%m.')} – {bis.strftime('%d.%m.%y')})</div>
   <table {S_TABLE}>
     <thead>
