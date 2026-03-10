@@ -21,7 +21,7 @@ jobs:
           python-version: "3.12"
 
       - name: Abhängigkeiten installieren
-        run: pip install requests beautifulsoup4 paramiko
+        run: pip install requests beautifulsoup4 paramiko pandas
 
       - name: Widgets generieren und hochladen
         env:
