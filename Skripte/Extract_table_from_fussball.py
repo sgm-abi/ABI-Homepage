@@ -373,7 +373,7 @@ alle_teams_html = f"""<style>
     <tbody>
 {rows_html}    </tbody>
   </table>
-  <p class="at-quelle"><a href="https://www.fussball.de" target="_blank" rel="noopener">fussball.de</a> &nbsp;|&nbsp; Stand: {stand_alle}</p>
+  <p style="font-size:12px;color:#aaa;margin-top:5px;text-align:right"><a href="https://www.fussball.de" target="_blank" rel="noopener">fussball.de</a> &nbsp;|&nbsp; Stand: {stand_alle}</p>
 </div>"""
 
 generated_html_files = []
