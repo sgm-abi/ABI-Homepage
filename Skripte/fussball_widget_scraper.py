@@ -412,12 +412,12 @@ def sftp_upload(local_files: list[str]):
         transport.connect(username=SFTP_USER, password=SFTP_PASS)
         sftp = paramiko.SFTPClient.from_transport(transport)
 
-        # Verzeichnis anlegen falls nicht vorhanden
+        # Verzeichnis anlegen falls nicht vorhanden (Fehler ignorieren wenn schon da)
         try:
-            sftp.stat(SFTP_REMOTE_DIR)
-        except FileNotFoundError:
             sftp.mkdir(SFTP_REMOTE_DIR)
             print(f"  📁 Verzeichnis angelegt: {SFTP_REMOTE_DIR}")
+        except Exception:
+            pass  # Ordner existiert bereits – alles gut
 
         for local_path in local_files:
             filename = os.path.basename(local_path)
