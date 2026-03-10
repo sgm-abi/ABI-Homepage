@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+
+% Formular-Einstellungen global festlegen
+\hypersetup{
+	pdftitle={Mein großes Formular},
+	pdfpagemode=UseNone,
+	pdfstartview=FitH
+}
+
+\newcommand{\dreierwahl}[2]{% #1=Name, #2=Fragetext
+	#2 & \ChoiceMenu[radio, name=#1, radiosymbol=\ding{108}]{}{ja=J} 
+	& \ChoiceMenu[radio, name=#1, radiosymbol=\ding{108}]{}{nein=N} 
+	& \ChoiceMenu[radio, name=#1, radiosymbol=\ding{108}]{}{vielleicht=V} \\
+}
+
+\begin{document}
+	
+	\section*{Anamnesebogen (Beispiel f\"ur 100+ Felder)}
+	
+	\begin{Form} % Wichtig: Alles muss innerhalb der Form-Umgebung stehen
+\noindent % Verhindert Einrückung der Tabelle
+\begin{tabular}{@{}p{4cm} l}
+	\textbf{Name:}         & \TextField[name=name, width=8cm, height=1cm, charsize=14pt]{} \\[2ex]
+	\textbf{Vorname (hoch):} & \TextField[name=vorname, width=8cm, height=1cm, charsize=14pt]{} \\[5ex]
+	\textbf{Geburt:}       & \TextField[name=geburt, width=4cm, height=0.5cm, bordercolor={0.8 0.8 0.8}]{} \\
+\end{tabular}
+
+\begin{description}
+	\item[Name:] \TextField[name=name, width=8cm]{}
+	\item[Vorname:] \TextField[name=vorname, width=8cm]{}
+\end{description}
+		
+		
+		\subsection*{Gesundheitsfragen}
+		
+		% Hier kannst du mit einer einfachen LaTeX-Schleife oder Copy-Paste arbeiten
+		\noindent
+		Sind Sie allergisch gegen: \\
+		\CheckBox[name=all_pollen]{Pollen} \hspace{1cm}
+		\CheckBox[name=all_staub]{Hausstaub} \hspace{1cm}
+		\CheckBox[name=all_tier]{Tierhaare}
+		
+		\noindent
+		\textbf{Wie zufrieden bist du mit der L\"osung?} \\
+		\ChoiceMenu[radio, name=Zufriedenheit, radiosymbol=\ding{108}]{}{Sehr gut=1, Gut=2, Mittel=3, Schlecht=4}
+		
+		\vspace{1cm}
+		
+		\begin{tabular}{lccc}
+			\textbf{Frage} & \textbf{Ja} & \textbf{Nein} & \textbf{Vielleicht} \\ \hline
+			\dreierwahl{q1}{Gef\"allt dir dieser Ansatz?}
+			\dreierwahl{q2}{Soll es so weitergehen?}
+			\dreierwahl{q3}{Sind 100 Felder viel?}
+		\end{tabular}
+		
+		\vspace{0.5cm}
+		
+		\noindent
+		\textbf{Zusatzbemerkungen (mehrzeilig):} \\
+		\TextField[name=bemerkung, multiline=true, width=\textwidth, height=3cm, bordercolor={0.8 0.8 0.8}]{}
+		
+	\end{Form}
+	
+\end{document}

@@ -1,0 +1,268 @@
+<!-- Generiert: 08.03.2026, 20:44 Uhr -->
+
+<style>
+/* ── ABI Widgets allgemein ── */
+.abi-widget {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 0.92em;
+  margin: 1.2em 0;
+}
+.abi-widget-titel {
+  font-size: 1em;
+  font-weight: 700;
+  color: #1159af;
+  margin-bottom: 0.5em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #1159af;
+}
+.abi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.abi-table thead tr {
+  background-color: #1159af;
+  color: #fff;
+}
+.abi-table thead th {
+  padding: 7px 9px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.abi-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+.abi-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.abi-table tbody td {
+  padding: 6px 9px;
+  vertical-align: middle;
+}
+.abi-table a {
+  color: #1159af;
+  text-decoration: none;
+}
+.abi-table a:hover { text-decoration: underline; }
+
+/* Heim/Auswärts-Badge */
+.abi-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.abi-badge-heim { background: #cfe2ff; color: #0c3780; }
+.abi-badge-ausw { background: #fff3cd; color: #856404; }
+
+/* Hervorhebung unseres Teams */
+.abi-unser-team {
+  background-color: #e8f1fb !important;
+  font-weight: bold;
+}
+.abi-unser-team td { color: #1159af; }
+
+/* Tabellenplatz-Badge */
+.abi-platz-badge {
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+  background: #1159af;
+  color: #fff;
+}
+
+.abi-quelle {
+  font-size: 0.75em;
+  color: #aaa;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* ── Responsive / Mobil ── */
+.abi-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 600px) {
+  .abi-widget { font-size: 0.82em; }
+  .abi-table thead th,
+  .abi-table tbody td { padding: 4px 5px; }
+  /* Ligatabelle: G/U/V ausblenden */
+  .abi-table .col-g,
+  .abi-table .col-u,
+  .abi-table .col-v { display: none; }
+  /* Nächste Spiele: Trennstrich-Spalte ausblenden */
+  .abi-table .col-sep { display: none; }
+}
+</style>
+
+<!-- ABI Nächste Spiele Widget -->
+<div class="abi-widget">
+  <div class="abi-widget-titel">⚽ Nächste Spiele – D2-Junioren ABI</div>
+  <div class="abi-table-wrap">
+  <table class="abi-table">
+    <thead>
+      <tr>
+        <th>Datum</th>
+        <th>Heimteam</th><th class="col-sep"></th><th>Gastteam</th><th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="white-space:nowrap">Sa, 14.03.26 |12:30<br><span class="abi-badge abi-badge-heim">Heim</span></td>
+      <td>SGM ABI</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM Sülzbach Sulmtal II</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-heinriet-abi-ii-sgm-suelzbach-sulmtal-ii/-/spiel/02VK8U79US000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 21.03.26 |11:00<br><span class="abi-badge abi-badge-ausw">Auswärts</span></td>
+      <td>SGM Willsbach II</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM ABI</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-willsbach-ii-sgm-ilsfeld-abstatt-heinriet-abi-ii/-/spiel/02VK8U7A1G000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 28.03.26 |11:00<br><span class="abi-badge abi-badge-heim">Heim</span></td>
+      <td>SGM ABI</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SC Amorbach III</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-heinriet-abi-ii-sc-amorbach-iii/-/spiel/02VK8U7A48000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 18.04.26 |12:30<br><span class="abi-badge abi-badge-ausw">Auswärts</span></td>
+      <td>TGV Eintracht Beilstein II</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM ABI</td>
+      <td><a href="https://www.fussball.de/spiel/tgv-eintracht-beilstein-ii-sgm-ilsfeld-abstatt-heinriet-abi-ii/-/spiel/02VK8U7A5G000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 25.04.26 |11:00<br><span class="abi-badge abi-badge-heim">Heim</span></td>
+      <td>SGM ABI</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>VfL Obereisesheim I</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-ilsfeld-abstatt-heinriet-abi-ii-vfl-obereisesheim-i/-/spiel/02VK8U7AAG000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="abi-quelle">
+    <a href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2526/team-id/011MIBO1P0000000VTVG0001VTR8C1K7"
+       target="_blank" rel="noopener">fussball.de</a>
+    &nbsp;|&nbsp; Stand: 08.03.2026, 20:44 Uhr
+  </p>
+</div>
+<!-- Ende Nächste Spiele -->
+<!-- ABI Ligatabelle Widget -->
+<div class="abi-widget">
+  <div class="abi-widget-titel">📊 D2-Junioren ABI</div>
+  <div class="abi-table-wrap">
+  <table class="abi-table">
+    <thead>
+      <tr>
+        <th style="text-align:center">Pl.</th>
+        <th>Mannschaft</th>
+        <th style="text-align:center">Sp</th>
+        <th class="col-g" style="text-align:center">G</th>
+        <th class="col-u" style="text-align:center">U</th>
+        <th class="col-v" style="text-align:center">V</th>
+        <th style="text-align:center">Tore</th>
+        <th style="text-align:center">Pkt</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>SC Amorbach III</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr class="abi-unser-team">
+      <td style="text-align:center"><span class="abi-platz-badge">1</span></td>
+      <td>SGM Ilsfeld-Abstatt-Heinriet ABI II</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>SGM Sülzbach Sulmtal II</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>SGM Willsbach II</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>TGV Eintracht Beilstein II</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>TSV Weinsberg II</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>TV Flein III</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>VfL Obereisesheim I</td>
+      <td style="text-align:center">0</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">0 : 0</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="abi-quelle">
+    <a href="https://www.fussball.de"
+       target="_blank" rel="noopener">fussball.de</a>
+    &nbsp;|&nbsp; Stand: 08.03.2026, 20:44 Uhr
+  </p>
+</div>
+<!-- Ende Ligatabelle -->

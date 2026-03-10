@@ -1,0 +1,288 @@
+<!-- Generiert: 08.03.2026, 20:23 Uhr -->
+
+<style>
+/* ── ABI Widgets allgemein ── */
+.abi-widget {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 0.92em;
+  margin: 1.2em 0;
+}
+.abi-widget-titel {
+  font-size: 1em;
+  font-weight: 700;
+  color: #1159af;
+  margin-bottom: 0.5em;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #1159af;
+}
+.abi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.abi-table thead tr {
+  background-color: #1159af;
+  color: #fff;
+}
+.abi-table thead th {
+  padding: 7px 9px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.abi-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+.abi-table tbody tr:nth-child(even) {
+  background-color: #f7f7f7;
+}
+.abi-table tbody td {
+  padding: 6px 9px;
+  vertical-align: middle;
+}
+.abi-table a {
+  color: #1159af;
+  text-decoration: none;
+}
+.abi-table a:hover { text-decoration: underline; }
+
+/* Heim/Auswärts-Badge */
+.abi-badge {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.abi-badge-heim { background: #cfe2ff; color: #0c3780; }
+.abi-badge-ausw { background: #fff3cd; color: #856404; }
+
+/* Hervorhebung unseres Teams */
+.abi-unser-team {
+  background-color: #e8f1fb !important;
+  font-weight: bold;
+}
+.abi-unser-team td { color: #1159af; }
+
+/* Tabellenplatz-Badge */
+.abi-platz-badge {
+  display: inline-block;
+  min-width: 24px;
+  text-align: center;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-weight: bold;
+  background: #1159af;
+  color: #fff;
+}
+
+.abi-quelle {
+  font-size: 0.75em;
+  color: #aaa;
+  margin-top: 5px;
+  text-align: right;
+}
+
+/* ── Responsive / Mobil ── */
+.abi-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 600px) {
+  .abi-widget { font-size: 0.82em; }
+  .abi-table thead th,
+  .abi-table tbody td { padding: 4px 5px; }
+  /* Ligatabelle: G/U/V ausblenden */
+  .abi-table .col-g,
+  .abi-table .col-u,
+  .abi-table .col-v { display: none; }
+  /* Nächste Spiele: Trennstrich-Spalte ausblenden */
+  .abi-table .col-sep { display: none; }
+}
+</style>
+
+<!-- ABI Nächste Spiele Widget -->
+<div class="abi-widget">
+  <div class="abi-widget-titel">⚽ Nächste Spiele – C-Junioren ABI</div>
+  <div class="abi-table-wrap">
+  <table class="abi-table">
+    <thead>
+      <tr>
+        <th>Datum</th>
+        <th>Heimteam</th><th class="col-sep"></th><th>Gastteam</th><th></th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="white-space:nowrap">Sa, 14.03.26 |14:15<br><span class="abi-badge abi-badge-ausw">Auswärts</span></td>
+      <td>SGM FSV Schwaigern/​Oberes Leintal I</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM ABI</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-fsv-schwaigern-oberes-leintal-i-sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i/-/spiel/02VK973VDO000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 21.03.26 |14:15<br><span class="abi-badge abi-badge-heim">Heim</span></td>
+      <td>SGM ABI</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM Union Heilbronn /​ TSN 1969 II</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i-sgm-union-heilbronn-tsn-1969-ii/-/spiel/02VK973VLC000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 28.03.26 |14:15<br><span class="abi-badge abi-badge-ausw">Auswärts</span></td>
+      <td>SGM TSV Meimsheim Zabergäu</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM ABI</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-tsv-meimsheim-zabergaeu-sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i/-/spiel/02VK973VOO000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 18.04.26 |14:15<br><span class="abi-badge abi-badge-heim">Heim</span></td>
+      <td>SGM ABI</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM Willsbach I</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i-sgm-willsbach-i/-/spiel/02VK973VTO000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    <tr>
+      <td style="white-space:nowrap">Sa, 25.04.26 |14:15<br><span class="abi-badge abi-badge-ausw">Auswärts</span></td>
+      <td>SGM Tiefenbach H-U-T-H</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>SGM ABI</td>
+      <td><a href="https://www.fussball.de/spiel/sgm-tiefenbach-h-u-t-h-sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i/-/spiel/02VK973VUK000000VS5489BUVS0RAL9C" target="_blank" rel="noopener">➜</a></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="abi-quelle">
+    <a href="https://www.fussball.de/mannschaft/sgm-sc-ilsfeld-abstatt-beilstein-heinriet-abi-i-sc-ilsfeld-wuerttemberg/-/saison/2526/team-id/020CNNEK1G000000VS548984VS7EIAOE"
+       target="_blank" rel="noopener">fussball.de</a>
+    &nbsp;|&nbsp; Stand: 08.03.2026, 20:23 Uhr
+  </p>
+</div>
+<!-- Ende Nächste Spiele -->
+<!-- ABI Ligatabelle Widget -->
+<div class="abi-widget">
+  <div class="abi-widget-titel">📊 Kreisleistungsstaffel 1 – C-Junioren</div>
+  <div class="abi-table-wrap">
+  <table class="abi-table">
+    <thead>
+      <tr>
+        <th style="text-align:center">Pl.</th>
+        <th>Mannschaft</th>
+        <th style="text-align:center">Sp</th>
+        <th class="col-g" style="text-align:center">G</th>
+        <th class="col-u" style="text-align:center">U</th>
+        <th class="col-v" style="text-align:center">V</th>
+        <th style="text-align:center">Tore</th>
+        <th style="text-align:center">Pkt</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td style="text-align:center">1.</td>
+      <td>SGM FSV Schwaigern/​Oberes Leintal I</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">1</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">12 : 3</td>
+      <td style="text-align:center"><strong>3</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">2.</td>
+      <td>SGM Tiefenbach H-U-T-H</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">1</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">5 : 1</td>
+      <td style="text-align:center"><strong>3</strong></td>
+    </tr>
+    <tr class="abi-unser-team">
+      <td style="text-align:center"><span class="abi-platz-badge">3</span></td>
+      <td>SGM SC Ilsfeld/​Abstatt/​Beilstein/​Heinriet ABI I</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">1</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">5 : 2</td>
+      <td style="text-align:center"><strong>3</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">4.</td>
+      <td>SGM TSV Meimsheim Zabergäu</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">1</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">3 : 1</td>
+      <td style="text-align:center"><strong>3</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">5.</td>
+      <td>SGM Union Heilbronn /​ TSN 1969 II</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">1</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">0</td>
+      <td style="text-align:center">2 : 1</td>
+      <td style="text-align:center"><strong>3</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">6.</td>
+      <td>SGM Dahenfeld/​Oedheim I</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">1</td>
+      <td style="text-align:center">1 : 2</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">7.</td>
+      <td>SGM Spvgg Möckmühl Unteres Jagsttal I</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">1</td>
+      <td style="text-align:center">1 : 3</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">8.</td>
+      <td>SG Bad Wimpfen</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">1</td>
+      <td style="text-align:center">2 : 5</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">9.</td>
+      <td>SGM Willsbach I</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">1</td>
+      <td style="text-align:center">1 : 5</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align:center">10.</td>
+      <td>SC Amorbach I</td>
+      <td style="text-align:center">1</td>
+      <td class="col-g" style="text-align:center">0</td>
+      <td class="col-u" style="text-align:center">0</td>
+      <td class="col-v" style="text-align:center">1</td>
+      <td style="text-align:center">3 : 12</td>
+      <td style="text-align:center"><strong>0</strong></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="abi-quelle">
+    <a href="https://www.fussball.de/spieltagsuebersicht/c-junioren-leistungsstaffel-1-bezirk-franken-k-c-junioren-leistungsstaffel-c-junioren-saison2526-wuerttemberg/-/staffel/02VGDVTPN8000006VS5489BUVVUFGBQS-G"
+       target="_blank" rel="noopener">fussball.de</a>
+    &nbsp;|&nbsp; Stand: 08.03.2026, 20:23 Uhr
+  </p>
+</div>
+<!-- Ende Ligatabelle -->
