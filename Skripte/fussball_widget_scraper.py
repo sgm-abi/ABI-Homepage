@@ -422,6 +422,7 @@ def sftp_upload(local_files: list[str]):
         for local_path in local_files:
             filename = os.path.basename(local_path)
             remote_path = SFTP_REMOTE_DIR.rstrip("/") + "/" + filename
+            print(f"  → Versuche Upload: {remote_path}")
             sftp.put(local_path, remote_path)
             print(f"  ✅ Hochgeladen: {filename} → {remote_path}")
 
