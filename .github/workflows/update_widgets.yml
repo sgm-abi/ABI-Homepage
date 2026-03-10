@@ -31,3 +31,12 @@ jobs:
           SFTP_PASS: ${{ secrets.SFTP_PASS }}
           SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
         run: python Skripte/fussball_widget_scraper.py
+
+      - name: Startseite generieren und hochladen
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SFTP_PASS: ${{ secrets.SFTP_PASS }}
+          SFTP_REMOTE_DIR: ${{ secrets.SFTP_REMOTE_DIR }}
+        run: cd Skripte && python Extract_table_from_fussball.py

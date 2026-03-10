@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import os
 import re
 import requests
 import time
@@ -8,6 +9,7 @@ from urllib.parse import urlparse, parse_qs, unquote_plus
 from bs4 import BeautifulSoup
 import pandas as pd
 import datetime
+import paramiko
 
 HEADERS = {
     "User-Agent": (
@@ -20,6 +22,41 @@ SAISON = "2526"
 HTML_PARSER = "html.parser"
 ABI_TEAM = "SGM ABI"
 ABI_TEAM_REGEX = r"SGM.*ABI.*"
+
+# SFTP-Konfiguration – Werte kommen aus Umgebungsvariablen (GitHub Secrets)
+SFTP_HOST = os.environ.get("SFTP_HOST", "home680099039.1and1-data.host")
+SFTP_PORT = int(os.environ.get("SFTP_PORT", "22"))
+SFTP_USER = os.environ.get("SFTP_USER", "u89169696")
+SFTP_PASS = os.environ.get("SFTP_PASS", "")
+SFTP_REMOTE_DIR = os.environ.get("SFTP_REMOTE_DIR", "/abi-widgets/")
+
+
+def sftp_upload(local_files: list):
+    """Lädt alle lokalen HTML-Dateien per SFTP auf IONOS hoch."""
+    if not SFTP_PASS:
+        print("⚠️  SFTP_PASS nicht gesetzt – Upload übersprungen")
+        return
+    print(f"\n📤 SFTP-Upload nach {SFTP_HOST}{SFTP_REMOTE_DIR} …")
+    transport = paramiko.Transport((SFTP_HOST, SFTP_PORT))
+    try:
+        transport.connect(username=SFTP_USER, password=SFTP_PASS)
+        sftp = paramiko.SFTPClient.from_transport(transport)
+        try:
+            sftp.mkdir(SFTP_REMOTE_DIR)
+        except Exception:
+            pass  # Ordner existiert bereits
+        for local_path in local_files:
+            if not os.path.exists(local_path):
+                print(f"  ⚠️  Datei nicht gefunden: {local_path}")
+                continue
+            filename = os.path.basename(local_path)
+            remote_path = SFTP_REMOTE_DIR.rstrip("/") + "/" + filename
+            sftp.put(local_path, remote_path)
+            print(f"  ✅ {filename} → {remote_path}")
+        sftp.close()
+    finally:
+        transport.close()
+    print("📤 Upload abgeschlossen\n")
 
 
 def get_team_platz(soup, team_url):
@@ -339,9 +376,12 @@ alle_teams_html = f"""<style>
   <p class="at-quelle"><a href="https://www.fussball.de" target="_blank" rel="noopener">fussball.de</a> &nbsp;|&nbsp; Stand: {stand_alle}</p>
 </div>"""
 
+generated_html_files = []
+
 with open("alle_teams.html", "w", encoding="utf-8") as f:
     f.write(alle_teams_html)
 print("alle_teams.html gespeichert")
+generated_html_files.append("alle_teams.html")
 
 df = pd.read_csv(outfile, sep=",")
 
@@ -461,6 +501,7 @@ aktuelle_spiele_html = f"""<!-- ABI Aktuelle Spiele -->
 with open("Aktuelle_Spiele.html", "w", encoding="utf-8") as f:
     f.write(aktuelle_spiele_html)
 print("Aktuelle_Spiele.html gespeichert")
+generated_html_files.append("Aktuelle_Spiele.html")
 
 with open("komplett_abi.html", "w", encoding="utf-8") as f:
     f.write(aktuelle_spiele_html + "\n\n" + alle_teams_html)
@@ -551,3 +592,5 @@ for _, row in ad_teams.iterrows():
     with open(filename, "w", encoding="utf-8") as f:
         f.write(spiele_html + liga_html)
     print(f"{filename} gespeichert")
+
+sftp_upload(generated_html_files)  # lädt nur alle_teams.html, Aktuelle_Spiele.html, komplett_abi.html
