@@ -343,7 +343,13 @@ for _, row in ad_teams.iterrows():
     tore_text = tore if (tore and not keine_spiele) else "–"
     pkt_text = f"<strong>{pkt}</strong>" if (pkt and not keine_spiele) else "–"
     fussball_url = str(row.get("url", "")).strip().rstrip("#!/")
-    team_cell = f'<a href="{fussball_url}" target="_blank" rel="noopener">{tname}</a>' if fussball_url else tname
+    buchstabe = tname[0].lower()
+    kategorie = "juniorinnen" if "J-innen" in tname else "junioren"
+    sgm_url = f"https://sgm-abi.de/teams/{buchstabe}-{kategorie}"
+    anzeigename = f"{tname.split('-')[0]}-{kategorie.capitalize()}"
+    team_cell = (f'<a href="{sgm_url}">{anzeigename}</a>'
+                 f'<br><small><a href="{fussball_url}" target="_blank" rel="noopener" '
+                 f'style="color:#aaa">Ligatabelle ↗</a></small>')
     tr_style = " style='color:#bbb'" if keine_spiele else ""
     rows_html += (
         f"\t<tr{tr_style}>\n\t\t<td>{team_cell}</td>\n"
