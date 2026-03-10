@@ -412,12 +412,12 @@ def sftp_upload(local_files: list[str]):
         transport.connect(username=SFTP_USER, password=SFTP_PASS)
         sftp = paramiko.SFTPClient.from_transport(transport)
 
-        # Verzeichnis anlegen falls nicht vorhanden
+        # Verzeichnis anlegen falls nicht vorhanden (Fehler ignorieren wenn schon da)
         try:
-            sftp.stat(SFTP_REMOTE_DIR)
-        except FileNotFoundError:
             sftp.mkdir(SFTP_REMOTE_DIR)
             print(f"  📁 Verzeichnis angelegt: {SFTP_REMOTE_DIR}")
+        except Exception:
+            pass  # Ordner existiert bereits – alles gut
 
         for local_path in local_files:
             filename = os.path.basename(local_path)
@@ -484,7 +484,9 @@ def main():
                 print(f"     ✅ {len(eintraege)} Teams gefunden")
                 for e in eintraege:
                     marker = " ◀ ABI" if e["unser"] else ""
-                    print(f"        {e['platz']:>2}. {e['team'][:45]:<45} {e['pkt']} Pkt{marker}")
+                    print(
+                        f"        {e['platz']:>2}. {e['team'][:45]:<45} {e['pkt']} Pkt{marker}"
+                    )
             else:
                 print("     ⚠️  Tabelle konnte nicht geparst werden")
             html_tabelle = render_tabelle(eintraege, team_name, staffel_id)
@@ -493,7 +495,9 @@ def main():
             html_tabelle = ""
 
         with open(output_file, "w", encoding="utf-8") as f:
-            f.write(stand_kommentar + SHARED_CSS + "\n" + html_spiele + "\n" + html_tabelle)
+            f.write(
+                stand_kommentar + SHARED_CSS + "\n" + html_spiele + "\n" + html_tabelle
+            )
         saved_files.append(output_file)
         print(f"  💾 Gespeichert: {output_file}\n")
 
