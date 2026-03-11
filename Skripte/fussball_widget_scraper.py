@@ -284,7 +284,6 @@ def render_spiele(spiele: list[dict], team_name: str, team_id: str) -> str:
       <td>{h(sp['gast'])}</td>
       <td><a href="{sp['link']}" target="_blank" rel="noopener">➜</a></td>
     </tr>"""
-
     return f"""<!-- ABI Nächste Spiele Widget -->
 <div class="abi-widget">
   <div class="abi-widget-titel">⚽ Nächste Spiele – {html_module.escape(team_name)}</div>
@@ -307,6 +306,65 @@ def render_spiele(spiele: list[dict], team_name: str, team_id: str) -> str:
   </p>
 </div>
 <!-- Ende Nächste Spiele -->"""
+
+
+def render_spiele_kombiniert(spiele_liste: list[tuple]) -> str:
+    """spiele_liste: [(label, spiele), ...] – werden nach Datum sortiert, max_spiele genommen."""
+    alle = []
+    for label, spiele in spiele_liste:
+        for sp in spiele:
+            alle.append((label, sp))
+
+    def sort_key(item):
+        label, sp = item
+        datum = sp.get("datum", "")  # z.B. "Sa, 14.03.26 |12:30"
+        try:
+            teil = datum.split(", ", 1)[1] if ", " in datum else datum
+            date_str = teil.strip().split(" ")[0]  # "14.03.26"
+            d, m, y = date_str.split(".")
+            zeit = teil.split("|")[1].strip() if "|" in teil else "00:00"
+            return (int("20" + y), int(m), int(d), zeit, label)
+        except Exception:
+            return (9999, 99, 99, "00:00", label)
+
+    alle.sort(key=sort_key)
+
+    rows = ""
+    h = html_module.escape
+    for label, sp in alle:
+        badge = (
+            '<span class="abi-badge abi-badge-heim">Heim</span>'
+            if sp["heimspiel"]
+            else '<span class="abi-badge abi-badge-ausw">Auswärts</span>'
+        )
+        rows += f"""
+    <tr>
+      <td style="white-space:nowrap">{h(sp['datum'])}<br>{badge}</td>
+      <td style="white-space:nowrap;font-weight:bold;color:#1159af">{label}</td>
+      <td>{h(sp['heim'])}</td>
+      <td class="col-sep" style="text-align:center;color:#aaa">–</td>
+      <td>{h(sp['gast'])}</td>
+      <td><a href="{sp['link']}" target="_blank" rel="noopener">➜</a></td>
+    </tr>"""
+    return f"""<!-- ABI Nächste Spiele Widget -->
+<div class="abi-widget">
+  <div class="abi-widget-titel">⚽ Nächste Spiele – D-Junioren</div>
+  <div class="abi-table-wrap">
+  <table class="abi-table">
+    <thead>
+      <tr>
+        <th>Datum</th>
+        <th>Team</th>
+        <th>Heimteam</th><th class="col-sep"></th><th>Gastteam</th><th></th>
+      </tr>
+    </thead>
+    <tbody>{rows}
+    </tbody>
+  </table>
+  </div>
+  <p class="abi-quelle">Stand: {jetzt()}</p>
+</div>
+<!-- Ende Nächste Spiele -->\n"""
 
 
 # ── Tabelle ───────────────────────────────────────────────────────────────────
@@ -459,6 +517,7 @@ def main():
 
     stand_kommentar = f"<!-- Generiert: {jetzt()} -->\n"
     saved_files = []
+    d_roh = {}      # {team_name: (spiele_liste, html_tabelle)}
 
     for team in TEAMS:
         team_id = team["team_id"]
@@ -475,10 +534,13 @@ def main():
             print("     ⚠️  Staffel-ID nicht gefunden")
 
         print("  → Nächste Spiele …")
+        spiele = []
+        ist_d_team = team_name.startswith("D1") or team_name.startswith("D2")
+        spiele_limit = 3 if ist_d_team else MAX_SPIELE
         try:
             url_next = f"https://www.fussball.de/ajax.team.next.games/-/mode/PAGE/team-id/{team_id}"
             raw_spiele = fetch(url_next)
-            spiele = parse_spiele(raw_spiele, MAX_SPIELE)
+            spiele = parse_spiele(raw_spiele, spiele_limit)
             if spiele:
                 print(f"     ✅ {len(spiele)} Spiel(e) gefunden")
                 for sp in spiele:
@@ -519,6 +581,28 @@ def main():
             )
         saved_files.append(output_file)
         print(f"  💾 Gespeichert: {output_file}\n")
+
+        if team_name.startswith("D1") or team_name.startswith("D2"):
+            d_roh[team_name] = (spiele, html_tabelle)
+
+    # Kombiniertes D-Junioren Widget (D1 + D2)
+    if len(d_roh) == 2:
+        d1_name = next(n for n in d_roh if "D1" in n)
+        d2_name = next(n for n in d_roh if "D2" in n)
+        html_spiele_komb = render_spiele_kombiniert([
+            ("D1", d_roh[d1_name][0]),
+            ("D2", d_roh[d2_name][0]),
+        ])
+        komplett_d = (
+            stand_kommentar + SHARED_CSS + "\n"
+            + html_spiele_komb + "\n"
+            + d_roh[d1_name][1] + "\n"
+            + d_roh[d2_name][1]
+        )
+        with open("komplett_D.html", "w", encoding="utf-8") as f:
+            f.write(komplett_d)
+        saved_files.append("komplett_D.html")
+        print("  💾 Gespeichert: komplett_D.html\n")
 
     # SFTP-Upload aller generierten Dateien
     sftp_upload(saved_files)
