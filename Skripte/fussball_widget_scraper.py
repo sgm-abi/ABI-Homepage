@@ -49,6 +49,21 @@ TEAMS = [
         "team_id": "011MIBO1P0000000VTVG0001VTR8C1K7",
         "output": "komplett_D2.html",
     },
+    {
+        "name": "B-Juniorinnen ABI",
+        "team_id": "02F0RK819O000000VS5489B2VUBVHUE0",
+        "output": "komplett_B-J-innen.html",
+    },
+    {
+        "name": "C-Juniorinnen ABI",
+        "team_id": "011MIAPVRC000000VTVG0001VTR8C1K7",
+        "output": "komplett_C-J-innen.html",
+    },
+    {
+        "name": "D-Juniorinnen ABI",
+        "team_id": "011MIB7H8C000000VTVG0001VTR8C1K7",
+        "output": "komplett_D-J-innen.html",
+    },
 ]
 
 SAISON = "2526"
