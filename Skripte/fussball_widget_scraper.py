@@ -69,6 +69,8 @@ TEAMS = [
 SAISON = "2526"
 MAX_SPIELE = 5
 OUR_TEAM_FRAGMENT = "ABI"
+ABI_TEAM = "SGM ABI"
+ABI_TEAM_REGEX = r"SGM.*ABI.*"
 
 # SFTP-Konfiguration – Werte kommen aus Umgebungsvariablen (GitHub Secrets)
 SFTP_HOST = os.environ.get("SFTP_HOST", "home680099039.1and1-data.host")
@@ -226,8 +228,8 @@ def parse_spiele(raw_html: str, max_spiele: int) -> list[dict]:
 
         links = row.find_all("a", href=re.compile(r"/mannschaft/"))
         if len(links) >= 2 and current_datum:
-            heim = re.sub(r"SGM.*ABI.*", "SGM ABI", links[0].get_text(strip=True))
-            gast = re.sub(r"SGM.*ABI.*", "SGM ABI", links[1].get_text(strip=True))
+            heim = re.sub(ABI_TEAM_REGEX, ABI_TEAM, links[0].get_text(strip=True))
+            gast = re.sub(ABI_TEAM_REGEX, ABI_TEAM, links[1].get_text(strip=True))
             spiel_tag = row.find("a", href=re.compile(r"/spiel/"))
             link = spiel_tag["href"] if spiel_tag else "#"
             if link.startswith("/"):
@@ -329,6 +331,7 @@ def parse_tabelle(raw_html: str) -> list[dict]:
         full_text = cells[2].get_text(" ", strip=True)
         parts = full_text.split("  ")
         team = parts[-1].strip() if len(parts) > 1 else full_text.strip()
+        team = re.sub(ABI_TEAM_REGEX, ABI_TEAM, team)
 
         spiele = cells[3].get_text(strip=True)
         siege = cells[4].get_text(strip=True)
