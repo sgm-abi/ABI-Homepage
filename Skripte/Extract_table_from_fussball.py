@@ -9,6 +9,7 @@ from urllib.parse import urlparse, parse_qs, unquote_plus
 from bs4 import BeautifulSoup
 import pandas as pd
 import datetime
+from zoneinfo import ZoneInfo
 import paramiko
 
 HEADERS = {
@@ -359,7 +360,7 @@ for _, row in ad_teams.iterrows():
         f"\t\t<td style='text-align:center'>{platz_text}</td>\n\t</tr>\n"
     )
 
-stand_alle = datetime.datetime.now().strftime("%d.%m.%Y, %H:%M Uhr")
+stand_alle = datetime.datetime.now(tz=ZoneInfo("Europe/Berlin")).strftime("%d.%m.%Y, %H:%M Uhr")
 alle_teams_html = f"""<style>
 .at-widget {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0.8em 0; }}
 .at-titel {{ font-size: 15px; font-weight: 700; color: #1159af; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 2px solid #1159af; }}

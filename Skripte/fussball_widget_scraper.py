@@ -17,6 +17,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import re
 import html as html_module
 import paramiko
@@ -200,7 +201,7 @@ def fetch(url: str) -> str:
 
 
 def jetzt() -> str:
-    return datetime.now().strftime("%d.%m.%Y, %H:%M Uhr")
+    return datetime.now(tz=ZoneInfo("Europe/Berlin")).strftime("%d.%m.%Y, %H:%M Uhr")
 
 
 # ── Spielplan ─────────────────────────────────────────────────────────────────
