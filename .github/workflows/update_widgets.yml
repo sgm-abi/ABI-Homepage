@@ -4,7 +4,7 @@ on:
   schedule:
     # Täglich 18:00 Uhr (UTC+1 = 17:00 UTC im Winter, 16:00 UTC im Sommer)
     # Wir nehmen 16:00 UTC → passt für MESZ (Sommer, UTC+2)
-    - cron: "0 17 * * *"
+    - cron: "0 16 * * *"
   workflow_dispatch:  # Manueller Start per Knopf in GitHub möglich
 
 jobs:
