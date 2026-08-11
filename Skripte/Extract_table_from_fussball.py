@@ -436,8 +436,8 @@ for idx in df.index:
         spielorte_text.append("")
         spielorte_url.append("")
 
-df.insert(len(df.columns), "Spielort", spielorte_text)
-df.insert(len(df.columns), "Spielort_URL", spielorte_url)
+df["Spielort"] = spielorte_text
+df["Spielort_URL"] = spielorte_url
 df.to_csv(outfile, index=False)
 
 # Inline-Style-Konstanten für WordPress-Kompatibilität
