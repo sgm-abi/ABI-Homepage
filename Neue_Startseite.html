@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SGM ABI – Kinder- und Jugendfußball (Kacheldesign)</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1c57c4;
+    --blue-dark: #0f3a8a;
+    --blue-light: #3a72e0;
+    --green: #2ecc71;
+    --orange: #f39c12;
+    --gray-light: #f4f6fb;
+    --gray: #7f8c8d;
+    --white: #ffffff;
+    --text: #1a2035;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Barlow', sans-serif;
+    color: var(--text);
+    background: #eef1f8;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--blue-dark);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 42px; height: 42px;
+    background: var(--blue);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+  }
+
+  .logo-text {
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+
+  .logo-text span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 400;
+    opacity: 0.75;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  nav { display: flex; align-items: center; height: 100%; }
+
+  nav a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    padding: 0 1.1rem;
+    height: 64px;
+    display: flex; align-items: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+  }
+
+  nav a:hover, nav a.active {
+    color: white;
+    border-bottom-color: var(--orange);
+    background: rgba(255,255,255,0.05);
+  }
+
+  .nav-cta {
+    background: var(--orange) !important;
+    color: white !important;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem !important;
+    height: auto !important;
+    border-bottom: none !important;
+    margin-left: 1rem;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: #e08a00 !important; transform: translateY(-1px); }
+
+  /* ── HERO (kompakt) ── */
+  .hero {
+    background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 70%, var(--blue-light) 100%);
+    padding: 1.1rem 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .hero-text h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.3px;
+  }
+
+  .hero-text h1 em { font-style: normal; color: var(--orange); }
+
+  .hero-text p {
+    font-size: 0.8rem;
+    opacity: 0.78;
+    margin-top: 0.2rem;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 0;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .stat-item {
+    padding: 0.5rem 1.1rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-item:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--orange);
+    line-height: 1;
+  }
+  .stat-label { font-size: 0.6rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.8px; margin-top: 0.1rem; }
+
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 0.65rem 1.3rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(243,156,18,0.4); }
+
+  /* ── CLUBS STRIP ── */
+  .clubs-strip {
+    background: white;
+    padding: 0.7rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-bottom: 3px solid var(--blue);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .clubs-strip-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gray);
+    font-weight: 600;
+  }
+
+  .club-chip {
+    display: flex; align-items: center; gap: 0.4rem;
+    font-size: 0.78rem; font-weight: 600; color: var(--blue-dark);
+    background: var(--gray-light);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid #dce4f5;
+  }
+
+  /* ── MAIN KACHEL GRID ── */
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Bento-style grid */
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    gap: 1rem;
+  }
+
+  /* Base tile */
+  .tile {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(28,87,196,0.07);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .tile:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(28,87,196,0.13);
+  }
+
+  /* Span helpers */
+  .col-4  { grid-column: span 4; }
+  .col-5  { grid-column: span 5; }
+  .col-6  { grid-column: span 6; }
+  .col-7  { grid-column: span 7; }
+  .col-8  { grid-column: span 8; }
+  .col-12 { grid-column: span 12; }
+
+  /* Tile header */
+  .tile-header {
+    padding: 1rem 1.2rem 0.7rem;
+    border-bottom: 2px solid var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tile-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--blue-dark);
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+
+  .tile-link {
+    font-size: 0.75rem;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* ── PROBETRAINING TILE ── */
+  .tile-probetraining {
+    background: linear-gradient(135deg, var(--orange), #e67e22);
+    color: white;
+    border-radius: 14px;
+    padding: 1.8rem 1.6rem;
+    box-shadow: 0 4px 20px rgba(243,156,18,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .tile-probetraining h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.05;
+    margin-bottom: 0.6rem;
+  }
+
+  .tile-probetraining p {
+    font-size: 0.83rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--orange);
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+    transition: all 0.2s;
+    align-self: flex-start;
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+  /* ── WETTER TILE ── */
+  .tile-wetter {
+    background: linear-gradient(135deg, #0f3a8a, #2563eb);
+    color: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(28,87,196,0.25);
+  }
+
+  .wetter-top {
+    padding: 1.2rem 1.4rem 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .wetter-main { display: flex; align-items: center; gap: 0.8rem; }
+  .wetter-icon { font-size: 2.8rem; line-height: 1; }
+  .wetter-temp { font-family: 'Barlow Condensed', sans-serif; font-size: 3rem; font-weight: 900; line-height: 1; }
+  .wetter-desc { font-size: 0.78rem; opacity: 0.75; margin-top: 0.2rem; }
+
+  .wetter-right { text-align: right; font-size: 0.72rem; opacity: 0.7; }
+  .wetter-right strong { display: block; font-size: 0.85rem; opacity: 1; font-weight: 700; }
+
+  .wetter-details {
+    display: flex; gap: 1rem;
+    padding: 0 1.4rem 0.8rem;
+    font-size: 0.72rem; opacity: 0.7;
+  }
+
+  .wetter-forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .forecast-day {
+    padding: 0.7rem 0.3rem;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.7rem;
+  }
+  .forecast-day:last-child { border-right: none; }
+  .forecast-day-name { opacity: 0.65; margin-bottom: 0.3rem; font-weight: 600; }
+  .forecast-icon { font-size: 1.2rem; margin-bottom: 0.2rem; }
+  .forecast-temp { font-weight: 700; }
+
+  .wetter-spieltag {
+    background: rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 0.5rem 1.4rem;
+    font-size: 0.73rem;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .wetter-spieltag strong { color: var(--orange); }
+
+  /* ── SPIELPLAN TILE ── */
+  .spiel-item {
+    display: flex;
+    align-items: center;
+    padding: 0.65rem 1.2rem;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--gray-light);
+    font-size: 0.82rem;
+    transition: background 0.15s;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .spiel-item:last-child { border-bottom: none; }
+  .spiel-item:hover { background: var(--gray-light); }
+
+  .spiel-datum { min-width: 68px; color: var(--gray); font-size: 0.73rem; font-weight: 600; }
+
+  .spiel-team-badge {
+    background: var(--blue);
+    color: white;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.5rem;
+    min-width: 32px;
+    text-align: center;
+  }
+
+  .spiel-info { flex: 1; font-weight: 500; }
+
+  .spiel-tag {
+    font-size: 0.68rem;
+    background: #e8f3ff;
+    color: var(--blue);
+    border-radius: 4px;
+    padding: 0.15rem 0.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* ── NEWS TILES ── */
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .news-img {
+    height: 130px;
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3.5rem;
+    flex-shrink: 0;
+  }
+
+  .news-body { padding: 1rem 1.1rem; flex: 1; }
+  .news-meta { font-size: 0.68rem; color: var(--gray); margin-bottom: 0.35rem; font-weight: 600; }
+  .news-title { font-weight: 700; font-size: 0.9rem; line-height: 1.35; color: var(--text); }
+  .news-excerpt { font-size: 0.78rem; color: var(--gray); margin-top: 0.4rem; line-height: 1.5; }
+
+  /* ── MITMACHEN TILE ── */
+  .tile-mitmachen {
+    background: linear-gradient(135deg, #0d5c3a, #1a8a56);
+    color: white;
+    border-radius: 14px;
+    padding: 1.6rem;
+    box-shadow: 0 4px 20px rgba(46,204,113,0.2);
+  }
+
+  .tile-mitmachen h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .tile-mitmachen p {
+    font-size: 0.82rem;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .ag-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+
+  .ag-tag {
+    background: rgba(255,255,255,0.15);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.7rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+
+  .btn-white-green {
+    background: white;
+    color: #0d5c3a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.82rem;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  .btn-white-green:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+  /* ── NEWSLETTER TILE ── */
+  .tile-newsletter {
+    background: linear-gradient(135deg, #1a2035, #2d3561);
+    color: white;
+    border-radius: 14px;
+    padding: 1.6rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  }
+
+  .nl-tag {
+    display: inline-block;
+    background: rgba(243,156,18,0.2);
+    color: var(--orange);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+    border: 1px solid rgba(243,156,18,0.3);
+  }
+
+  .tile-newsletter h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+  }
+
+  .tile-newsletter p {
+    font-size: 0.78rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .nl-form { display: flex; gap: 0.5rem; }
+
+  .nl-form input {
+    flex: 1;
+    padding: 0.65rem 0.9rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 0.82rem;
+    outline: none;
+    min-width: 0;
+  }
+  .nl-form input::placeholder { color: rgba(255,255,255,0.4); }
+  .nl-form input:focus { border-color: var(--orange); background: rgba(255,255,255,0.15); }
+
+  .nl-form button {
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65rem 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .nl-form button:hover { background: #e08a00; }
+
+  /* ── DRIBBLING TILE ── */
+  .tile-dribbling {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(28,87,196,0.07);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dribbling-top {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: white;
+    padding: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .dribbling-top .issue {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .dribbling-top h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .dribbling-top p {
+    font-size: 0.78rem;
+    opacity: 0.8;
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+
+  .dribbling-bottom {
+    padding: 0.8rem 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid var(--gray-light);
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+
+  .dribbling-bottom a {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--blue-dark);
+    color: rgba(255,255,255,0.7);
+    margin-top: 1rem;
+    padding: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-col h4 {
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+  }
+
+  .footer-col a {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+    transition: color 0.15s;
+  }
+  .footer-col a:hover { color: white; }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 1.5rem auto 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  .social-links { display: flex; gap: 0.8rem; }
+  .social-link {
+    width: 32px; height: 32px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  .social-link:hover { background: var(--orange); }
+
+  /* NEW badge */
+  .badge-new {
+    display: inline-block;
+    background: var(--green);
+    color: white;
+    font-size: 0.58rem;
+    font-weight: 800;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo">
+    <div class="logo-icon">⚽</div>
+    <div class="logo-text">
+      SGM ABI
+      <span>Kinder- und Jugendfußball</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#" class="active">🏠 Start</a>
+    <a href="#">⚽ Training & Teams</a>
+    <a href="#">🧑‍🤝‍🧑 Über uns</a>
+    <a href="#">🗞️ Dribbling</a>
+    <a href="#">📰 News</a>
+    <a href="#" class="nav-cta">🎽 Probetraining</a>
+  </nav>
+</header>
+
+<!-- CLUBS STRIP -->
+<div class="clubs-strip">
+  <span class="clubs-strip-label">Unsere Vereine</span>
+  <span class="club-chip">🔵 SC Abstatt</span>
+  <span class="club-chip">🟢 TGV Beilstein</span>
+  <span class="club-chip">🔴 SC Ilsfeld</span>
+  <span class="club-chip">🟡 SpVgg Heinriet</span>
+</div>
+
+<!-- HERO (kompakt) -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Eine Region. <em>Eine Familie.</em> 18 Teams.</h1>
+    <p>SGM ABI – Kinder- und Jugendfußball im Heilbronner Land</p>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">300</div>
+      <div class="stat-label">Kinder</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">18</div>
+      <div class="stat-label">Teams</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Vereine</div>
+    </div>
+  </div>
+  <a href="#" class="btn-primary">🎽 Probetraining</a>
+</div>
+
+<!-- BENTO GRID -->
+<div class="page">
+  <div class="bento">
+
+    <!-- ROW 1: Probetraining + Wetter + Mitmachen -->
+    <div class="tile-probetraining col-4">
+      <h2>🎽 Jetzt Probetraining!</h2>
+      <p>Schnuppere rein und erlebe die ABI-Familie hautnah. Einfach beim Training deiner Altersgruppe vorbeikommen!</p>
+      <a href="#" class="btn-white">Termin & Infos →</a>
+    </div>
+
+    <div class="tile-wetter col-4">
+      <div class="wetter-top">
+        <div class="wetter-main">
+          <div class="wetter-icon">🌤️</div>
+          <div>
+            <div class="wetter-temp">9°</div>
+            <div class="wetter-desc">Leicht bewölkt</div>
+          </div>
+        </div>
+        <div class="wetter-right">
+          <strong>☁️ Spieltag-Wetter</strong>
+          Ilsfeld · Heute
+        </div>
+      </div>
+      <div class="wetter-details">
+        <span>💧 65%</span>
+        <span>💨 12 km/h</span>
+        <span>⬇️ 3° / ⬆️ 11°</span>
+      </div>
+      <div class="wetter-forecast">
+        <div class="forecast-day">
+          <div class="forecast-day-name">Di</div>
+          <div class="forecast-icon">🌧️</div>
+          <div class="forecast-temp">7°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-day-name">Mi</div>
+          <div class="forecast-icon">🌦️</div>
+          <div class="forecast-temp">9°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-day-name">Do</div>
+          <div class="forecast-icon">⛅</div>
+          <div class="forecast-temp">11°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-day-name">Fr</div>
+          <div class="forecast-icon">☀️</div>
+          <div class="forecast-temp">13°</div>
+        </div>
+        <div class="forecast-day">
+          <div class="forecast-day-name">Sa</div>
+          <div class="forecast-icon">🌤️</div>
+          <div class="forecast-temp">10°</div>
+        </div>
+      </div>
+      <div class="wetter-spieltag">⚽ <strong>Sa 28.02:</strong> ⛅ 10° – Spielbedingungen gut</div>
+    </div>
+
+    <div class="tile-mitmachen col-4">
+      <h2>🤝 Mitmachen!</h2>
+      <p>Wir suchen engagierte Menschen. Unsere Arbeitsgruppen freuen sich über Verstärkung:</p>
+      <div class="ag-tags">
+        <span class="ag-tag">📰 Dribbling</span>
+        <span class="ag-tag">🌐 Homepage</span>
+        <span class="ag-tag">📸 Instagram</span>
+        <span class="ag-tag">🏃 Sporttag</span>
+        <span class="ag-tag">➕ Neue Ideen?</span>
+      </div>
+      <a href="#" class="btn-white-green">Mehr erfahren →</a>
+    </div>
+
+    <!-- ROW 2: News (3 Kacheln gleich gross) -->
+    <a href="#" class="tile col-4 news-card">
+      <div class="news-img">⚽</div>
+      <div class="news-body">
+        <div class="news-meta">20. Feb 2026 · C-Junioren</div>
+        <div class="news-title">Niederlage im ersten Testspiel nach der Hallensaison</div>
+        <div class="news-excerpt">Nach der überaus erfolgreichen Hallensaison starteten die C-Junioren mit einer knappen Niederlage...</div>
+      </div>
+    </a>
+
+    <a href="#" class="tile col-4 news-card">
+      <div class="news-img">🏫</div>
+      <div class="news-body">
+        <div class="news-meta">15. Feb 2026 · ABI</div>
+        <div class="news-title">ABI meets Fußballschule Frieböse Hofmeier</div>
+        <div class="news-excerpt">Ein besonderer Tag für unsere Kicker – die Fußballschule zu Gast bei der SGM ABI.</div>
+      </div>
+    </a>
+
+    <a href="#" class="tile col-4 news-card">
+      <div class="news-img">🏆</div>
+      <div class="news-body">
+        <div class="news-meta">10. Feb 2026 · E-Jugend</div>
+        <div class="news-title">Starker Teamgeist beim E-Jugend-Hallenturnier in Ilsfeld</div>
+        <div class="news-excerpt">Beim E-Jugend-Hallenturniertag zeigte das Team von ABI, was echten Zusammenhalt ausmacht.</div>
+      </div>
+    </a>
+
+    <!-- ROW 3: Spielplan (breit) + Newsletter + Dribbling -->
+    <div class="tile col-7">
+      <div class="tile-header">
+        <div class="tile-title">📅 Nächste Spiele</div>
+        <a href="#" class="tile-link">Alle Spiele →</a>
+      </div>
+      <a href="#" class="spiel-item">
+        <div class="spiel-datum">Mo 24.02.<br>17:50</div>
+        <div class="spiel-team-badge">C1</div>
+        <div class="spiel-info">SGM ABI C1 vs. Sport-Union Neckarsulm I</div>
+        <div class="spiel-tag">🏠 Heim</div>
+      </a>
+      <a href="#" class="spiel-item">
+        <div class="spiel-datum">Sa 28.02.<br>15:15</div>
+        <div class="spiel-team-badge">A</div>
+        <div class="spiel-info">SGM ABI A vs. SGM Union Heilbronn / TSN 1969</div>
+        <div class="spiel-tag">🏠 Heim</div>
+      </a>
+      <a href="#" class="spiel-item">
+        <div class="spiel-datum">So 01.03.<br>12:00</div>
+        <div class="spiel-team-badge">C1</div>
+        <div class="spiel-info">SGM ABI C1 vs. SV Steinbach I</div>
+        <div class="spiel-tag">🏠 Heim</div>
+      </a>
+      <a href="#" class="spiel-item">
+        <div class="spiel-datum">Sa 07.03.<br>12:30</div>
+        <div class="spiel-team-badge">D1</div>
+        <div class="spiel-info">SGM ABI D1 vs. SV Heilbronn am Leinbach I</div>
+        <div class="spiel-tag">🏠 Heim</div>
+      </a>
+      <a href="#" class="spiel-item">
+        <div class="spiel-datum">Sa 07.03.<br>16:00</div>
+        <div class="spiel-team-badge">A</div>
+        <div class="spiel-info">SGM Cleebronn/Botenheim vs. SGM ABI A</div>
+        <div class="spiel-tag" style="background:#fff3e0;color:#e07000;">📍 Auswärts</div>
+      </a>
+    </div>
+
+    <div class="tile-newsletter col-5" style="display:flex;flex-direction:column;justify-content:center;">
+      <div class="nl-tag">📬 Newsletter</div>
+      <h3>Bleib auf dem Laufenden!</h3>
+      <p>3× im Jahr: Highlights, Termine & News direkt in dein Postfach. Immer gut informiert.</p>
+      <div class="nl-form">
+        <input type="email" placeholder="deine@email.de">
+        <button>Anmelden</button>
+      </div>
+    </div>
+
+    <!-- Dribbling -->
+    <div class="tile-dribbling col-4">
+      <div class="dribbling-top">
+        <div>
+          <div class="issue">🗞️ Ausgabe 26 · 2025</div>
+          <h3>Dribbling</h3>
+          <p>Das Vereinsmagazin der SGM ABI – jetzt online lesen.</p>
+        </div>
+      </div>
+      <div class="dribbling-bottom">
+        <span>Jährlich erscheinend</span>
+        <a href="#">Jetzt lesen →</a>
+      </div>
+    </div>
+
+    <!-- Ligatabelle Beispiel (A-Junioren) -->
+    <div class="tile col-5">
+      <div class="tile-header">
+        <div class="tile-title">📊 Tabelle A-Junioren</div>
+        <a href="#" class="tile-link">fussball.de →</a>
+      </div>
+      <div style="overflow-y:auto;max-height:260px;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.78rem;">
+          <thead>
+            <tr style="background:var(--gray-light);position:sticky;top:0;">
+              <th style="padding:0.4rem 0.6rem;text-align:center;font-weight:700;color:var(--gray);">#</th>
+              <th style="padding:0.4rem 0.6rem;text-align:left;font-weight:700;color:var(--gray);">Mannschaft</th>
+              <th style="padding:0.4rem 0.6rem;text-align:center;font-weight:700;color:var(--gray);">Sp</th>
+              <th style="padding:0.4rem 0.6rem;text-align:center;font-weight:700;color:var(--gray);">Pkt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--gray-light);">
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">1</td>
+              <td style="padding:0.45rem 0.6rem;font-weight:600;">TSV Musterstadt</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;">38</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-light);background:#f0f5ff;">
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">2</td>
+              <td style="padding:0.45rem 0.6rem;font-weight:700;color:var(--blue-dark);">SGM ABI A</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;color:var(--blue);">35</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-light);">
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">3</td>
+              <td style="padding:0.45rem 0.6rem;font-weight:600;">SV Beispiel</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;">30</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-light);">
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">4</td>
+              <td style="padding:0.45rem 0.6rem;">FC Musterclub</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;">25</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-light);">
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">5</td>
+              <td style="padding:0.45rem 0.6rem;">SpVgg Testingen</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;">22</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gray-light);">
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">6</td>
+              <td style="padding:0.45rem 0.6rem;">TSG Demohausen</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;">18</td>
+            </tr>
+            <tr>
+              <td style="padding:0.45rem 0.6rem;text-align:center;color:var(--gray);">7</td>
+              <td style="padding:0.45rem 0.6rem;">VfB Platzhalter</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;">14</td>
+              <td style="padding:0.45rem 0.6rem;text-align:center;font-weight:700;">12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sponsoren -->
+    <div class="tile col-7" style="padding:1.2rem;display:flex;align-items:center;gap:2rem;justify-content:center;">
+      <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gray);font-weight:600;white-space:nowrap;">Unsere Partner</div>
+      <div style="font-size:1.3rem;font-weight:800;color:#aaa;">Volksbank BIA</div>
+      <div style="font-size:1.3rem;font-weight:800;color:#aaa;">FFH</div>
+      <div style="font-size:1.3rem;font-weight:800;color:#aaa;">SAMS · JAKO</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>SGM ABI</h4>
+      <p style="margin-bottom:0.8rem;line-height:1.6;">Spielgemeinschaft Abstatt, Beilstein, Heinriet und Ilsfeld. Gemeinsam stark für unsere Jugend.</p>
+      <div class="social-links">
+        <a href="#" class="social-link">📘</a>
+        <a href="#" class="social-link">📸</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="#">Start</a>
+      <a href="#">Training & Teams</a>
+      <a href="#">Über uns / Mitmachen</a>
+      <a href="#">Dribbling</a>
+      <a href="#">News</a>
+      <a href="#">Kontakt</a>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <a href="#">✉️ <span class="__cf_email__" data-cfemail="fb9a9992d69d8e8888999a9797bb94959792959ed59f9e">[email&#160;protected]</span></a>
+      <a href="#">⚖️ Impressum</a>
+      <a href="#">🔒 Datenschutz</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 SGM ABI – Kinder- und Jugendfußball e.V.</span>
+    <span>Mi

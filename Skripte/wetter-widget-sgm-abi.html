@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wetter Widget – SGM ABI</title>
+<style>
+  /* ── Vorschau-Wrapper (nur für Demo) ── */
+  body {
+    background: #eef1f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  /* ══════════════════════════════════════
+     WIDGET – nur diesen Teil in WordPress
+     einfügen (ab .abi-wetter bis Ende)
+  ══════════════════════════════════════ */
+
+  .abi-wetter {
+    width: 300px;
+    background: linear-gradient(160deg, #0f3a8a 0%, #1c57c4 60%, #3a72e0 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(15,58,138,0.35);
+    color: white;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    position: relative;
+  }
+
+  /* Dekoratives Kreismuster im Hintergrund */
+  .abi-wetter::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+  }
+  .abi-wetter::after {
+    content: '';
+    position: absolute;
+    top: 20px; right: -20px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    pointer-events: none;
+  }
+
+  /* ── Kopf ── */
+  .aw-head {
+    padding: 14px 16px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .aw-location {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.65;
+  }
+
+  .aw-date {
+    font-size: 0.68rem;
+    opacity: 0.5;
+    margin-top: 2px;
+  }
+
+  .aw-update {
+    font-size: 0.6rem;
+    opacity: 0.4;
+    text-align: right;
+  }
+
+  /* ── Haupt-Temp-Bereich ── */
+  .aw-main {
+    padding: 4px 16px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+  }
+
+  .aw-icon {
+    font-size: 3.4rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+  }
+
+  .aw-temp-block {}
+
+  .aw-temp {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .aw-temp sup {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    vertical-align: super;
+    opacity: 0.7;
+  }
+
+  .aw-desc {
+    font-size: 0.78rem;
+    opacity: 0.75;
+    margin-top: 3px;
+    font-weight: 500;
+  }
+
+  /* ── Details-Zeile ── */
+  .aw-details {
+    display: flex;
+    gap: 0;
+    padding: 8px 16px;
+    background: rgba(0,0,0,0.12);
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
+
+  .aw-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-right: 14px;
+  }
+
+  .aw-detail-item:last-child { margin-right: 0; }
+
+  /* ── Min/Max ── */
+  .aw-minmax {
+    padding: 7px 16px;
+    font-size: 0.72rem;
+    opacity: 0.65;
+    display: flex;
+    gap: 10px;
+    background: rgba(0,0,0,0.08);
+  }
+
+  /* ── 5-Tage-Vorschau ── */
+  .aw-forecast {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .aw-fc-day {
+    padding: 10px 4px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    transition: background 0.2s;
+  }
+  .aw-fc-day:last-child { border-right: none; }
+  .aw-fc-day:hover { background: rgba(255,255,255,0.07); }
+
+  .aw-fc-name {
+    font-size: 0.65rem;
+    font-weight: 700;
+    opacity: 0.55;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+
+  .aw-fc-icon { font-size: 1.3rem; margin-bottom: 4px; }
+
+  .aw-fc-temp {
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .aw-fc-low {
+    font-size: 0.65rem;
+    opacity: 0.45;
+    margin-top: 1px;
+  }
+
+  /* ── Spieltag-Banner ── */
+  .aw-spieltag {
+    background: rgba(243,156,18,0.18);
+    border-top: 1px solid rgba(243,156,18,0.3);
+    padding: 7px 14px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fdd87a;
+  }
+
+  .aw-spieltag strong { color: #f39c12; }
+
+  /* ── Lade-Zustand ── */
+  .aw-loading {
+    padding: 40px 16px;
+    text-align: center;
+    opacity: 0.5;
+    font-size: 0.8rem;
+  }
+
+  .aw-spinner {
+    width: 28px; height: 28px;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 10px;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ── Fehler ── */
+  .aw-error {
+    padding: 20px 16px;
+    text-align: center;
+    font-size: 0.78rem;
+    opacity: 0.6;
+  }
+
+  /* ── Fade-in beim Laden ── */
+  .aw-content { animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     AB HIER in WordPress als Custom HTML Block
+     einfügen (komplettes div.abi-wetter + script)
+════════════════════════════════════════════ -->
+
+<div class="abi-wetter" id="abi-wetter-widget">
+  <div class="aw-loading">
+    <div class="aw-spinner"></div>
+    Wetter wird geladen…
+  </div>
+</div>
+
+<script>
+(function() {
+  // ── Konfiguration ──────────────────────────
+  var LAT  = 49.0574;   // Ilsfeld Breitengrad
+  var LON  = 9.2578;    // Ilsfeld Längengrad
+  var ORT  = 'Ilsfeld';
+  // ──────────────────────────────────────────
+
+  var TAGE = ['So','Mo','Di','Mi','Do','Fr','Sa'];
+  var MONATE = ['Jan','Feb','Mär','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Dez'];
+
+  // WMO Wetter-Code → Emoji + Beschreibung
+  function wetterInfo(code, isDay) {
+    var d = isDay !== false;
+    if (code === 0)              return { icon: d ? '☀️' : '🌙', desc: 'Klar' };
+    if (code === 1)              return { icon: d ? '🌤️' : '🌤️', desc: 'Überwiegend klar' };
+    if (code === 2)              return { icon: '⛅', desc: 'Teilweise bewölkt' };
+    if (code === 3)              return { icon: '☁️', desc: 'Bedeckt' };
+    if (code >= 45 && code <= 48) return { icon: '🌫️', desc: 'Nebel' };
+    if (code >= 51 && code <= 55) return { icon: '🌦️', desc: 'Nieselregen' };
+    if (code >= 61 && code <= 65) return { icon: '🌧️', desc: 'Regen' };
+    if (code >= 71 && code <= 77) return { icon: '❄️', desc: 'Schnee' };
+    if (code >= 80 && code <= 82) return { icon: '🌦️', desc: 'Regenschauer' };
+    if (code >= 85 && code <= 86) return { icon: '🌨️', desc: 'Schneeschauer' };
+    if (code >= 95)              return { icon: '⛈️', desc: 'Gewitter' };
+    return { icon: '🌡️', desc: 'Unbekannt' };
+  }
+
+  function spieltagEmpfehlung(temp, code) {
+    if (code >= 95) return '⛈️ Spielabsage wahrscheinlich';
+    if (code >= 61) return '🌧️ Regenjacke einpacken!';
+    if (temp < 2)   return '🥶 Sehr kalt – warm anziehen';
+    if (temp > 28)  return '☀️ Sonnenschutz nicht vergessen';
+    return '✅ Gute Spielbedingungen';
+  }
+
+  function render(data) {
+    var c = data.current;
+    var d = data.daily;
+    var info = wetterInfo(c.weather_code, c.is_day);
+
+    var now = new Date();
+    var datumStr = TAGE[now.getDay()] + '. ' + now.getDate() + '. ' + MONATE[now.getMonth()];
+
+    // Vorschau-Tage (ab morgen)
+    var forecastHTML = '';
+    for (var i = 1; i <= 5; i++) {
+      var datum = new Date(d.time[i]);
+      var fi = wetterInfo(d.weather_code_max[i]);
+      forecastHTML += '<div class="aw-fc-day">' +
+        '<div class="aw-fc-name">' + TAGE[datum.getDay()] + '</div>' +
+        '<div class="aw-fc-icon">' + fi.icon + '</div>' +
+        '<div class="aw-fc-temp">' + Math.round(d.temperature_2m_max[i]) + '°</div>' +
+        '<div class="aw-fc-low">' + Math.round(d.temperature_2m_min[i]) + '°</div>' +
+        '</div>';
+    }
+
+    var empfehlung = spieltagEmpfehlung(Math.round(c.temperature_2m), c.weather_code);
+
+    document.getElementById('abi-wetter-widget').innerHTML =
+      '<div class="aw-content">' +
+        '<div class="aw-head">' +
+          '<div>' +
+            '<div class="aw-location">⚽ Spieltag-Wetter · ' + ORT + '</div>' +
+            '<div class="aw-date">' + datumStr + '</div>' +
+          '</div>' +
+          '<div class="aw-update">Live-Daten</div>' +
+        '</div>' +
+
+        '<div class="aw-main">' +
+          '<div class="aw-icon">' + info.icon + '</div>' +
+          '<div class="aw-temp-block">' +
+            '<div class="aw-temp">' + Math.round(c.temperature_2m) + '<sup>°C</sup></div>' +
+            '<div class="aw-desc">' + info.desc + '</div>' +
+          '</div>' +
+        '</div>' +
+
+        '<div class="aw-details">' +
+          '<div class="aw-detail-item">💧 ' + Math.round(c.relative_humidity_2m) + '%</div>' +
+          '<div class="aw-detail-item">💨 ' + Math.round(c.wind_speed_10m) + ' km/h</div>' +
+          '<div class="aw-detail-item">👁️ ' + Math.round((c.apparent_temperature || c.temperature_2m)) + '° gefühlt</div>' +
+        '</div>' +
+
+        '<div class="aw-minmax">' +
+          '<span>⬇️ ' + Math.round(d.temperature_2m_min[0]) + '°</span>' +
+          '<span>⬆️ ' + Math.round(d.temperature_2m_max[0]) + '°</span>' +
+          '<span>🌧️ ' + d.precipitation_sum[0] + ' mm</span>' +
+        '</div>' +
+
+        '<div class="aw-forecast">' + forecastHTML + '</div>' +
+
+        '<div class="aw-spieltag">' + empfehlung + '</div>' +
+      '</div>';
+  }
+
+  function ladeWetter() {
+    var url = 'https://api.open-meteo.com/v1/forecast' +
+      '?latitude=' + LAT +
+      '&longitude=' + LON +
+      '&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,is_day' +
+      '&daily=temperature_2m_max,temperature_2m_min,weather_code_max,precipitation_sum' +
+      '&timezone=Europe%2FBerlin' +
+      '&forecast_days=6';
+
+    fetch(url)
+      .then(function(r) { return r.json(); })
+      .then(function(data) { render(data); })
+      .catch(function() {
+        document.getElementById('abi-wetter-widget').innerHTML =
+          '<div class="aw-error">⚠️ Wetter konnte nicht geladen werden.<br>Bitte später erneut versuchen.</div>';
+      });
+  }
+
+  // Sofort laden (kein iFrame, kein Blocking!)
+  ladeWetter();
+
+  // Alle 30 Minuten aktualisieren
+  setInterval(ladeWetter, 30 * 60 * 1000);
+})();
+</script>
+
+<!-- ══ ENDE WordPress-Einbindung ══ -->
+
+</body>
+</html>

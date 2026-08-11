@@ -462,7 +462,7 @@ kw_data["Heim"] = kw_data["Heim"].replace(ABI_TEAM_REGEX, ABI_TEAM, regex=True)
 kw_data["Gast"] = kw_data["Gast"].replace(ABI_TEAM_REGEX, ABI_TEAM, regex=True)
 
 rows_html = ""
-for ind in kw_data.index:
+for row_num, ind in enumerate(kw_data.index):
     heim = kw_data["Heim"][ind].replace("\u200b", "")
     gast = kw_data["Gast"][ind].replace("\u200b", "")
     is_heimspiel = heim == ABI_TEAM
@@ -481,7 +481,8 @@ for ind in kw_data.index:
     spielort_url = kw_data["Spielort_URL"][ind]
     if isinstance(spielort_url, str) and spielort_url:
         spiel_text += f'<br><small>📍 <a href="{spielort_url}" target="_blank">{spielort_text}</a></small>'
-    rows_html += f"""    <tr>
+    tr_bg = ' style="background-color:#f0f4fb"' if row_num % 2 == 1 else ""
+    rows_html += f"""    <tr{tr_bg}>
       <td {S_TD_DATE}>{datum} | {zeit}<br>{badge}</td>
       <td {S_TD}>{kw_data["Team"][ind]}</td>
       <td {S_TD}>{spiel_text}</td>
@@ -526,7 +527,7 @@ for _, row in ad_teams.iterrows():
     # Gefilterte Spiele für dieses Team
     team_spiele = kw_data[kw_data["Team"] == tname]
     team_rows_html = ""
-    for ind in team_spiele.index:
+    for row_num, ind in enumerate(team_spiele.index):
         heim = team_spiele["Heim"][ind].replace("\u200b", "")
         gast = team_spiele["Gast"][ind].replace("\u200b", "")
         is_heimspiel = heim == ABI_TEAM
@@ -547,7 +548,8 @@ for _, row in ad_teams.iterrows():
         spielort_url = team_spiele["Spielort_URL"][ind]
         if isinstance(spielort_url, str) and spielort_url:
             spiel_text += f'<br><small>📍 <a href="{spielort_url}" target="_blank">{spielort_text}</a></small>'
-        team_rows_html += f"""    <tr>
+        tr_bg = ' style="background-color:#f0f4fb"' if row_num % 2 == 1 else ""
+        team_rows_html += f"""    <tr{tr_bg}>
       <td {S_TD_DATE}>{datum} | {zeit}<br>{badge}</td>
       <td {S_TD}>{spiel_text}</td>
     </tr>\n"""
